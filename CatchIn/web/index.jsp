@@ -1,7 +1,7 @@
 <%-- 
     Document   : index
     Created on : 27/08/2018, 11:29:44
-    Author     : Alunos
+    Author     : Henrique Silva
 --%>
 
 <%@page import="br.com.entra21java.dao.PessoaDAO"%>
@@ -49,14 +49,11 @@
                     <th>IDTIPO</th>
                     <th>nome</th>
                     <th>email</th>
-                    <th>senha</th>
-                    <th>cpf</th>
-                    <th>idade</th>
                     <th>Ação</th>
                 </tr>
             </tfoot>
         </table>
 
     </div>
-</div>*/
+</div>
 <%@include file="layout/footer.jsp" %>

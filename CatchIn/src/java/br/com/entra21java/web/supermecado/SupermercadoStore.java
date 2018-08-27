@@ -36,7 +36,7 @@ public class SupermercadoStore extends HttpServlet{
         int codigo = new ClientesDAO().adicionarCliente(cliente);
 
         if(codigo > 0){
-            resp.sendRedirect("/SupermercadoGemidao/index");
+            resp.sendRedirect("/CatchIn/index");
         } 
         
     }
