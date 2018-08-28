@@ -5,6 +5,24 @@
         .page-footer{
             background-color: #009aad;
         }
+        nav{
+                background-color: #141861 !important;
+            }
+            body {
+                background-color: #05abbf;
+            }
+            .dropdown-content li{
+                text-align: center !important;
+            }
+            .select-wrapper input.select-dropdown {
+                font-size: x-large !important;
+            }
+            nav i {
+                font-size: xx-large !important;
+            }
+            nav ul a{
+                font-size: x-large !important;
+            }
     </style>
           <div class="container">
             <div class="row">
@@ -15,7 +33,7 @@
               <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Links</h5>
                 <ul>
-                    <li><a class="grey-text text-lighten-3" href="../termos.jsp">Política de Privacidade</a></li>
+                    <li><a class="grey-text text-lighten-3" href="/CatchIn/termos">Política de Privacidade</a></li>
                 </ul>
               </div>
             </div>

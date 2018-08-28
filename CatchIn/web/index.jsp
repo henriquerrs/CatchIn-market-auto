@@ -16,24 +16,6 @@
             .select-wrapper .caret {
                 fill: rgba(255, 255, 255, 0.9);
             }
-            nav{
-                background-color: #141861 !important;
-            }
-            body {
-                background-color: #05abbf;
-            }
-            .dropdown-content li{
-                text-align: center !important;
-            }
-            .select-wrapper input.select-dropdown {
-                font-size: x-large !important;
-            }
-            nav i {
-                font-size: xx-large !important;
-            }
-            nav ul a{
-                font-size: x-large !important;
-            }
         </style>
 <div class="container-fluid">
             <img class="materialboxed" width="100%" src="banner.jpg">
