@@ -50,7 +50,7 @@
             <!--Opções de seleção-->
                <nav>
               <div class="nav-wrapper">
-                <ul class="left hide-on-med-and-down">
+                <ul class="right hide-on-med-and-down">
                   <li><select>
                         <option value="" disabled selected>Categoria</option>
                         <option value="1">Option 1</option>
@@ -60,8 +60,6 @@
                     <li>
                         <a href="#"><i class="material-icons">date_range</i></a>
                     </li>
-                  <!-- Dropdown Trigger -->
-                  <li><a class="dropdown-trigger" href="#" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
                 </ul>
               </div>
             </nav>  
