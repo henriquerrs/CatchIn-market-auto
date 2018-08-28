@@ -6,7 +6,7 @@ package br.com.entra21java.bean;
 public class ListaBean {
     
     private ClienteBean clienteBean;
-    private int cliente_id;
+    private int idCliente;
 
     public ClienteBean getClienteBean() {
         return clienteBean;
@@ -17,11 +17,11 @@ public class ListaBean {
     }
 
     public int getClientes_id() {
-        return cliente_id;
+        return idCliente;
     }
 
     public void setClientes_id(int clientes_id) {
-        this.cliente_id = clientes_id;
+        this.idCliente = clientes_id;
     }
     
 }
