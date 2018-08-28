@@ -18,7 +18,7 @@ public class ClientesDAO {
     public List<ClienteBean> obterCliente() {
 
         List<ClienteBean> clientes = new ArrayList<>();
-        String sql = "SELECT * FROM clientes cl JOIN pessoas ps ON cl.id_pessoas = ps.id";
+        String sql = "SELECT * FROM clientes cl JOIN pessoas ps ON cl.id_pessoa = ps.id";
         try {
             Statement st = Conexao.obterConexao().createStatement();
             st.execute(sql);
@@ -27,7 +27,7 @@ public class ClientesDAO {
                 ClienteBean usuario = new ClienteBean();
                 usuario.setId(resultset.getInt("cl.id"));
                 usuario.setEndereco(resultset.getString("cl.endereco"));
-                usuario.setIdPessoa(resultset.getInt("cl.id_privilegios"));
+                usuario.setIdPessoa(resultset.getInt("cl.id_privilegio"));
 
                 PessoaBean pessoa = new PessoaBean();
                 pessoa.setId(resultset.getInt("ps.id"));
@@ -37,7 +37,7 @@ public class ClientesDAO {
                 pessoa.setCpf(resultset.getString("ps.cpf"));
                 pessoa.setIdade(resultset.getByte("ps.idade"));
                 pessoa.setTelefone(resultset.getString("ps.telefone"));
-                pessoa.setIdPrivilegio(resultset.getInt("ps.id_privilegios"));
+                pessoa.setIdPrivilegio(resultset.getInt("ps.id_privilegio"));
                 usuario.setPessoaBean(pessoa);
 
                 clientes.add(usuario);
@@ -52,8 +52,8 @@ public class ClientesDAO {
 
     public int adicionarCliente(ClienteBean cliente) {
 
-        String sql = "INSERT INTO pessoas (nome,senha,email,cpf,idade,telefone,id_privilegios) VALUES (?,?,?,?,?,?,4);"
-                + "INSERT INTO clientes (endereco, id_pessoas) VALUES (?,?);";
+        String sql = "INSERT INTO pessoas (nome,senha,email,cpf,idade,telefone,id_privilegio) VALUES (?,?,?,?,?,?,4);"
+                + "INSERT INTO clientes (endereco, id_pessoa) VALUES (?,?);";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             int quantidade = 1;
@@ -100,9 +100,9 @@ public class ClientesDAO {
     }
     
     public boolean alterar(ClienteBean cliente) {
-        String sql = "UPDATE clientes cl JOIN pessoas ps ON cl.id_pessoas = ps.id SET cl.endereco = ?, "
-                + "cl.id_pessoas = ?, ps.nome = ?, ps.senha = ?, ps.email = ?, ps.cpf = ?, ps.idade = ?,"
-                + " ps.telefone = ?, ps.id_privilegios = ? WHERE cl.id = ?";
+        String sql = "UPDATE clientes cl JOIN pessoas ps ON cl.id_pessoa = ps.id SET cl.endereco = ?, "
+                + "cl.id_pessoa = ?, ps.nome = ?, ps.senha = ?, ps.email = ?, ps.cpf = ?, ps.idade = ?,"
+                + " ps.telefone = ?, ps.id_privilegio = ? WHERE cl.id = ?";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
             int quantidade = 1;

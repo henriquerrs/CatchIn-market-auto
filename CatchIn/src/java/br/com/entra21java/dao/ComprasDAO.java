@@ -17,7 +17,7 @@ public class ComprasDAO {
     public List<CompraBean> obterCompras() {
         List<CompraBean> compras = new ArrayList<>();
         String sql = "SELECT * FROM compras cp "
-                + "JOIN clientes cl ON cp.id_clientes = cl.id ";
+                + "JOIN clientes cl ON cp.id_cliente = cl.id ";
         try {
             Statement st = Conexao.obterConexao().createStatement();
             st.execute(sql);
@@ -25,7 +25,7 @@ public class ComprasDAO {
             while (resultSet.next()) {
                 CompraBean compra = new CompraBean();
                 compra.setId(resultSet.getInt("cp.id"));
-                compra.setIdClientes(resultSet.getInt("cp.id_clientes"));
+                compra.setIdClientes(resultSet.getInt("cp.id_cliente"));
                 compra.setTotal(resultSet.getDouble("cp.total"));
 
                 ClienteBean cliente = new ClienteBean();

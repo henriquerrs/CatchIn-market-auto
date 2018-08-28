@@ -31,19 +31,19 @@ public class ItemBean {
         this.quantidade = quantidade;
     }
 
-    public int getIdCompras() {
+    public int getIdCompra() {
         return idCompra;
     }
 
-    public void setIdCompras(int idCompras) {
+    public void setIdCompra(int idCompras) {
         this.idCompra = idCompras;
     }
 
-    public int getIdProdutos() {
+    public int getIdProduto() {
         return idProduto;
     }
 
-    public void setIdProdutos(int idProdutos) {
+    public void setIdProduto(int idProdutos) {
         this.idProduto = idProdutos;
     }
 

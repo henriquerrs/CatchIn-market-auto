@@ -16,7 +16,7 @@ public class PessoaDAO {
     
     public List<PessoaBean> ObterUsuario(){
         List<PessoaBean> pessoas = new ArrayList<>();
-        String sql = "SELECT * FROM pessoas ps JOIN privilegios pi ON ps.id_privilegios = pi.id;";
+        String sql = "SELECT * FROM pessoas ps JOIN privilegios pi ON ps.id_privilegio = pi.id;";
         try {
             Statement st = Conexao.obterConexao().createStatement();
             st.execute(sql);
@@ -30,7 +30,7 @@ public class PessoaDAO {
                 pessoa.setCpf(resultSet.getString("ps.cpf"));
                 pessoa.setIdade(resultSet.getByte("ps.idade"));
                 pessoa.setTelefone(resultSet.getString("ps.telefone"));
-                pessoa.setIdPrivilegio(resultSet.getInt("ps.id_privilegios"));
+                pessoa.setIdPrivilegio(resultSet.getInt("ps.id_privilegio"));
                 
                 PrivilegioBean privilegio = new PrivilegioBean();
                 privilegio.setId(resultSet.getInt("pi.id"));

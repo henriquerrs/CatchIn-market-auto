@@ -52,7 +52,5 @@ public class CompraBean {
     public void setItens(List<ItemBean> itens) {
         this.item = itens;
     }
-
-   
     
 }
