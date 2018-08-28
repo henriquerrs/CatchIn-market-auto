@@ -6,7 +6,7 @@
 package br.com.entra21java.web.supermecado;
 
 import br.com.entra21java.bean.ClienteBean;
-import br.com.entra21java.dao.ClientesDAO;
+import br.com.entra21java.dao.ClienteDAO;
 import java.io.IOException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -33,7 +33,7 @@ public class SupermercadoStore extends HttpServlet{
         cliente.getPessoaBean().setIdade(Byte.parseByte(req.getParameter("idade")));
         cliente.getPessoaBean().setTelefone(req.getParameter("telefone"));
         
-        int codigo = new ClientesDAO().adicionarCliente(cliente);
+        int codigo = new ClienteDAO().adicionarCliente(cliente);
 
         if(codigo > 0){
             resp.sendRedirect("/CatchIn/index");

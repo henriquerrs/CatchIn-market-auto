@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * @author Crispim Paiano dos Santos
  */
-public class ProdutosDAO {
+public class ProdutoDAO {
     
     public List<ProdutoBean> obterProdutos(){
         
