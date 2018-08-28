@@ -7,10 +7,10 @@ import java.util.List;
 */
 public class CompraBean {
 
-    private int id, idClientes;
+    private int id, idCliente;
     private ClienteBean cliente;
     private double total;
-    private List<ItemBean> itens;
+    private List<ItemBean> item;
 
 
     public int getId() {
@@ -22,11 +22,11 @@ public class CompraBean {
     }
     
     public int getIdClientes() {
-        return idClientes;
+        return idCliente;
     }
 
     public void setIdClientes(int idClientes) {
-        this.idClientes = idClientes;
+        this.idCliente = idClientes;
     }
 
     public ClienteBean getCliente() {
@@ -46,11 +46,11 @@ public class CompraBean {
     }
 
     public List<ItemBean> getItens() {
-        return itens;
+        return item;
     }
 
     public void setItens(List<ItemBean> itens) {
-        this.itens = itens;
+        this.item = itens;
     }
 
    

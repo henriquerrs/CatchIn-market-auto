@@ -33,7 +33,7 @@ public class ItemDAO {
                 ItemBean item = new ItemBean();
                 item.setId(resultSet.getInt("it.id"));
                 item.setQuantidade(resultSet.getInt("it.quantidade"));
-                item.setIdCompras(resultSet.getInt("it.id_compras"));
+                item.setIdCompras(resultSet.getInt("it.id_compra"));
                 item.setIdProdutos(resultSet.getInt("it.id_produtos"));
 
                 ProdutoBean produto = new ProdutoBean();

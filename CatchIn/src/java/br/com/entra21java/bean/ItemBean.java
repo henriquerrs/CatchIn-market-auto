@@ -11,7 +11,7 @@ package br.com.entra21java.bean;
  */
 public class ItemBean {
 
-    private int id, quantidade, idCompras, idProdutos;
+    private int id, quantidade, idCompra, idProduto;
     private CompraBean compra;
     private ProdutoBean produto;
 
@@ -32,19 +32,19 @@ public class ItemBean {
     }
 
     public int getIdCompras() {
-        return idCompras;
+        return idCompra;
     }
 
     public void setIdCompras(int idCompras) {
-        this.idCompras = idCompras;
+        this.idCompra = idCompras;
     }
 
     public int getIdProdutos() {
-        return idProdutos;
+        return idProduto;
     }
 
     public void setIdProdutos(int idProdutos) {
-        this.idProdutos = idProdutos;
+        this.idProduto = idProdutos;
     }
 
     public CompraBean getCompra() {
