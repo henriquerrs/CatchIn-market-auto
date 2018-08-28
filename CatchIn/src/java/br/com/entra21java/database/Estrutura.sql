@@ -30,11 +30,11 @@ CREATE TABLE IF NOT EXISTS `supermercado_gemidao`.`pessoas` (
   `cpf` VARCHAR(11) NULL,
   `idade` TINYINT NULL,
   `telefone` VARCHAR(45) NULL,
-  `id_privilegios` INT NOT NULL,
+  `id_privilegio` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_pessoas_privilegios1_idx` (`id_privilegios` ASC),
+  INDEX `fk_pessoas_privilegios1_idx` (`id_privilegio` ASC),
   CONSTRAINT `fk_pessoas_privilegios1`
-    FOREIGN KEY (`id_privilegios`)
+    FOREIGN KEY (`id_privilegio`)
     REFERENCES `supermercado_gemidao`.`privilegios` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -47,11 +47,11 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `supermercado_gemidao`.`clientes` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `endereco` VARCHAR(45) NULL,
-  `id_pessoas` INT NOT NULL,
+  `id_pessoa` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_clientes_pessoas1_idx` (`id_pessoas` ASC),
+  INDEX `fk_clientes_pessoas1_idx` (`id_pessoa` ASC),
   CONSTRAINT `fk_clientes_pessoas1`
-    FOREIGN KEY (`id_pessoas`)
+    FOREIGN KEY (`id_pessoa`)
     REFERENCES `supermercado_gemidao`.`pessoas` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -65,11 +65,11 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `supermercado_gemidao`.`colaboradores` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `cargo` VARCHAR(45) NULL DEFAULT NULL,
-  `id_pessoas` INT NOT NULL,
+  `id_pessoa` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_colaboradores_pessoas1_idx` (`id_pessoas` ASC),
+  INDEX `fk_colaboradores_pessoas1_idx` (`id_pessoa` ASC),
   CONSTRAINT `fk_colaboradores_pessoas1`
-    FOREIGN KEY (`id_pessoas`)
+    FOREIGN KEY (`id_pessoa`)
     REFERENCES `supermercado_gemidao`.`pessoas` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -81,11 +81,12 @@ DEFAULT CHARACTER SET = utf8;
 -- Table `supermercado_gemidao`.`listas`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `supermercado_gemidao`.`listas` (
-  `id_clientes` INT NOT NULL,
-  INDEX `fk_Clientes_has_Produtos_Clientes1_idx` (`id_clientes` ASC),
-  PRIMARY KEY (`id_clientes`),
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `id_cliente` INT NOT NULL,
+  INDEX `fk_Clientes_has_Produtos_Clientes1_idx` (`id_cliente` ASC),
+  PRIMARY KEY (`id`),
   CONSTRAINT `fk_Clientes_has_Produtos_Clientes1`
-    FOREIGN KEY (`id_clientes`)
+    FOREIGN KEY (`id_cliente`)
     REFERENCES `supermercado_gemidao`.`clientes` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -114,19 +115,20 @@ DEFAULT CHARACTER SET = utf8;
 -- Table `supermercado_gemidao`.`produtos_listas`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `supermercado_gemidao`.`produtos_listas` (
-  `id_listas` INT NOT NULL,
-  `id_produtos` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
+  `id_lista` INT NOT NULL,
+  `id_produto` INT NOT NULL,
   `quantidade` INT NULL,
-  PRIMARY KEY (`id_listas`, `id_produtos`),
-  INDEX `fk_DefaultCompras_has_Produtos_Produtos1_idx` (`id_produtos` ASC),
-  INDEX `fk_DefaultCompras_has_Produtos_DefaultCompras1_idx` (`id_listas` ASC),
+  INDEX `fk_DefaultCompras_has_Produtos_Produtos1_idx` (`id_produto` ASC),
+  INDEX `fk_DefaultCompras_has_Produtos_DefaultCompras1_idx` (`id_lista` ASC),
+  PRIMARY KEY (`id`),
   CONSTRAINT `fk_DefaultCompras_has_Produtos_DefaultCompras1`
-    FOREIGN KEY (`id_listas`)
-    REFERENCES `supermercado_gemidao`.`listas` (`id_clientes`)
+    FOREIGN KEY (`id_lista`)
+    REFERENCES `supermercado_gemidao`.`listas` (`id_cliente`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_DefaultCompras_has_Produtos_Produtos1`
-    FOREIGN KEY (`id_produtos`)
+    FOREIGN KEY (`id_produto`)
     REFERENCES `supermercado_gemidao`.`produtos` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -139,12 +141,12 @@ DEFAULT CHARACTER SET = utf8;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `supermercado_gemidao`.`compras` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `id_clientes` INT NOT NULL,
+  `id_cliente` INT NOT NULL,
   `total` DOUBLE NULL,
-  INDEX `fk_Clientes_has_Produtos_Clientes_idx` (`id_clientes` ASC),
+  INDEX `fk_Clientes_has_Produtos_Clientes_idx` (`id_cliente` ASC),
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_Clientes_has_Produtos_Clientes`
-    FOREIGN KEY (`id_clientes`)
+    FOREIGN KEY (`id_cliente`)
     REFERENCES `supermercado_gemidao`.`clientes` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -158,18 +160,18 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `supermercado_gemidao`.`itens` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `quantidade` TINYINT NULL,
-  `id_compras` INT NOT NULL,
-  `id_produtos` INT NOT NULL,
+  `id_compra` INT NOT NULL,
+  `id_produto` INT NOT NULL,
   PRIMARY KEY (`id`),
-  INDEX `fk_itens_compras1_idx` (`id_compras` ASC),
-  INDEX `fk_itens_produtos1_idx` (`id_produtos` ASC),
+  INDEX `fk_itens_compras1_idx` (`id_compra` ASC),
+  INDEX `fk_itens_produtos1_idx` (`id_produto` ASC),
   CONSTRAINT `fk_itens_compras1`
-    FOREIGN KEY (`id_compras`)
+    FOREIGN KEY (`id_compra`)
     REFERENCES `supermercado_gemidao`.`compras` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
   CONSTRAINT `fk_itens_produtos1`
-    FOREIGN KEY (`id_produtos`)
+    FOREIGN KEY (`id_produto`)
     REFERENCES `supermercado_gemidao`.`produtos` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
@@ -179,4 +181,3 @@ ENGINE = InnoDB;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-
