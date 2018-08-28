@@ -13,7 +13,7 @@ import java.util.List;
 /**
  * @author Crispim Paiano dos Santos
  */
-public class ClientesDAO {
+public class ClienteDAO {
 
     public List<ClienteBean> obterCliente() {
 

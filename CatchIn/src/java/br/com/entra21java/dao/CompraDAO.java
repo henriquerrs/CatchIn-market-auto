@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * @author Crispim Paiano dos Santos
  */
-public class ComprasDAO {
+public class CompraDAO {
 
     public List<CompraBean> obterCompras() {
         List<CompraBean> compras = new ArrayList<>();
