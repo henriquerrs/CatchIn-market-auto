@@ -42,9 +42,9 @@
             <!--navbar itens dropdown-->
             <div class="container">
             <ul id="dropdown1" class="dropdown-content">
-                 <li><a href="#!">one</a></li>
-                  <li><a href="#!">two</a></li>
-                  <li><a href="#!">three</a></li>
+                 <li><a href="#">one</a></li>
+                  <li><a href="#">two</a></li>
+                  <li><a href="#">three</a></li>
             </ul>
             </div>
             <!--Opções de seleção-->
@@ -61,7 +61,7 @@
                         <a href="#"><i class="material-icons">date_range</i></a>
                     </li>
                   <!-- Dropdown Trigger -->
-                  <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+                  <li><a class="dropdown-trigger" href="#" data-target="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
                 </ul>
               </div>
             </nav>  
