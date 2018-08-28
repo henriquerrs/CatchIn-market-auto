@@ -8,7 +8,7 @@ import java.sql.DriverManager;
  */
 public class Conexao {
     
-    private static final String HOST="jdbc:mysql://localhost/supermercado_gemidao";
+    private static final String HOST="jdbc:mysql://localhost/supermercado_catchin";
     private static final String USER="root";
     private static final String PASSWORD="";
     private static final String CLASS="com.mysql.jdbc.Driver";
