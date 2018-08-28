@@ -64,14 +64,5 @@
               </div>
             </nav>  
         </div>
-        <script type="text/javascript">
-            $(".dropdown-trigger").dropdown();
-        </script>
-        <script type="text/javascript">
-            $(document).ready(function(){
-                $('.datepicker').datepicker();
-              }); $(document).ready(function(){
-                $('select').formSelect();
-              });
-        </script>
+
 <%@include file="layout/footer.jsp" %>
