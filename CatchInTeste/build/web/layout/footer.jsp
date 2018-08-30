@@ -1,11 +1,11 @@
 </div>
 
-<script type="text/javascript" src="/CatchIn/tema/materialize/js/materialize.min.js"></script>
-<script type="text/javascript" src="/CatchIn/libs/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="/CatchIn/tema/materialize-stepper/materialize-stepper.min.js"></script>
-<script type="text/javascript" src="/CatchIn/libs/jquery-validate/jquery.validate.min.js"></script>
-<script type="text/javascript" src="/CatchIn/libs/jquery-mask/jquery.mask.js"></script>
-<script type="text/javascript" src="/CatchIn/js/custom.js"></script>
+<script type="text/javascript" src="/tema/materialize/js/materialize.min.js"></script>
+<script type="text/javascript" src="/libs/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/tema/materialize-stepper/materialize-stepper.min.js"></script>
+<script type="text/javascript" src="/libs/jquery-validate/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/libs/jquery-mask/jquery.mask.js"></script>
+<script type="text/javascript" src="/js/custom.js"></script>
 
 <footer class="page-footer" id="footer">
     <style type="text/css">
@@ -40,7 +40,7 @@
               <div class="col l4 offset-l2 s12">
                 <h5 class="white-text">Links</h5>
                 <ul>
-                    <li><a class="grey-text text-lighten-3" href="/CatchIn/termos">Política de Privacidade</a></li>
+                    <li><a class="grey-text text-lighten-3" href="/termos">Política de Privacidade</a></li>
                 </ul>
               </div>
             </div>

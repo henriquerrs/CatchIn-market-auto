@@ -1,6 +1,5 @@
 <%@include file="layout/masterPrincipal.jsp" %>
-<form action='/CatchIn/supermercado/supermercadoStore' method='post'>
-    <!--action='/CatchIn/supermercado/supermercadoStore'-->
+<form action='/supermercado/store' method='post'>
     <div class="section scrollspy" id="non-linear">
         <div class="row">
             <div class="col s12 center"><h5>Faça seu cadastro</h5></div>

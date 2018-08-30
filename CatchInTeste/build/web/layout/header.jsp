@@ -1,6 +1,6 @@
 <nav>
     <div class="nav-wrapper">
-        <a href="/CatchIn/" class="brand-logo"><i class="material-icons">shopping_basket</i>CatchIn</a>
+        <a href="/" class="brand-logo"><i class="material-icons">shopping_basket</i>CatchIn</a>
         <ul class="right hide-on-med-and-down">
             <li class="input-field">
                 <style type="text/css">

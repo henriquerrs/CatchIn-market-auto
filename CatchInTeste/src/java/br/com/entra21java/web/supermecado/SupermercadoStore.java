@@ -9,6 +9,7 @@ import br.com.entra21java.bean.ClienteBean;
 import br.com.entra21java.dao.ClienteDAO;
 import java.io.IOException;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,6 +18,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Alunos
  */
+@WebServlet("/supermercado/store")
 public class SupermercadoStore extends HttpServlet{
 
     @Override
@@ -36,7 +38,7 @@ public class SupermercadoStore extends HttpServlet{
         int codigo = new ClienteDAO().adicionarCliente(cliente);
 
         if(codigo > 0){
-            resp.sendRedirect("/CatchIn/index");
+            resp.sendRedirect("/index");
         } 
         
     }

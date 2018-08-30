@@ -1,5 +1,6 @@
-package br.com.entra21java.web.supermecado;
+package br.com.entra21java.web;
 
+import br.com.entra21java.web.supermecado.*;
 import br.com.entra21java.bean.PessoaBean;
 import br.com.entra21java.dao.PessoaDAO;
 import java.io.IOException;
@@ -14,15 +15,18 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * @author Crispim Paiano dos Santos
  */
-@WebServlet(urlPatterns = "/index")
-public class SupermecadoIndex extends HttpServlet{
-    
+@WebServlet(urlPatterns = "")
+public class ServletIndex extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
-        List<PessoaBean> clientes = new PessoaDAO().ObterUsuario();
-        req.getRequestDispatcher("/principal.jsp").include(req, resp);
+        boolean logado = Boolean.parseBoolean(req.getParameter("logado"));
+        if (logado == true) {
+            List<PessoaBean> clientes = new PessoaDAO().ObterUsuario();
+            req.getRequestDispatcher("/index.jsp").include(req, resp);
+        } else {
+            req.getRequestDispatcher("/login.jsp").include(req, resp);
+        }
     }
-    
+
 }

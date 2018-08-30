@@ -34,8 +34,8 @@
                     <th><%=usuario.getNome()%></th>
                     <th><%=usuario.getEmail()%></th>
                     <th> 
-                        <a href='/WebExemplo02/alimentos/editar?id=<%=usuario.getId()%>' class='btn btn-success'><i class='fa fa-edit'></i>Editar</a>
-                        <a href='/WebExemplo02/alimentos/excluir?id=<%=usuario.getId()%>' class='btn btn-outline-danger'>Excluir</a>
+                        <a href='/alimentos/editar?id=<%=usuario.getId()%>' class='btn btn-success'><i class='fa fa-edit'></i>Editar</a>
+                        <a href='/alimentos/excluir?id=<%=usuario.getId()%>' class='btn btn-outline-danger'>Excluir</a>
                     </th>
                 </tr>
                 <% }%>
