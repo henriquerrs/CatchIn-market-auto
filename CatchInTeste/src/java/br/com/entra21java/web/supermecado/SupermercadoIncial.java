@@ -11,12 +11,12 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Henrique Silva
  */
-@WebServlet("/inicial")
+@WebServlet("/principal")
 public class SupermercadoIncial extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.getRequestDispatcher("/inicial.jsp").include(req, resp);
+        req.getRequestDispatcher("/principal.jsp").include(req, resp);
     }
     
 }
