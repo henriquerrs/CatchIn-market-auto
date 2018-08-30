@@ -1,4 +1,4 @@
-<%@include file="layout/master.jsp" %>
+<%@include file="layout/masterPrincipal.jsp" %>
 <form action='/CatchIn/supermercado/supermercadoStore' method='post'>
     <!--action='/CatchIn/supermercado/supermercadoStore'-->
     <div class="section scrollspy" id="non-linear">

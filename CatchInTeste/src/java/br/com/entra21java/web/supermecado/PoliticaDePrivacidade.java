@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author Henrique Silva
  * @author Sara Reis
  */
+
 @WebServlet("/termos")
 public class PoliticaDePrivacidade extends HttpServlet{
 
@@ -19,5 +20,4 @@ public class PoliticaDePrivacidade extends HttpServlet{
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("termos.jsp").include(req, resp);
     }
-    
 }

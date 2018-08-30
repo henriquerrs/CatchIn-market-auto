@@ -8,7 +8,7 @@
 <%@page import="br.com.entra21java.dao.PessoaDAO"%>
 <%@page import="java.util.List"%>
 <%@page import="br.com.entra21java.bean.PessoaBean"%>
-<%@include file="layout/master.jsp" %>
+<%@include file="layout/masterPrincipal.jsp" %>
 <div class="container">
     <form class="col s12">
         <div class="row">
@@ -29,9 +29,10 @@
                         <label for="lock_open">Senha</label>
                     </div>
                     <div class="input-field col s12">
-                        <button class="waves-effect waves-light btn" type="submit" name="action">Entrar
-                        </button>
-                        <a href="/CatchIn/cadastro.jsp" class="waves-effect waves-teal btn-flat">Registre-se</a>
+<!--                        <button class="waves-effect waves-light btn" type="submit" name="action">Entrar
+                        </button>-->
+                        <a href="/CatchIn/tabela.jsp" class="waves-effect waves-teal btn">Entrar</a>
+                        <a href="/CatchIn/cadastro.jsp" class="waves-effect waves-light btn-flat">Registre-se</a>
                     </div>
                     <div  class="input-field col s12">
                     </div>
