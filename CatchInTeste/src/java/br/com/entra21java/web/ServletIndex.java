@@ -20,6 +20,7 @@ public class ServletIndex extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setContentType("text/html;charset=UTF-8");
         boolean logado = Boolean.parseBoolean(req.getParameter("logado"));
         if (logado == true) {
             List<PessoaBean> clientes = new PessoaDAO().ObterUsuario();
@@ -28,5 +29,4 @@ public class ServletIndex extends HttpServlet {
             req.getRequestDispatcher("/login.jsp").include(req, resp);
         }
     }
-
 }

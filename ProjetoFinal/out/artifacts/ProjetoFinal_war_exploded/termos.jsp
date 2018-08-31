@@ -5,24 +5,24 @@
     Author     : Sara
 --%>
 <%@include file="layout/master.jsp" %>
-    <div>
+    <div style="background-color: #FFFFFF">
     <link rel="stylesheet" type="text/css" href="tema/materialize/css/style.css">
-            <h2>Política de privacidade para 
+            <h2>Polï¿½tica de privacidade para 
             <a href='http://catchIn.nz'>CatchIn</a>
             </h2>
-            <p>Todas as suas informações pessoais recolhidas, serão usadas para o ajudar a tornar a sua visita no nosso site o mais produtiva e agradável possível.</p>
-            <p>A garantia da confidencialidade dos dados pessoais dos utilizadores do nosso site é importante para o CatchIn.</p>
-            <p>Todas as informações pessoais relativas a membros, assinantes, clientes ou visitantes que usem o CatchIn serão tratadas em concordância com a Lei da Proteção de Dados Pessoais de 26 de outubro de 1998 (Lei n.º 67/98).</p>
-            <p>A informação pessoal recolhida pode incluir o seu nome, e-mail, número de telefone e/ou telemóvel, morada, data de nascimento e/ou outros.</p>
-            <p>O uso do CatchIn pressupõe a aceitação deste Acordo de privacidade. A equipa do CatchIn reserva-se ao direito de alterar este acordo sem aviso prévio. Deste modo, recomendamos que consulte a nossa política de privacidade com regularidade de forma a estar sempre atualizado.</p>
-            <h2>Os anúncios</h2>
-            <p>Tal como outros websites, coletamos e utilizamos informação contida nos anúncios. A informação contida nos anúncios, inclui o seu endereço IP (Internet Protocol), o seu ISP (Internet Service Provider, como o Sapo, Clix, ou outro), o browser que utilizou ao visitar o nosso website (como o Internet Explorer ou o Firefox), o tempo da sua visita e que páginas visitou dentro do nosso website.</p>
+            <p>Todas as suas informaï¿½ï¿½es pessoais recolhidas, serï¿½o usadas para o ajudar a tornar a sua visita no nosso site o mais produtiva e agradï¿½vel possï¿½vel.</p>
+            <p>A garantia da confidencialidade dos dados pessoais dos utilizadores do nosso site ï¿½ importante para o CatchIn.</p>
+            <p>Todas as informaï¿½ï¿½es pessoais relativas a membros, assinantes, clientes ou visitantes que usem o CatchIn serï¿½o tratadas em concordï¿½ncia com a Lei da Proteï¿½ï¿½o de Dados Pessoais de 26 de outubro de 1998 (Lei n.ï¿½ 67/98).</p>
+            <p>A informaï¿½ï¿½o pessoal recolhida pode incluir o seu nome, e-mail, nï¿½mero de telefone e/ou telemï¿½vel, morada, data de nascimento e/ou outros.</p>
+            <p>O uso do CatchIn pressupï¿½e a aceitaï¿½ï¿½o deste Acordo de privacidade. A equipa do CatchIn reserva-se ao direito de alterar este acordo sem aviso prï¿½vio. Deste modo, recomendamos que consulte a nossa polï¿½tica de privacidade com regularidade de forma a estar sempre atualizado.</p>
+            <h2>Os anï¿½ncios</h2>
+            <p>Tal como outros websites, coletamos e utilizamos informaï¿½ï¿½o contida nos anï¿½ncios. A informaï¿½ï¿½o contida nos anï¿½ncios, inclui o seu endereï¿½o IP (Internet Protocol), o seu ISP (Internet Service Provider, como o Sapo, Clix, ou outro), o browser que utilizou ao visitar o nosso website (como o Internet Explorer ou o Firefox), o tempo da sua visita e que pï¿½ginas visitou dentro do nosso website.</p>
             <h2>Os Cookies e Web Beacons</h2>
-            <p>Utilizamos cookies para armazenar informação, tais como as suas preferências pessoas quando visita o nosso website. Isto poderá incluir um simples popup, ou uma ligação em vários serviços que providenciamos, tais como fóruns.</p>
-            <p>Em adição também utilizamos publicidade de terceiros no nosso website para suportar os custos de manutenção. Alguns destes publicitários, poderão utilizar tecnologias como os cookies e/ou web beacons quando publicitam no nosso website, o que fará com que esses publicitários (como o Google através do Google AdSense) também recebam a sua informação pessoal, como o endereço IP, o seu ISP, o seu browser, etc. Esta função é geralmente utilizada para geotargeting (mostrar publicidade de Lisboa apenas aos leitores oriundos de Lisboa por ex.) ou apresentar publicidade direcionada a um tipo de utilizador (como mostrar publicidade de restaurante a um utilizador que visita sites de culinária regularmente, por ex.).</p>
-            <p>Você detém o poder de desligar os seus cookies, nas opções do seu browser, ou efetuando alterações nas ferramentas de programas Anti-Virus, como o Norton Internet Security. No entanto, isso poderá alterar a forma como interage com o nosso website, ou outros websites. Isso poderá afetar ou não permitir que faça logins em programas, sites ou fóruns da nossa e de outras redes.</p>
-            <h2>Ligações a Sites de terceiros</h2>
-            <p>O CatchIn possui ligações para outros sites, os quais, a nosso ver, podem conter informações / ferramentas úteis para os nossos visitantes. A nossa política de privacidade não é aplicada a sites de terceiros, pelo que, caso visite outro site a partir do nosso deverá ler a politica de privacidade do mesmo.</p>
-            <p>Não nos responsabilizamos pela política de privacidade ou conteúdo presente nesses mesmos sites.</p>
+            <p>Utilizamos cookies para armazenar informaï¿½ï¿½o, tais como as suas preferï¿½ncias pessoas quando visita o nosso website. Isto poderï¿½ incluir um simples popup, ou uma ligaï¿½ï¿½o em vï¿½rios serviï¿½os que providenciamos, tais como fï¿½runs.</p>
+            <p>Em adiï¿½ï¿½o tambï¿½m utilizamos publicidade de terceiros no nosso website para suportar os custos de manutenï¿½ï¿½o. Alguns destes publicitï¿½rios, poderï¿½o utilizar tecnologias como os cookies e/ou web beacons quando publicitam no nosso website, o que farï¿½ com que esses publicitï¿½rios (como o Google atravï¿½s do Google AdSense) tambï¿½m recebam a sua informaï¿½ï¿½o pessoal, como o endereï¿½o IP, o seu ISP, o seu browser, etc. Esta funï¿½ï¿½o ï¿½ geralmente utilizada para geotargeting (mostrar publicidade de Lisboa apenas aos leitores oriundos de Lisboa por ex.) ou apresentar publicidade direcionada a um tipo de utilizador (como mostrar publicidade de restaurante a um utilizador que visita sites de culinï¿½ria regularmente, por ex.).</p>
+            <p>Vocï¿½ detï¿½m o poder de desligar os seus cookies, nas opï¿½ï¿½es do seu browser, ou efetuando alteraï¿½ï¿½es nas ferramentas de programas Anti-Virus, como o Norton Internet Security. No entanto, isso poderï¿½ alterar a forma como interage com o nosso website, ou outros websites. Isso poderï¿½ afetar ou nï¿½o permitir que faï¿½a logins em programas, sites ou fï¿½runs da nossa e de outras redes.</p>
+            <h2>Ligaï¿½ï¿½es a Sites de terceiros</h2>
+            <p>O CatchIn possui ligaï¿½ï¿½es para outros sites, os quais, a nosso ver, podem conter informaï¿½ï¿½es / ferramentas ï¿½teis para os nossos visitantes. A nossa polï¿½tica de privacidade nï¿½o ï¿½ aplicada a sites de terceiros, pelo que, caso visite outro site a partir do nosso deverï¿½ ler a politica de privacidade do mesmo.</p>
+            <p>Nï¿½o nos responsabilizamos pela polï¿½tica de privacidade ou conteï¿½do presente nesses mesmos sites.</p>
     </div>
 <%@include file="layout/footer.jsp" %>

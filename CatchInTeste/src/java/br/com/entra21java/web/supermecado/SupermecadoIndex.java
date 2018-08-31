@@ -20,9 +20,9 @@ public class SupermecadoIndex extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-
+        resp.setContentType("text/html;charset=UTF-8");
         List<PessoaBean> clientes = new PessoaDAO().ObterUsuario();
-        req.getRequestDispatcher("/principal.jsp").include(req, resp);
+        req.getRequestDispatcher("/index.jsp").include(req, resp);
     }
     
 }

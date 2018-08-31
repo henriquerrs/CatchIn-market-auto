@@ -18,6 +18,7 @@ public class PoliticaDePrivacidade extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        resp.setContentType("text/html;charset=UTF-8");
         req.getRequestDispatcher("termos.jsp").include(req, resp);
     }
 }
