@@ -14,7 +14,7 @@ $(function () {
 
 
     $(function () {
-        $("#datepicker").datepicker({minDate: now.getDate()});
+        $("#datepicker").datepicker({minDate: new DatePicker.getDate()});
     });
 
     $('.datepicker').datepicker({
