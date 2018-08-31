@@ -2,7 +2,7 @@
 <form action='/supermercado/store' method='post'>
     <div class="section scrollspy" id="non-linear">
         <div class="row">
-            <div class="col s12 center"><h5>Faça seu cadastro</h5></div>
+            <div class="col s12 center"><h5>FaÃ§a seu cadastro</h5></div>
             <div class="col l12 m12 s12">
                 <div class="card">
                     <div class="card-content">
@@ -74,10 +74,10 @@
                                 </div>
                             </li>
                             <li class="step">
-                                <div class="step-title waves-effect waves-dark">Às compras</div>
+                                <div class="step-title waves-effect waves-dark">ï¿½s compras</div>
                                 <div class="step-content">
                                     <div class="container">
-                                        <p style="text-align: center">Você foi muito bem, receba esse código promocional para ganhar 5% de desconto na primeira compra!!<p><br/>
+                                        <p style="text-align: center">VocÃª foi muito bem, receba esse cÃ³digo promocional para ganhar 5% de desconto na primeira compra!!<p><br/>
                                         <p style="text-align: center">Use Sabiamente</p>
                                     </div>
                                     <div class="step-actions">

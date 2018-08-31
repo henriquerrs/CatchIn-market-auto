@@ -22,7 +22,7 @@ public class SupermecadoIndex extends HttpServlet{
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         List<PessoaBean> clientes = new PessoaDAO().ObterUsuario();
-        req.getRequestDispatcher("/principal.jsp").include(req, resp);
+        req.getRequestDispatcher("/index.jsp").include(req, resp);
     }
     
 }

@@ -15,7 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * @author Crispim Paiano dos Santos
  */
-@WebServlet(urlPatterns = "/teste")
+@WebServlet(urlPatterns = "")
 public class ServletIndex extends HttpServlet {
 
     @Override

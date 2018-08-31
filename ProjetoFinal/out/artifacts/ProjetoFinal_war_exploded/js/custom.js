@@ -14,7 +14,7 @@ $(function () {
 
 
     $(function () {
-        $("#datepicker").datepicker({minDate: now.getDate()});
+        $("#idade_usuario").datepicker({minDate: now.getDate()});
     });
 
     $('.datepicker').datepicker({
