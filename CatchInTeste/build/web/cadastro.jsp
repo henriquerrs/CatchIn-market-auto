@@ -1,4 +1,4 @@
-<%@include file="layout/masterPrincipal.jsp" %>
+<%@include file="layout/masterSemNavBar.jsp" %>
 <form action='/supermercado/store' method='post'>
     <div class="section scrollspy" id="non-linear">
         <div class="row">
@@ -81,7 +81,7 @@
                                         <p style="text-align: center">Use Sabiamente</p>
                                     </div>
                                     <div class="step-actions">
-                                        <button id="btn-submit" class="waves-effect waves-dark btn blue" type="submit">SUBMIT</button>
+                                        <a href="/index" id="btn-submit" class="waves-effect waves-dark btn blue">SUBMIT</a>
                                     </div>
                                 </div>
                             </li>
