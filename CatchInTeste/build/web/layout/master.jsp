@@ -14,9 +14,9 @@
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <!--Import materialize.css-->
-        <link type="text/css" rel="stylesheet" href="/tema/materialize/css/materialize.min.css"  media="screen,projection"/>
-        <link type="text/css" rel="stylesheet" href="/tema/CustomCss/style.css"/>
-        <link rel="stylesheet" href="/tema/materialize-stepper/materialize-stepper.min.css">
+        <link type="text/css" rel="stylesheet" href="../tema/materialize/css/materialize.min.css"  media="screen,projection"/>
+        <link type="text/css" rel="stylesheet" href="../tema/CustomCss/style.css"/>
+        <link rel="stylesheet" href="../tema/materialize-stepper/materialize-stepper.min.css">
         <!--Let browser know website is optimized for mobile-->
     </head>
 
