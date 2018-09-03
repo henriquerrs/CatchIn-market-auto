@@ -4,7 +4,7 @@
     Author     : Leonardo Airam Vieira
 --%>
 
-<%@include file="layout/masterSemNavBar.jsp" %>
+<%@include file="layout/masterBootStrap.jsp" %>
 
     <div class="row row-striped">
         <div class="col-2 text-right">
