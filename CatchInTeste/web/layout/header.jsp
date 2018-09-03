@@ -15,10 +15,6 @@
                     <!--<i class="material-icons">close</i>-->
                 </li>
 
-                <li><a href="#"><i class="material-icons">date_range</i></a></li>
-
-                <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
-
                 <li><a href="#"><i class="material-icons">shopping_cart</i></a></li>
             </ul>
         </div>
