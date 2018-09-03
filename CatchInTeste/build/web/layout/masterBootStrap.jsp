@@ -15,6 +15,5 @@
         <!------ Include the above in your HEAD tag ---------->
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
         
-        <link href="../tema/CustomCss/style.css">
     </head>
     <body>

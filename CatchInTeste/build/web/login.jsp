@@ -26,7 +26,7 @@
                         <br/>
                         <div class="input-field col s12">
                             <i class="material-icons prefix">lock_open</i>
-                            <input id="lock_open" type="tel" class="validate">
+                            <input id="lock_open" type="password" class="validate">
                                 <label for="lock_open">Senha</label>
                         </div>
                         <div class="input-field col s12">

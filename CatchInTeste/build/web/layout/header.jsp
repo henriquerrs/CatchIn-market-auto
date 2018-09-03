@@ -1,5 +1,6 @@
 <nav>
     <div class="nav-wrapper">
+        
         <a href="/" class="brand-logo"><i class="material-icons">shopping_basket</i>CatchIn</a>
 
         <!--<a href="/" class="input-field"><i class="material-icons">shopping_basket</i>CatchIn</a>-->

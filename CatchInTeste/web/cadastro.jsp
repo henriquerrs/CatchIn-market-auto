@@ -26,7 +26,7 @@
                                         <div class="row">
                                             <div class="input-field col s6">
                                                 <i class="material-icons prefix">perm_contact_calendar</i>
-                                                <input id="idade_usuario" type="text" class="datepicker validate required">
+                                                <input id="idade_usuario" type="text" class="datepicker validate required" readonly="true">
                                                 <label for="idade_usuario">Data</label>
                                             </div>
                                             <div class="input-field col s6">
