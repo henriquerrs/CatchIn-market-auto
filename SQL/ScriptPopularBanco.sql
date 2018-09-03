@@ -19,17 +19,17 @@ INSERT INTO produtos(nome, preco, peso, quantidade, marca, categoria, descricao)
 
 SELECT * FROM pessoas;
 INSERT INTO pessoas(nome,senha,email,cpf,idade,telefone,id_privilegio) VALUES
-('Crispim','umdoistresquatro','40028922funkdoyudiplaystation','10258856947',20,'3245154',1),
-('HenriP0N31','242424','LegalizeErvasedicinais@BobMarleyEEU','!!!',21,'3123451514513',2),
-('LeonardoMaria','666','CuidadoComPéNoMeioFio@ComeuUmXSaladaJaSabe','545454545',18,'CuidadoComPéNoMeioFio',3),
-('SaraComH','umdoistresquatro','@@@','2415541',20,'40028922funkdoyudiplaystation',1);
+('Crispim','123','crispim@gmail.com','11111111111',20,'33333333',1),
+('HenriP0N31','123','henrique@gmail.com','11111111111',21,'33333333',2),
+('LeonardoMaria','123','leonardo@gmail.com','11111111111',18,'33333333',3),
+('SaraComH','123','sara@gmail.com','11111111111',17,'33333333',1);
 
 SELECT * FROM clientes;
 INSERT INTO clientes(endereco, id_pessoa) VALUES
-('teste',3),
-('teste',3),
-('teste',3),
-('teste',3);
+('Rua AAA',3),
+('Rua BBB',3),
+('Rua CCC',3),
+('Rua DDD',3);
 
 SELECT * FROM colaboradores;
 INSERT INTO colaboradores(cargo,id_pessoa) VALUES
@@ -51,5 +51,3 @@ INSERT INTO itens (quantidade,id_compra,id_produto) VALUES
 (2,1,2),
 (2,1,2),
 (3,1,1);
-
-SELECT * FROM itens it JOIN produtos pt ON it.id_produto = pt.id;

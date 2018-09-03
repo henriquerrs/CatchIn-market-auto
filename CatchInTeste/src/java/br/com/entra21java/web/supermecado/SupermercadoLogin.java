@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Henrique Silva
+ * @author Henrique Silva and Crispim P.
  */
 @WebServlet("/login")
 public class SupermercadoLogin extends HttpServlet{

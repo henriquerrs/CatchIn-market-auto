@@ -5,6 +5,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 -- Schema supermercado_catchin
 -- -----------------------------------------------------
+DROP DATABASE IF EXISTS supermercado_catchin;
 CREATE SCHEMA IF NOT EXISTS `supermercado_catchin` DEFAULT CHARACTER SET utf8 ;
 USE `supermercado_catchin` ;
 

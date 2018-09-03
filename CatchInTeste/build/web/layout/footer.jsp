@@ -6,6 +6,7 @@
 <script type="text/javascript" src="/libs/jquery-mask/jquery.mask.js"></script>
 <script type="text/javascript" src="/libs/jquery-validate/jquery.validate.min.js"></script>
 <script type="text/javascript" src="/js/custom.js"></script>
+<script type="text/javascript" src="/js/login.js"></script>
 
 <footer class="page-footer" id="footer">
     <style type="text/css">

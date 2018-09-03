@@ -1,8 +1,7 @@
 <%-- 
     Document   : inicial
     Created on : 27/08/2018, 14:00:58
-    Author     : Henrique Silva
-    Author     : Leonardo Airam
+    Author     : Henrique Silva, Leonardo Airam & Crispim P.
 --%>
 
 <%@page import="br.com.entra21java.dao.PessoaDAO"%>
@@ -10,29 +9,24 @@
 <%@page import="br.com.entra21java.bean.PessoaBean"%>
 <%@include file="layout/masterSemNavBar.jsp" %>
 <div class="container">
-    <form class="col s12">
         <div class="row">
             <div class="alinhamento">
                 <fieldset class="center" style="background-color: whitesmoke ">
                     <form action="/login" method="POST">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">account_circle</i>
-                            <input id="icon_prefix" type="text" class="validate">
+                            <input id="login" type="text" class="validate" name="login">
                                 <label for="icon_prefix">Login</label>
                         </div>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
                         <div class="input-field col s12">
                             <i class="material-icons prefix">lock_open</i>
-                            <input id="lock_open" type="password" class="validate">
+                            <input id="senha" type="password" class="validate" name="senha">
                                 <label for="lock_open">Senha</label>
                         </div>
                         <div class="input-field col s12">
                             <!--                        <button class="waves-effect waves-light btn" type="submit" name="action">Entrar
                                                     </button>-->
-                            <button type="submit" class="waves-effect waves-teal btn">Entrar</button>
+                            <button type="button" id="cadastrar">Cadastrar</button>
                             <a href="/cadastro" class="waves-effect waves-light btn-flat">Registre-se</a>
                         </div>
                         <div  class="input-field col s12">
@@ -54,7 +48,6 @@
                 </fieldset>
             </div>
         </div>
-    </form>
 </div>
 </div>
 <%@include file="layout/footer.jsp" %>
