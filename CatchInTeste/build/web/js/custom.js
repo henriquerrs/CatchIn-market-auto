@@ -13,9 +13,9 @@ $(function () {
     });
 
 
-    $(function () {
-        $("#datepicker").datepicker({minDate: new DatePicker.getDate()});
-    });
+//    $(document).ready(function(){
+//        $('.datepicker').datepicker();
+//    });
 
     $('.datepicker').datepicker({
         format: 'dd/mm/yyyy',
@@ -33,7 +33,7 @@ $(function () {
             done: 'Ok',
             previousMonth: '‹',
             nextMonth: '›',
-            months: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+            months: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
             monthsShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Maio', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
             weekdays: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
             weekdaysShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
