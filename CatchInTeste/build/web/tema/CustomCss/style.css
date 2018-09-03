@@ -57,3 +57,11 @@ fieldset{
   height:32px;
   width:260px;
 }
+
+#nome_logo {
+    font-size: large;
+}
+
+placeholder {
+    color: red;
+}
