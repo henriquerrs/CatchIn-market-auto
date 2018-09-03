@@ -15,7 +15,7 @@
                     <!--<i class="material-icons">close</i>-->
                 </li>
 
-                <li><a href="#"><i class="material-icons">shopping_cart</i></a></li>
+                <li><a href="/carrinho"><i class="material-icons">shopping_cart</i></a></li>
             </ul>
         </div>
     </nav>
