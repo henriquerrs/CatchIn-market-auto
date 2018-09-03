@@ -1,10 +1,10 @@
 </div>
 
-<script type="text/javascript" src="/tema/materialize/js/materialize.min.js"></script>
 <script type="text/javascript" src="/libs/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="/tema/materialize/js/materialize.min.js"></script>
 <script type="text/javascript" src="/tema/materialize-stepper/materialize-stepper.min.js"></script>
-<script type="text/javascript" src="/libs/jquery-validate/jquery.validate.min.js"></script>
 <script type="text/javascript" src="/libs/jquery-mask/jquery.mask.js"></script>
+<script type="text/javascript" src="/libs/jquery-validate/jquery.validate.min.js"></script>
 <script type="text/javascript" src="/js/custom.js"></script>
 
 <footer class="page-footer" id="footer">

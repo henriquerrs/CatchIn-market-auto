@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Alunos
+ * @author Leonardo Airam Vieira
  */
 @WebServlet("/calendario/ofertas")
 public class SupermercadoCalendario extends HttpServlet{
