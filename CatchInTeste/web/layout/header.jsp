@@ -11,10 +11,11 @@
                         height: auto;
                     </style>
                     <input id="search" type="search" required>
-                    <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                    <label class="label-icon" for="search"><i class="material-icons" style="color: #141861;">search</i></label><i class="material-icons" style="color: white">search</i>
                     <!--<i class="material-icons">close</i>-->
                 </li>
 
+                <li><a href="#"><i class="material-icons">date_range</i></a></li>
                 <li><a href="#"><i class="material-icons">shopping_cart</i></a></li>
             </ul>
         </div>
