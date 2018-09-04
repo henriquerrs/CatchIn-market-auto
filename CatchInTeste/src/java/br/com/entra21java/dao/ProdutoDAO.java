@@ -30,8 +30,10 @@ public class ProdutoDAO {
                 produto.setPeso(resultset.getDouble("peso"));
                 produto.setQuantidade(resultset.getInt("quantidade"));
                 produto.setMarca(resultset.getString("marca"));
-                produto.setCategoria(resultset.getString("cpf"));                
-                produto.setDescricao(resultset.getString("descricao"));                
+                produto.setCategoria(resultset.getString("categoria"));                
+                produto.setDescricao(resultset.getString("descricao"));         
+                
+                usuarios.add(produto);
             }
         } catch (SQLException e) {
             e.printStackTrace();

@@ -1,9 +1,8 @@
 package br.com.entra21java.web.supermecado;
 
-import br.com.entra21java.bean.PessoaBean;
-import br.com.entra21java.dao.PessoaDAO;
+import br.com.entra21java.bean.ProdutoBean;
+import br.com.entra21java.dao.ProdutoDAO;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -26,7 +25,7 @@ public class SupermecadoIndex extends HttpServlet{
             resp.sendRedirect("/login");
         }
         
-        List<PessoaBean> clientes = new PessoaDAO().ObterUsuario();
+        List<ProdutoBean> produtos = new ProdutoDAO().obterProdutos();
         req.getRequestDispatcher("/index.jsp").include(req, resp);
     }
     
