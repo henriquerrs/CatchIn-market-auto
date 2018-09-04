@@ -39,11 +39,8 @@ INSERT INTO colaboradores(cargo,id_pessoa) VALUES
 ('Frigorifico',4);
 
 SELECT * FROM compras;
-INSERT INTO compras(total) VALUES
-(1.10),
-(1.20),
-(1.30),
-(1.40);
+INSERT INTO compras(total, id_cliente) VALUES
+(1.10, 1);
 
 SELECT * FROM itens;
 INSERT INTO itens (quantidade,id_compra,id_produto) VALUES
