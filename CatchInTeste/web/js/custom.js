@@ -46,3 +46,15 @@ $(function () {
 
     });
 });
+
+$(document).ready(function(){
+  $('#myTable').pageMe({
+    pagerSelector:'#myPager',
+    activeColor: 'indigo',
+    prevText:'Anterior',
+    nextText:'Siguiente',
+    showPrevNext:true,
+    hidePageNumbers:false,
+    perPage:2
+  });
+});

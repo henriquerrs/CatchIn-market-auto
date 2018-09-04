@@ -19,7 +19,7 @@
     #nome_centro_tabela{
         text-align: center;
     }
-    
+
     #botao_compra {
         margin-left: 37%;
     }
@@ -29,7 +29,7 @@
     <div>
         <h1><%= ((ClienteBean) session.getAttribute("cliente")).getId() %></h1>
         <h3>Produtos</h3>
-        <table style="background-color: #009aad;" class='table table-striped table-hover'>
+        <table id="myTable" style="background-color: #009aad;" class='table table-striped table-hover'>
             <thead>
                 <tr style="background-color: #141861;" class='table-primary'>
                     <th style="color: white" class="center">Preço</th>
@@ -41,15 +41,17 @@
             <tbody>
                 <% for (ProdutoBean produto : produtos) {%>
                 <tr>
-                  <th class="center"><%=produto.getPreco()%></th>
-                  <th><%=produto.getNome()%></th>
-                  <th class="center"><%=produto.getMarca()%></th>
+                    <th class="center"><%=produto.getPreco()%></th>
+                    <th><%=produto.getNome()%></th>
+                    <th class="center"><%=produto.getMarca()%></th>
                     <th> 
                         <a id="botao_compra" href='/alimentos/editar?id=<%=produto.getId()%>' class='btn btn-success'><i class="material-icons center">shopping_cart</i></a>
                     </th>
                 </tr>
                 <% }%>
             </tbody>
+            <ul class="pagination pager" id="myPager">
+            </ul>
         </table>
     </div>
 </div>

@@ -7,6 +7,7 @@
 <script type="text/javascript" src="/libs/jquery-validate/jquery.validate.min.js"></script>
 <script type="text/javascript" src="/js/custom.js"></script>
 <script type="text/javascript" src="/js/login.js"></script>
+<script type="text/javascript" src="https://cdn.rawgit.com/pinzon1992/materialize_table_pagination/f9a8478f/js/pagination.js"></script>
 
 <footer class="page-footer" id="footer">
     <style type="text/css">
