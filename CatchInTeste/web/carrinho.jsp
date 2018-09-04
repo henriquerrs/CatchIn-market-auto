@@ -5,15 +5,13 @@
 --%>
 
 <%@page import="br.com.entra21java.bean.ItemBean"%>
-<%@page import="br.com.entra21java.dao.ProdutoDAO"%>
 <%@page import="br.com.entra21java.dao.ItemDAO" %>
 <%@page import="java.util.List"%>
-<%@page import="br.com.entra21java.bean.ProdutoBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="layout/master.jsp" %>
 
 <div id="nome_centro_tabela" class='col-md-12'>
-    <%  int idCompra =1;%>
+    <% int idCompra = Integer.parseInt(request.getParameter("id")); %>
     <% List<ItemBean> itens = new ItemDAO().obterItensPeloIdCompra(idCompra); %>
     <div>
         <br/>
@@ -32,7 +30,7 @@
                 <tr>
                     <th class="center"><%=item.getProduto().getPreco()%></th>
                     <th><%=item.getProduto().getNome()%></th>
-                    <th class="center"><%=item.getProduto().getQuantidade()%></th>
+                    <th class="center"><%=item.getQuantidade() %></th>
                 </tr>
                 <% }%>
             </tbody>

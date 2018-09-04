@@ -47,7 +47,10 @@ INSERT INTO compras(id_cliente,total) VALUES
 
 SELECT * FROM itens;
 INSERT INTO itens (quantidade,id_compra,id_produto) VALUES
-(1,1,1),
-(2,1,2),
-(2,1,2),
-(3,1,1);
+(1,2,1),
+(2,2,2),
+(2,2,2),
+(3,2,1);
+
+
+SELECT * FROM itens it JOIN produtos pr ON (it.id_produto = pr.id) WHERE it.id_compra = 1;

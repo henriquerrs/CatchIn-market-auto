@@ -43,7 +43,7 @@ public class ItemDAO {
                 produto.setPeso(resultSet.getDouble("pr.peso"));
                 produto.setQuantidade(resultSet.getInt("pr.quantidade"));
                 produto.setMarca(resultSet.getString("pr.marca"));
-                produto.setCategoria(resultSet.getString("pr.cpf"));
+                produto.setCategoria(resultSet.getString("pr.categoria"));
                 produto.setDescricao(resultSet.getString("pr.descricao"));
                 
                 item.setProduto(produto);
