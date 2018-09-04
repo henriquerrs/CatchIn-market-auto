@@ -1,3 +1,6 @@
+<%@page import="br.com.entra21java.bean.ItemBean"%>
+<%@page import="br.com.entra21java.dao.ItemDAO"%>
+
 <nav>
     <div class="nav-wrapper">
 
@@ -17,7 +20,7 @@
                     </li>
 
                     <li><a href="#"><i class="material-icons">date_range</i></a></li>
-                    <li><a href="/carrinho"><i class="material-icons">shopping_cart</i></a></li>
+                    <li><a href="/carrinho?id=<%= getInitParameter("id") %>"><i class="material-icons">shopping_cart</i></a></li>
                 </ul>
                 </div>
                 </nav>
