@@ -5,6 +5,8 @@
     Author     : Leonardo Airam
 --%>
 
+<%@page import="br.com.entra21java.bean.ClienteBean"%>
+<%@page import="jdk.nashorn.internal.parser.JSONParser"%>
 <%@include file="layout/master.jsp" %>
 <div class="container-fluid">
     <img class="materialboxed" width="100%" src="/libs/imagens/banner.jpg">
@@ -22,10 +24,10 @@
         margin-left: 37%;
     }
 </style>
-
 <div id="nome_centro_tabela" class='col-md-12'>
     <%  List<ProdutoBean> produtos = new ProdutoDAO().obterProdutos(); %>
     <div>
+        <h1><%= ((ClienteBean) session.getAttribute("cliente")).getId() %></h1>
         <h3>Produtos</h3>
         <table style="background-color: #009aad;" class='table table-striped table-hover'>
             <thead>

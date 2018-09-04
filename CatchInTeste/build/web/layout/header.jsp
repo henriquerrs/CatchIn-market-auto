@@ -1,3 +1,4 @@
+<%@page import="br.com.entra21java.bean.PessoaBean"%>
 <%@page import="br.com.entra21java.bean.ItemBean"%>
 <%@page import="br.com.entra21java.dao.ItemDAO"%>
 
@@ -18,9 +19,9 @@
                         <label class="label-icon" for="search" ><i class="material-icons" style="color: #141861;">search</i></label><i class="material-icons" style="color: white">search</i>
                         <!--<i class="material-icons">close</i>-->
                     </li>
-
+                    <% PessoaBean pessoabean = (PessoaBean)request.getSession().getAttribute("pessoa");  %>
                     <li><a href="#"><i class="material-icons">date_range</i></a></li>
-                    <li><a href="/carrinho?id=<%= getInitParameter("id") %>"><i class="material-icons">shopping_cart</i></a></li>
+                    <li><a href="/carrinho?id="><i class="material-icons">shopping_cart</i></a></li>
                 </ul>
                 </div>
                 </nav>

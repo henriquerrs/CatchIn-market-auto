@@ -57,4 +57,24 @@ public class ItemDAO {
         
         return itens;
     }
+    
+    public int obterIdDaCompra(int idCompra) {
+        int itens = 0;
+        String sql = "SELECT it.id_compra, ps.id FROM itens it JOIN compras cp ON it.id_compra = cp.id JOIN clientes cl ON cl.id = cp.id_cliente JOIN pessoas ps ON ps.id = cl.id_pessoa WHERE ps.id = ?;";
+        try {
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+            ps.setInt(1, idCompra);
+            ps.execute();
+            ResultSet resultSet = ps.getResultSet();
+            while (resultSet.next()) {
+                itens = resultSet.getInt("it.id_compra");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            Conexao.fecharConexao();
+        }
+        
+        return itens;
+    }
 }

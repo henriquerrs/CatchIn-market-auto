@@ -12,7 +12,7 @@ $(function () {
                 var resultado = JSON.parse(data);
                 sessionStorage.setItem("id", resultado.id);
                 alert(resultado.id);
-                window.location = "/index";
+                window.location = "/";
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 alert("Falhou ");

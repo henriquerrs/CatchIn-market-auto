@@ -16,6 +16,12 @@ public class SupermercadoLogin extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        if(req.getSession().getAttribute("cliente") != null){
+            resp.sendRedirect("/");
+            return;
+        }
+        
+        
         resp.setContentType("text/html;charset=UTF-8");
         req.getRequestDispatcher("/login.jsp").include(req, resp);
     }

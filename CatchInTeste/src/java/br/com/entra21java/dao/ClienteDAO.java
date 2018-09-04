@@ -72,7 +72,7 @@ public class ClienteDAO {
                 ps.execute();
                 resultSet = ps.getGeneratedKeys();
                 if (resultSet.next()) {
-                    return resultSet.getInt(1); 
+                    return resultSet.getInt(1);
                 }
             }
 
@@ -84,8 +84,8 @@ public class ClienteDAO {
         return -1;
 
     }
-    
-    public boolean excluirCliente(int id){
+
+    public boolean excluirCliente(int id) {
         String sql = "DELETE FROM clientes WHERE id = ?";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
@@ -93,12 +93,12 @@ public class ClienteDAO {
             return ps.executeUpdate() == 1;
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally{
+        } finally {
             Conexao.fecharConexao();
         }
         return false;
     }
-    
+
     public boolean alterar(ClienteBean cliente) {
         String sql = "UPDATE clientes cl JOIN pessoas ps ON cl.id_pessoa = ps.id SET cl.endereco = ?, "
                 + "cl.id_pessoa = ?, ps.nome = ?, ps.senha = ?, ps.email = ?, ps.cpf = ?, ps.idade = ?,"
@@ -122,6 +122,41 @@ public class ClienteDAO {
             Conexao.fecharConexao();
         }
         return false;
+    }
+
+    public ClienteBean obterPeloIdPessoa(int id) {
+
+        String sql = "SELECT * FROM clientes cl JOIN pessoas ps ON cl.id_pessoa = ps.id WHERE cl.id_pessoa = ?";
+        try {
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+            ps.setInt(1, id);
+            ps.execute();
+            ResultSet resultset = ps.getResultSet();
+            if (resultset.next()) {
+                ClienteBean cliente = new ClienteBean();
+                cliente.setId(resultset.getInt("cl.id"));
+                cliente.setEndereco(resultset.getString("cl.endereco"));
+                cliente.setIdPessoa(resultset.getInt("cl.id_pessoa"));
+
+                PessoaBean pessoa = new PessoaBean();
+                pessoa.setId(resultset.getInt("ps.id"));
+                pessoa.setNome(resultset.getString("ps.nome"));
+                pessoa.setSenha(resultset.getString("ps.senha"));
+                pessoa.setEmail(resultset.getString("ps.email"));
+                pessoa.setCpf(resultset.getString("ps.cpf"));
+                pessoa.setIdade(resultset.getByte("ps.idade"));
+                pessoa.setTelefone(resultset.getString("ps.telefone"));
+                pessoa.setIdPrivilegio(resultset.getInt("ps.id_privilegio"));
+                cliente.setPessoaBean(pessoa);
+                return cliente;
+
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            Conexao.fecharConexao();
+        }
+        return null;
     }
 
 }

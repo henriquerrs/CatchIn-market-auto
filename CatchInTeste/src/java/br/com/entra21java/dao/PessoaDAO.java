@@ -1,5 +1,6 @@
 package br.com.entra21java.dao;
 
+import br.com.entra21java.bean.ClienteBean;
 import br.com.entra21java.bean.PessoaBean;
 import br.com.entra21java.bean.PrivilegioBean;
 import br.com.entra21java.database.Conexao;
@@ -75,7 +76,7 @@ public class PessoaDAO {
 
     }
 
-    public PessoaBean verificarLogin(String login, String senha) {
+    public ClienteBean verificarLogin(String login, String senha) {
         String sql = "SELECT id FROM pessoas WHERE email = ? AND senha = ?";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
@@ -84,7 +85,7 @@ public class PessoaDAO {
             ResultSet resultSet = ps.executeQuery();
             if (resultSet.next()) {
                 int id = resultSet.getInt(1);
-                return obterPeloId(id);
+                return new ClienteDAO().obterPeloIdPessoa(id);
             }
         } catch (SQLException ex) {
             ex.printStackTrace();

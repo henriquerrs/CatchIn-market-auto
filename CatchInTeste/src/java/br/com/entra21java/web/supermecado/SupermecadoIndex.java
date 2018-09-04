@@ -13,20 +13,20 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * @author Crispim Paiano dos Santos
  */
-@WebServlet(urlPatterns = "/index")
-public class SupermecadoIndex extends HttpServlet{
-    
+@WebServlet(urlPatterns = "")
+public class SupermecadoIndex extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
-        
-        if(req.getSession().getAttribute("pessoa") == null){
+
+        if (req.getSession().getAttribute("cliente") == null) {
             resp.sendRedirect("/login");
+            return;
         }
-        
+
         List<ProdutoBean> produtos = new ProdutoDAO().obterProdutos();
         req.getRequestDispatcher("/index.jsp").include(req, resp);
     }
-    
+
 }

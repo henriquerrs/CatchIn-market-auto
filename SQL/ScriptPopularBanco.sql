@@ -26,10 +26,10 @@ INSERT INTO pessoas(nome,senha,email,cpf,idade,telefone,id_privilegio) VALUES
 
 SELECT * FROM clientes;
 INSERT INTO clientes(endereco, id_pessoa) VALUES
-('Rua AAA',3),
-('Rua BBB',3),
+('Rua AAA',1),
+('Rua BBB',2),
 ('Rua CCC',3),
-('Rua DDD',3);
+('Rua DDD',4);
 
 SELECT * FROM colaboradores;
 INSERT INTO colaboradores(cargo,id_pessoa) VALUES
@@ -39,11 +39,11 @@ INSERT INTO colaboradores(cargo,id_pessoa) VALUES
 ('Frigorifico',4);
 
 SELECT * FROM compras;
-INSERT INTO compras(id_cliente,total) VALUES
-(1,10),
-(1,20),
-(1,30),
-(1,40);
+INSERT INTO compras(total) VALUES
+(1.10),
+(1.20),
+(1.30),
+(1.40);
 
 SELECT * FROM itens;
 INSERT INTO itens (quantidade,id_compra,id_produto) VALUES
@@ -53,4 +53,4 @@ INSERT INTO itens (quantidade,id_compra,id_produto) VALUES
 (3,2,1);
 
 
-SELECT * FROM itens it JOIN produtos pr ON (it.id_produto = pr.id) WHERE it.id_compra = 1;
+SELECT it.id_compra, ps.id FROM itens it JOIN compras cp ON it.id_compra = cp.id JOIN clientes cl ON cl.id = cp.id_cliente JOIN pessoas ps ON ps.id = cl.id_pessoa

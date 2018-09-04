@@ -5,6 +5,7 @@
  */
 package br.com.entra21java.web.supermecado;
 
+import br.com.entra21java.bean.ClienteBean;
 import br.com.entra21java.bean.PessoaBean;
 import br.com.entra21java.dao.PessoaDAO;
 import com.google.gson.Gson;
@@ -28,14 +29,14 @@ public class SupermercadoValidar extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String login = req.getParameter("login");
         String senha = req.getParameter("senha");
-        PessoaBean pessoa = new PessoaDAO().verificarLogin(login, senha);
+        ClienteBean cliente = new PessoaDAO().verificarLogin(login, senha);
 
-        if (pessoa != null) {
+        if (cliente != null) {
             HttpSession session = req.getSession();
-            session.setAttribute("pessoa", pessoa);
+            session.setAttribute("cliente", cliente);
             
             HashMap<String, Integer> retorno = new HashMap<>();
-            retorno.put("id", pessoa.getId());
+            retorno.put("id", cliente.getId());
             resp.getWriter().write(new Gson().toJson(retorno));
         } else {
             resp.sendRedirect("");
