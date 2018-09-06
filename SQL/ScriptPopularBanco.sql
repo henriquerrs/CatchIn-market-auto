@@ -52,3 +52,7 @@ SELECT * FROM compras;
 SELECT * FROM clientes;
 SELECT * FROM colaboradores;
 SELECT * FROM itens;
+
+INSERT INTO pessoas (nome,senha,email,telefone,id_privilegio) VALUES ('Teste','teste','teste@teste.com','222222',4);
+INSERT INTO compras (total) VALUES (0);
+INSERT INTO clientes (endereco, id_compra, id_pessoa) VALUES ('Rua dos Bobos',2,3);

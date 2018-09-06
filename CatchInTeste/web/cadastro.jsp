@@ -14,12 +14,12 @@
                                         <div class="row">
                                             <div class="input-field col s6">
                                                 <i class="material-icons prefix">account_circle</i>
-                                                <input id="first_name" type="text" class="validate required" name="nome">
+                                                <input id="nome" type="text" class="validate required" name="nome">
                                                 <label for="first_name">Nome</label>
                                             </div>
                                             <div class="input-field col s6">
                                                 <i class="material-icons prefix">account_circle</i>
-                                                <input id="last_name" type="text" class="validate" name="endereco" required">
+                                                <input id="endereco" type="text" class="validate" name="endereco" required>
                                                 <label for="last_name">Sobrenome</label>
                                             </div>
                                         </div>
@@ -38,7 +38,7 @@
                                         <div class="row">
                                             <div class="input-field col s12">
                                                 <i class="material-icons prefix">mail_outline</i>
-                                                <input name="email" type="email" class="validate" name="email" required>
+                                                <input id="email" type="email" class="validate" name="email" required>
                                                 <label for="email">e-mail</label>
                                             </div>
                                         </div>
@@ -55,14 +55,14 @@
                                         <div class="row">
                                             <div class="input-field col s12">
                                                 <i class="material-icons prefix">account_circle</i>
-                                                <input name="login" type="text" class="validate" required>
+                                                <input name="login" id="login" type="text" class="validate" required>
                                                 <label for="login">Login</label>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s12">
                                                 <i class="material-icons prefix">lock_open</i>
-                                                <input name="password" type="password" class="validate" name="senha" required>
+                                                <input id="senha" type="password" class="validate" name="senha" required>
                                                 <label for="password">Senha</label>
                                             </div>
                                         </div>
@@ -81,7 +81,7 @@
                                         <!--<p style="text-align: center"> </p>-->
                                     </div>
                                     <div class="step-actions">
-                                        <a href="/index" id="btn-submit" class="waves-effect waves-dark btn blue">SUBMIT</a>
+                                        <button type="submit" class="waves-effect waves-light btn" id="cadastrar">Cadastrar</button>
                                     </div>
                                 </div>
                             </li>
@@ -91,5 +91,6 @@
             </div>
         </div>
     </div>
+</form>    
 
     <%@include file="layout/footer.jsp" %>

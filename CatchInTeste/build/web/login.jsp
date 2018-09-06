@@ -26,7 +26,7 @@
                     <div class="input-field col s12">
                         <!--                        <button class="waves-effect waves-light btn" type="submit" name="action">Entrar
                                                 </button>-->
-                        <button type="button" class="waves-effect waves-light btn" id="cadastrar">Entrar</button>
+                        <button type="button" class="waves-effect waves-light btn" id="entrar">Entrar</button>
                         <a href="/cadastro" class="waves-effect waves-light btn-flat">Registre-se</a>
                     </div>
                     <div  class="input-field col s12">

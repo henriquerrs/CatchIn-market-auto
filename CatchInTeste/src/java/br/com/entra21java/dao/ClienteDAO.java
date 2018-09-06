@@ -54,7 +54,7 @@ public class ClienteDAO {
 
         String sql = "INSERT INTO pessoas (nome,senha,email,telefone,id_privilegio) VALUES (?,?,?,?,4);"
                 + "INSERT INTO compras (total) VALUES (0);"
-                + "INSERT INTO clientes (endereco, id_compra, id_pessoa) VALUES (?,?);";
+                + "INSERT INTO clientes (endereco, id_compra, id_pessoa) VALUES (?,?,?);";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             int quantidade = 1;
@@ -62,13 +62,15 @@ public class ClienteDAO {
             ps.setString(quantidade++, cliente.getPessoaBean().getSenha());
             ps.setString(quantidade++, cliente.getPessoaBean().getEmail());
             ps.setString(quantidade++, cliente.getPessoaBean().getTelefone());
-            ps.setString(quantidade++, cliente.getEndereco());
 
             ResultSet resultSet = ps.getGeneratedKeys();
+            System.out.println("Resultado: " + resultSet);
             if (resultSet.next()) {
 
+                ps.setString(quantidade++, cliente.getEndereco());
                 ps.setInt(quantidade++, resultSet.getInt(1));
                 ps.setInt(quantidade++, resultSet.getInt(2));
+                System.out.println("Resultados: " + ps.getGeneratedKeys());
                 ps.execute();
                 resultSet = ps.getGeneratedKeys();
                 if (resultSet.next()) {

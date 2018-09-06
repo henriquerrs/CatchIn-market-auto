@@ -31,8 +31,6 @@ public class SupermercadoStore extends HttpServlet{
         cliente.getPessoaBean().setNome(req.getParameter("nome"));
         cliente.getPessoaBean().setSenha(req.getParameter("senha"));
         cliente.getPessoaBean().setEmail(req.getParameter("email"));
-        cliente.getPessoaBean().setCpf(req.getParameter("cpf"));
-        cliente.getPessoaBean().setIdade(Byte.parseByte(req.getParameter("idade")));
         cliente.getPessoaBean().setTelefone(req.getParameter("telefone"));
         
         int codigo = new ClienteDAO().adicionarCliente(cliente);
