@@ -77,8 +77,8 @@
                                 <div class="step-title waves-effect waves-dark">Às compras</div>
                                 <div class="step-content">
                                     <div class="container">
-                                        <p style="text-align: center">Você foi muito bem, receba esse código promocional para ganhar 5% de desconto na primeira compra!!<p><br/>
-                                        <p style="text-align: center">Use Sabiamente</p>
+                                        <p style="text-align: center; margin-top: 30%;">Muito bem jovem gafanhoto, agora você está apto à fazer compras como um bom capitalista opressor<p>
+                                        <!--<p style="text-align: center"> </p>-->
                                     </div>
                                     <div class="step-actions">
                                         <a href="/index" id="btn-submit" class="waves-effect waves-dark btn blue">SUBMIT</a>

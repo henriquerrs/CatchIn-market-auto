@@ -15,8 +15,6 @@
                     <li class="input-field">
                         <style type="text/css">.nav-wrapper .input-field input[type=search] {height: auto;}
                         </style>
-                        <input id="search" type="search" required placeholder="Buscar..." >
-                        <label class="label-icon" for="search" ><i class="material-icons" style="color: #141861;">search</i></label><i class="material-icons" style="color: white">search</i>
                         <!--<i class="material-icons">close</i>-->
                     </li>
                     <% PessoaBean pessoabean = (PessoaBean)request.getSession().getAttribute("pessoa");  %>
