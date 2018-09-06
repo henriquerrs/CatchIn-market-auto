@@ -4,9 +4,9 @@
 
 <nav>
     <div class="nav-wrapper">
-
-        <a href="/index"><img src="libs/imagens/catchinCOIN.png" style="margin-top: 7px" width="50px" height="50px" class="imagem-logo"><a>
-                <a href='/index' class='brand-logo'>CatchIn</a>
+        
+        <a href="/" style="margin-left: 1%"><i class="fas fa-comment-dollar"></i>
+        <a href="/" id="texto_logo" style=" font-size: xx-large; margin-bottom: 30%; margin-left: 1% !important">CatchIn</a></a>
                 <!--<a id="nome_logo" style="margin-left: 60px" >CatchIn</a>-->
                 <!--<a href="/index" class="brand-logo"><i class="material-icons">shopping_basket</i>CatchIn</a>-->
 

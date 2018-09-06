@@ -23,6 +23,9 @@
     #botao_compra {
         margin-left: 37%;
     }
+    body {
+        background-color: #05adc3;
+    }
 </style>
 <div id="nome_centro_tabela" class='col-md-12'>
     <%  List<ProdutoBean> produtos = new ProdutoDAO().obterProdutos(); %>
