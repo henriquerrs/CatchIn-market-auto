@@ -13,6 +13,7 @@
         
         <!--Import Google Icon Font-->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
         <!--Import materialize.css-->
         <link type="text/css" rel="stylesheet" href="../tema/materialize/css/materialize.min.css"  media="screen,projection"/>
         <link type="text/css" rel="stylesheet" href="../tema/CustomCss/style.css"/>
