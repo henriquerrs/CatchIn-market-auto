@@ -52,16 +52,15 @@ public class ClienteDAO {
 
     public int adicionarCliente(ClienteBean cliente) {
 
-        String sql = "INSERT INTO pessoas (nome,senha,email,cpf,idade,telefone,id_privilegio) VALUES (?,?,?,?,?,?,4);"
-                + "INSERT INTO clientes (endereco, id_pessoa) VALUES (?,?);";
+        String sql = "INSERT INTO pessoas (nome,senha,email,telefone,id_privilegio) VALUES (?,?,?,?,4);"
+                + "INSERT INTO compras (total) VALUES (0);"
+                + "INSERT INTO clientes (endereco, id_compra, id_pessoa) VALUES (?,?);";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             int quantidade = 1;
             ps.setString(quantidade++, cliente.getPessoaBean().getNome());
             ps.setString(quantidade++, cliente.getPessoaBean().getSenha());
             ps.setString(quantidade++, cliente.getPessoaBean().getEmail());
-            ps.setString(quantidade++, cliente.getPessoaBean().getCpf());
-            ps.setByte(quantidade++, cliente.getPessoaBean().getIdade());
             ps.setString(quantidade++, cliente.getPessoaBean().getTelefone());
             ps.setString(quantidade++, cliente.getEndereco());
 
@@ -69,6 +68,7 @@ public class ClienteDAO {
             if (resultSet.next()) {
 
                 ps.setInt(quantidade++, resultSet.getInt(1));
+                ps.setInt(quantidade++, resultSet.getInt(2));
                 ps.execute();
                 resultSet = ps.getGeneratedKeys();
                 if (resultSet.next()) {
