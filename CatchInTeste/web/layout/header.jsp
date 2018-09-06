@@ -5,7 +5,7 @@
 <nav>
     <div class="nav-wrapper">
         
-        <a href="/"><i class="fas fa-comment-dollar"></i></a>
+        <a href="/"><i class="fas fa-comment-dollar" style="margin-left: 2%"></i></a>
         <a href="/"></a>
         <a href="/" style="margin-bottom: 25%">CatchIn</a>
                 <!--<a id="nome_logo" style="margin-left: 60px" >CatchIn</a>-->
