@@ -14,12 +14,12 @@
                                         <div class="row">
                                             <div class="input-field col s6">
                                                 <i class="material-icons prefix">account_circle</i>
-                                                <input id="first_name" type="text" class="validate required">
+                                                <input id="first_name" type="text" class="validate required" name="nome">
                                                 <label for="first_name">Nome</label>
                                             </div>
                                             <div class="input-field col s6">
                                                 <i class="material-icons prefix">account_circle</i>
-                                                <input id="last_name" type="text" class="validate required">
+                                                <input id="last_name" type="text" class="validate" name="endereco" required">
                                                 <label for="last_name">Sobrenome</label>
                                             </div>
                                         </div>
@@ -31,14 +31,14 @@
                                             </div>
                                             <div class="input-field col s6">
                                                 <i class="material-icons prefix">phone</i>
-                                                <input id="telefone" type="tel" class="validate">
+                                                <input id="telefone" type="tel" class="validate" name="telefone">
                                                 <label for="telefone">Telefone</label>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s12">
                                                 <i class="material-icons prefix">mail_outline</i>
-                                                <input name="email" type="email" class="validate" required>
+                                                <input name="email" type="email" class="validate" name="email" required>
                                                 <label for="email">e-mail</label>
                                             </div>
                                         </div>
@@ -62,7 +62,7 @@
                                         <div class="row">
                                             <div class="input-field col s12">
                                                 <i class="material-icons prefix">lock_open</i>
-                                                <input name="password" type="password" class="validate" required>
+                                                <input name="password" type="password" class="validate" name="senha" required>
                                                 <label for="password">Senha</label>
                                             </div>
                                         </div>
@@ -77,8 +77,8 @@
                                 <div class="step-title waves-effect waves-dark">Às compras</div>
                                 <div class="step-content">
                                     <div class="container">
-                                        <p style="text-align: center">Você foi muito bem, receba esse código promocional para ganhar 5% de desconto na primeira compra!!<p><br/>
-                                        <p style="text-align: center">Use Sabiamente</p>
+                                        <p style="text-align: center; margin-top: 30%;">Muito bem jovem gafanhoto, agora você está apto à fazer compras como um bom capitalista opressor<p>
+                                        <!--<p style="text-align: center"> </p>-->
                                     </div>
                                     <div class="step-actions">
                                         <a href="/index" id="btn-submit" class="waves-effect waves-dark btn blue">SUBMIT</a>
