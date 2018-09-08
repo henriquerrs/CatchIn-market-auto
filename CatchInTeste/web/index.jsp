@@ -49,6 +49,7 @@
                     <th class="center"><%=produto.getMarca()%></th>
                     <th> 
                         <a id="botao_compra" href='/alimentos/editar?id=<%=produto.getId()%>' class='btn btn-success'><i class="material-icons center">shopping_cart</i></a>
+                        
                     </th>
                 </tr>
                 <% }%>
