@@ -18,7 +18,6 @@
                         <!--<i class="material-icons">close</i>-->
                     </li>
                     <% PessoaBean pessoabean = (PessoaBean)request.getSession().getAttribute("pessoa");  %>
-                    <li><a href="#"><i class="material-icons">date_range</i></a></li>
                     <li><a href="/carrinho?id="><i class="material-icons">shopping_cart</i></a></li>
                 </ul>
                 </div>
