@@ -58,6 +58,7 @@ public class ClienteDAO {
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             int quantidade = 1;
+            int idCompra = new CompraDAO().criarCompra();
             ps.setString(quantidade++, cliente.getPessoaBean().getNome());
             ps.setString(quantidade++, cliente.getPessoaBean().getSenha());
             ps.setString(quantidade++, cliente.getPessoaBean().getEmail());
@@ -66,10 +67,9 @@ public class ClienteDAO {
             ResultSet resultSet = ps.getGeneratedKeys();
             System.out.println("Resultado: " + resultSet);
             if (resultSet.next()) {
-
                 ps.setString(quantidade++, cliente.getEndereco());
                 ps.setInt(quantidade++, resultSet.getInt(1));
-                ps.setInt(quantidade++, resultSet.getInt(2));
+                ps.setInt(quantidade++, idCompra);
                 System.out.println("Resultados: " + ps.getGeneratedKeys());
                 ps.execute();
                 resultSet = ps.getGeneratedKeys();

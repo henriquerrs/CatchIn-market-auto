@@ -15,7 +15,7 @@
         <ul class="right hide-on-med-and-down">
             <% PessoaBean pessoabean = (PessoaBean) request.getSession().getAttribute("pessoa");%>
             <div>
-                <li><a id="botao_logout" href="/login"><i class="fas fa-sign-out-alt"></i></a></li>
+                <li><a id="botao_logout" href="/logout"><i class="fas fa-sign-out-alt"></i></a></li>
                 <li><a href="/carrinho?id="><i class="material-icons">shopping_cart</i></a></li>
             </div>
         </ul>

@@ -3,6 +3,7 @@ package br.com.entra21java.dao;
 import br.com.entra21java.bean.ClienteBean;
 import br.com.entra21java.bean.CompraBean;
 import br.com.entra21java.database.Conexao;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -43,6 +44,25 @@ public class CompraDAO {
             Conexao.fecharConexao();
         }
         return compras;
+    }
+    
+    public int criarCompra() {
+
+        String sql = "INSERT INTO compras (total) VALUES (total);";
+        try {
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
+            ps.execute();
+            ResultSet resultSet = ps.getGeneratedKeys();
+            if (resultSet.next()) {
+                return resultSet.getInt(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            Conexao.fecharConexao();
+        }
+        return -1;
+
     }
 
 }
