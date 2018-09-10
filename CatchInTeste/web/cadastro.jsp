@@ -15,12 +15,12 @@
                                             <div class="input-field col s6">
                                                 <i class="material-icons prefix">account_circle</i>
                                                 <input id="nome" type="text" class="validate required" name="nome">
-                                                <label for="first_name">Nome</label>
+                                                <label for="nome">Nome</label>
                                             </div>
                                             <div class="input-field col s6">
                                                 <i class="material-icons prefix">account_circle</i>
                                                 <input id="endereco" type="text" class="validate" name="endereco" required>
-                                                <label for="last_name">Endereço</label>
+                                                <label for="enderco">Endereço</label>
                                             </div>
                                         </div>
                                         <div class="row">

@@ -16,14 +16,16 @@
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">account_circle</i>
+                            <label for="login">Login</label>
                             <input id="login" type="text" class="validate" name="login">
-                            <label for="icon_prefix">Login</label>
                         </div>
                     </div>
-                    <div class="input-field col s12">
-                        <i class="material-icons prefix">lock_open</i>
-                        <input id="senha" type="password" class="validate" name="senha">
-                        <label for="lock_open">Senha</label>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <i class="material-icons prefix">lock_open</i>
+                            <label for="senha">Senha</label>
+                            <input id="senha" type="password" class="validate" name="senha">
+                        </div>
                     </div>
                     <div class="input-field col s12">
                         <button type="button" class="waves-effect waves-light btn" id="entrar">Entrar</button>

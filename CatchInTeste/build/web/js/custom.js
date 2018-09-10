@@ -18,8 +18,11 @@ $(function () {
 //    });
 
     $('.datepicker').datepicker({
+        
         format: 'dd/mm/yyyy',
         i18n: {
+            minDate: null,
+            maxDate: null,
             selectMonths: true, //Creates a dropdown to control month
             selectYears: 15, //Creates a dropdown of 15 years to control year
             //The title label to use for the month nav buttons
@@ -40,7 +43,8 @@ $(function () {
             //Materialize modified
             weekdaysAbbrev: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'],
             today: 'Hoje',
-            close: 'Fechar',
+            close: 'Fechar'
+            
             //The format to show on the `input` element
         }
 
