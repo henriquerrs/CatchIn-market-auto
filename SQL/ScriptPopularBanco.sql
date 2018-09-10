@@ -29,7 +29,7 @@ INSERT INTO produtos(nome, preco, peso, quantidade, marca, categoria, descricao)
 ('MACARRÃO ESPAGUETE',2.80,500,1,'Galo','Carboidratosas','É macarrão, tenho certeza'),
 ('MACARRÃO PENNE',2.38,500,1,'Galo','Carboidratosas','É macarrão, tenho certeza'),
 ('LÁMEN',1.50,200,1,'Galo','Carboidratosas','É macarrão, tenho certeza'),
-('MIOJO',0.99,'200',1,'Galo','Carboidratosas','É macarrão, tenho certeza'),
+('MIOJO',0.99,200,1,'Galo','Carboidratosas','É macarrão, tenho certeza'),
 ('FEIJÃO CARIOCA',4.15,1000,1,'Urbano','Carboidratosas','É feijão, tenho certeza'),
 ('FEIJÃO PRETO',4.79,1000,1,'Urbano','Carboidratosas','É feijão, tenho certeza'),
 ('FEIJÃO VERMELHO',5.50,1000,1,'Urbano','Carboidratosas','É feijão, tenho certeza'),
@@ -67,7 +67,7 @@ INSERT INTO produtos(nome, preco, peso, quantidade, marca, categoria, descricao)
 ('FANTA',4.99,2000,1,'Fanta','Carboidratosas','É refrigerante, tenho certeza'),
 ('FANTA',5.50,3000,1,'Fanta','Carboidratosas','É refrigerante, tenho certeza'),
 ('AÇUCAR',1.60,1000,1,'Caravelas','Carboidratosas','É açucar, tenho certeza'),
-('AÇUCAR',7,99,5000,1,'Caravelas','Carboidratosas','É açucar, tenho certeza'),
+('AÇUCAR',7.99,5000,1,'Caravelas','Carboidratosas','É açucar, tenho certeza'),
 ('SAL',2.99,1000,1,'Cisne','Carboidratosas','É sal, tenho certeza'),
 ('SAL',8.85,1000,1,'Cisne','Carboidratosas','É sal, tenho certeza'),
 ('SAL ROSA',3.99,1000,1,'Cisne','Carboidratosas','É sal, tenho certeza'),
@@ -110,7 +110,3 @@ SELECT * FROM compras;
 SELECT * FROM clientes;
 SELECT * FROM colaboradores;
 SELECT * FROM itens;
-
-INSERT INTO pessoas (nome,senha,email,telefone,id_privilegio) VALUES ('Teste','teste','teste@teste.com','222222',4);
-INSERT INTO compras (total) VALUES (0);
-INSERT INTO clientes (endereco, id_compra, id_pessoa) VALUES ('Rua dos Bobos',2,3);

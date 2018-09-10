@@ -1,5 +1,5 @@
 <%@include file="layout/masterSemNavBar.jsp" %>
-<form action='/supermercado/store' method='post'>
+<form action='/store' method='post'>
     <div class="section scrollspy" id="non-linear">
         <div class="row">
             <div class="col s12 center"><h5>Faça seu cadastro</h5></div>
@@ -20,7 +20,7 @@
                                             <div class="input-field col s6">
                                                 <i class="material-icons prefix">account_circle</i>
                                                 <input id="endereco" type="text" class="validate" name="endereco" required>
-                                                <label for="last_name">Sobrenome</label>
+                                                <label for="last_name">Endereço</label>
                                             </div>
                                         </div>
                                         <div class="row">

@@ -48,7 +48,7 @@ public class CompraDAO {
     
     public int criarCompra() {
 
-        String sql = "INSERT INTO compras (total) VALUES (total);";
+        String sql = "INSERT INTO compras (total) VALUES (0);";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             ps.execute();
