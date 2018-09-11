@@ -38,7 +38,7 @@
         <li>
             <img src="libs/imagens/imagem1.jpg" size="100%"> <!-- random image -->
             <div class="caption left-align">
-                <h5 class="light black-text text-lighten-3">Etiqueta LARANJA no CatchIn</h5>
+                <h5 class="light black-text text-lighten-3">Etiqueta Pêssego no CatchIn</h5>
             </div>
         </li>
         <li>

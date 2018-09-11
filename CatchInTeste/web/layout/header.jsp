@@ -12,7 +12,7 @@
         <!--<a href="/index" class="brand-logo"><i class="material-icons">shopping_basket</i>CatchIn</a>-->
 
         <!--<a href="/" class="input-field"><i class="material-icons">shopping_basket</i>CatchIn</a>-->
-        <ul class="right hide-on-med-and-down">
+        <ul class="right">
             <% PessoaBean pessoabean = (PessoaBean) request.getSession().getAttribute("pessoa");%>
             <div>
                 <li><a id="botao_logout" href="/logout"><i class="fas fa-sign-out-alt"></i></a></li>
