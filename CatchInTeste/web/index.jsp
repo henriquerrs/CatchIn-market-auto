@@ -32,6 +32,7 @@
         z-index: 100;
         /* text-align: left; */
     }
+    
 </style>
 <div class="slider">
     <ul class="slides">
@@ -44,18 +45,13 @@
         <li>
             <img src="libs/imagens/imagem2.jpg"> <!-- random image -->
             <div class="caption right-align">
-                <h5 class="light black-text text-lighten-3">May the capitalismo be with you</h5>
+                <h5 class="light white-text text-lighten-3">May the capitalismo be with you</h5>
             </div>
         </li>
         <li>
             <img src="libs/imagens/imagem3.jpg"> <!-- random image -->
             <div class="caption right-align">
                 <h5 class="light grey-text text-lighten-3">Mercado? CatchIn</h5>
-            </div>
-        </li>
-        <li>
-            <img src="libs/imagens/imagem4.jpg" size="70%"> <!-- random image -->
-            <div class="caption center-align">
             </div>
         </li>
     </ul>
@@ -79,7 +75,6 @@
     <div id="nome_centro_tabela" class='col-md-12'>
         <%  List<ProdutoBean> produtos = new ProdutoDAO().obterProdutos();%>
         <div>
-            <h1><%= ((ClienteBean) session.getAttribute("cliente")).getId()%></h1>
             <h1>Seja bem vindo <%= ((ClienteBean) session.getAttribute("cliente")).getPessoaBean().getNome()%>!</h1>
             <h3>Produtos</h3>
             <table id="myTable" style="background-color: #009aad;" class='table table-striped table-hover'>
