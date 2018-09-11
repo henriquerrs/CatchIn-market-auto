@@ -39,7 +39,7 @@ public class SupermercadoStore extends HttpServlet{
         int codigo = new ClienteDAO().adicionarCliente(cliente);
 
         if(codigo > 0){
-            resp.sendRedirect("/index");
+            resp.sendRedirect("/login");
         } 
         
     }

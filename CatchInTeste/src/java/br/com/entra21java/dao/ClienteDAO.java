@@ -52,28 +52,20 @@ public class ClienteDAO {
 
     public int adicionarCliente(ClienteBean cliente) {
 
-        String sql = "INSERT INTO pessoas (nome,senha,email,telefone,id_privilegio) VALUES (?,?,?,?,4);"
-                + "INSERT INTO clientes (endereco, id_compra, id_pessoa) VALUES (?,?,?);";
+        String sql = "INSERT INTO clientes (endereco, id_compra, id_pessoa) VALUES (?,?,?);";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             int quantidade = 1;
             int idCompra = new CompraDAO().criarCompra();
-            ps.setString(quantidade++, cliente.getPessoaBean().getNome());
-            ps.setString(quantidade++, cliente.getPessoaBean().getSenha());
-            ps.setString(quantidade++, cliente.getPessoaBean().getEmail());
-            ps.setString(quantidade++, cliente.getPessoaBean().getTelefone());
+            int idPessoa = new PessoaDAO().adicionarPessoa(cliente.getPessoaBean());
             ps.setString(quantidade++, cliente.getEndereco());
             ps.setInt(quantidade++, idCompra);
+            ps.setInt(quantidade++, idPessoa);
+            ps.execute();
             
             ResultSet resultSet = ps.getGeneratedKeys();
             if (resultSet.next()) {
-                ps.setInt(quantidade++, resultSet.getInt(1));
-                System.out.println("Chave de pessoas: " + resultSet.getInt(1));
-                ps.execute();
-                resultSet = ps.getGeneratedKeys();
-                if (resultSet.next()) {
-                    return resultSet.getInt(1);
-                }
+                return resultSet.getInt(1);
             }
 
         } catch (SQLException e) {

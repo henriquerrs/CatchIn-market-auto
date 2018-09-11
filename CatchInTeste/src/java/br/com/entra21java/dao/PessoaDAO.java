@@ -50,16 +50,14 @@ public class PessoaDAO {
     }
 
     public int adicionarPessoa(PessoaBean pessoa) {
-
-        String sql = "INSERT INTO pessoas (nome,senha,email,cpf,idade,telefone,id_privilegio) VALUES (?,?,?,?,?,?,4);";
+        
+        String sql = "INSERT INTO pessoas (nome,senha,email,telefone,id_privilegio) VALUES (?,?,?,?,4);";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             int quantidade = 1;
             ps.setString(quantidade++, pessoa.getNome());
             ps.setString(quantidade++, pessoa.getSenha());
             ps.setString(quantidade++, pessoa.getEmail());
-            ps.setString(quantidade++, pessoa.getCpf());
-            ps.setByte(quantidade++, pessoa.getIdade());
             ps.setString(quantidade++, pessoa.getTelefone());
             ps.execute();
             ResultSet resultSet = ps.getGeneratedKeys();
