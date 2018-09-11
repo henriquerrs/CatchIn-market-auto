@@ -62,3 +62,7 @@ $(document).ready(function(){
     perPage:10
   });
 });
+
+$(document).ready(function(){
+  $('.slider').slider();
+});

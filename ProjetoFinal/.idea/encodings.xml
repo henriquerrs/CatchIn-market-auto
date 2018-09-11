@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/web/termos.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/build/web/cadastro.jsp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/cadastro.jsp" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/web/index.jsp" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/web/layout/footer.jsp" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/web/tabela.jsp" charset="windows-1252" />
+    <file url="file://$PROJECT_DIR$/web/termos.jsp" charset="windows-1252" />
   </component>
 </project>

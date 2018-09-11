@@ -13,13 +13,16 @@ $(function () {
     });
 
 
-    $(function () {
-        $("#idade_usuario").datepicker({minDate: now.getDate()});
-    });
+//    $(document).ready(function(){
+//        $('.datepicker').datepicker();
+//    });
 
     $('.datepicker').datepicker({
+        
         format: 'dd/mm/yyyy',
         i18n: {
+            minDate: null,
+            maxDate: null,
             selectMonths: true, //Creates a dropdown to control month
             selectYears: 15, //Creates a dropdown of 15 years to control year
             //The title label to use for the month nav buttons
@@ -33,16 +36,33 @@ $(function () {
             done: 'Ok',
             previousMonth: '‹',
             nextMonth: '›',
-            months: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+            months: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
             monthsShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Maio', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
             weekdays: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
             weekdaysShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb'],
             //Materialize modified
             weekdaysAbbrev: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'],
             today: 'Hoje',
-            close: 'Fechar',
+            close: 'Fechar'
+            
             //The format to show on the `input` element
         }
 
     });
+});
+
+$(document).ready(function(){
+  $('#myTable').pageMe({
+    pagerSelector:'#myPager',
+    activeColor: 'indigo',
+    prevText:'Anterior',
+    nextText:'Siguiente',
+    showPrevNext:true,
+    hidePageNumbers:false,
+    perPage:10
+  });
+});
+
+$(document).ready(function(){
+  $('.slider').slider();
 });
