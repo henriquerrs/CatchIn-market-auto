@@ -30,7 +30,7 @@
 <div id="nome_centro_tabela" class='col-md-12'>
     <%  List<ProdutoBean> produtos = new ProdutoDAO().obterProdutos(); %>
     <div>
-        <h1><%= ((ClienteBean) session.getAttribute("cliente")).getId() %></h1>
+        <h1>Seja bem vindo <%= ((ClienteBean) session.getAttribute("cliente")).getPessoaBean().getNome() %>!</h1>
         <h3>Produtos</h3>
         <table id="myTable" style="background-color: #009aad;" class='table table-striped table-hover'>
             <thead>
