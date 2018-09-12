@@ -129,6 +129,7 @@ public class ClienteDAO {
                 cliente.setId(resultset.getInt("cl.id"));
                 cliente.setEndereco(resultset.getString("cl.endereco"));
                 cliente.setIdPessoa(resultset.getInt("cl.id_pessoa"));
+                cliente.setIdCompra(resultset.getInt("cl.id_compra"));
 
                 PessoaBean pessoa = new PessoaBean();
                 pessoa.setId(resultset.getInt("ps.id"));

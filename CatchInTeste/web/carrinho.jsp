@@ -11,8 +11,8 @@
 <%@include file="layout/master.jsp" %>
 
 <div id="nome_centro_tabela" class='col-md-12'>
-    <% int idCompra = Integer.parseInt(request.getParameter("id")); %>
-    <% List<ItemBean> itens = new ItemDAO().obterItensPeloIdCompra(idCompra); %>
+    <% int id = ((ClienteBean) session.getAttribute("cliente")).getIdCompra(); %>
+    <% List<ItemBean> itens = new ItemDAO().obterItensPeloIdCompra(id); %>
     <div>
         <br/>
         <br/>

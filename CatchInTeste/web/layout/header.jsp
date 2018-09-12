@@ -1,3 +1,4 @@
+<%@page import="br.com.entra21java.bean.ClienteBean"%>
 <%@page import="br.com.entra21java.bean.PessoaBean"%>
 <%@page import="br.com.entra21java.bean.ItemBean"%>
 <%@page import="br.com.entra21java.dao.ItemDAO"%>
@@ -13,10 +14,9 @@
 
         <!--<a href="/" class="input-field"><i class="material-icons">shopping_basket</i>CatchIn</a>-->
         <ul class="right">
-            <% PessoaBean pessoabean = (PessoaBean) request.getSession().getAttribute("pessoa");%>
             <div>
                 <li><a id="botao_logout" href="/logout"><i class="fas fa-sign-out-alt"></i></a></li>
-                <li><a href="/carrinho?id="><i class="material-icons">shopping_cart</i></a></li>
+                <li><a href="/carrinho"><i class="material-icons">shopping_cart</i></a></li>
             </div>
         </ul>
     </div>

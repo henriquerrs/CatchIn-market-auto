@@ -23,6 +23,7 @@ public class ItemDAO {
 
     public List<ItemBean> obterItensPeloIdCompra(int idCompra) {
         List<ItemBean> itens = new ArrayList<>();
+        System.out.println("Resultado ID: " + idCompra);
         String sql = "SELECT * FROM itens it JOIN produtos pr ON (it.id_produto = pr.id) WHERE it.id_compra = ?;";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
