@@ -4,7 +4,7 @@
 <%@page import="br.com.entra21java.dao.ItemDAO"%>
 
 <nav>
-    <div class="nav-wrapper">
+    <div class="nav-wrapper "style="background-color: #343838 !important;">
 
         <a href="/" style="margin-left: 1%"><i class="fas fa-comment-dollar"></i>
 
@@ -15,8 +15,8 @@
         <!--<a href="/" class="input-field"><i class="material-icons">shopping_basket</i>CatchIn</a>-->
         <ul class="right">
             <div>
-                <li><a id="botao_logout" href="/logout"><i class="fas fa-sign-out-alt"></i></a></li>
-                <li><a href="/carrinho"><i class="material-icons">shopping_cart</i></a></li>
+                <li><a style="padding-right: 15%" href="/carrinho"><i class="material-icons">shopping_cart</i></a></li>
+                <li><a style="padding-left:  10%" id="botao_logout" href="/logout"><i class="fas fa-sign-out-alt"></i></a></li>
             </div>
         </ul>
     </div>

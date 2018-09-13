@@ -17,9 +17,9 @@
         <br/>
         <br/>
         <h3>Carrinho</h3>
-        <table style="background-color: #009aad;" class='table table-striped table-hover'>
+        <table style="background-color: #d3e2f5;" class='table table-striped table-hover'>
             <thead>
-                <tr style="background-color: #141861;" class='table-primary'>
+                <tr style="background-color: #343838;" class='table-primary'>
                     <th style="color: white" class="center">Preço</th>
                     <th style="color: white">Nome</th>
                     <th style="color: white" class="center">Quantidade</th>

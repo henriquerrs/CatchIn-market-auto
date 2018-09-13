@@ -12,13 +12,13 @@
 <footer class="page-footer" id="footer">
     <style type="text/css">
         .page-footer{
-            background-color: #009aad;
+            background-color: #343838;
         }
         nav{
                 background-color: #141861 !important;
             }
             body {
-                background-color: #05abbf;
+                background-color: lightgrey;
             }
             .dropdown-content li{
                 text-align: center !important;

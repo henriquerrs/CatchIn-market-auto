@@ -69,17 +69,16 @@
             margin-left: 37%;
         }
         body {
-            background-color: #05adc3;
+            background-color: #E8E8E8 !important;
         }
     </style>
     <div id="nome_centro_tabela" class='col-md-12'>
         <%  List<ProdutoBean> produtos = new ProdutoDAO().obterProdutos();%>
         <div>
-            <h1>Seja bem vindo <%= ((ClienteBean) session.getAttribute("cliente")).getPessoaBean().getNome()%>!</h1>
             <h3>Produtos</h3>
-            <table id="myTable" style="background-color: #009aad;" class='table table-striped table-hover'>
+            <table id="myTable" style="background-color: #d3e2f5;" class='table table-striped table-hover'>
                 <thead>
-                    <tr style="background-color: #141861;" class='table-primary'>
+                    <tr style="background-color: #343838;" class='table-primary'>
                         <th style="color: white" class="center">Preço</th>
                         <th style="color: white">Nome</th>
                         <th style="color: white" class="center">Marca</th>
@@ -93,7 +92,7 @@
                         <th><%=produto.getNome()%></th>
                         <th class="center"><%=produto.getMarca()%></th>
                         <th> 
-                            <a id="botao_compra" href='/alimentos/editar?id=<%=produto.getId()%>' class='btn btn-success'><i class="material-icons center">shopping_cart</i></a>
+                            <a id="botao_compra" href='/alimentos/editar?id=<%=produto.getId()%>' class='btn btn-success blue'><i class="material-icons center">shopping_cart</i></a>
 
                         </th>
                     </tr>
