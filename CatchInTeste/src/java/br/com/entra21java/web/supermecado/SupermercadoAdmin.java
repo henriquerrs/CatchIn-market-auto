@@ -22,7 +22,7 @@ public class SupermercadoAdmin extends HttpServlet{
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
 
-        if (req.getSession().getAttribute("admin") == null) {
+        if (req.getSession().getAttribute("cliente") == null) {
             resp.sendRedirect("/login");
             return;
         }
