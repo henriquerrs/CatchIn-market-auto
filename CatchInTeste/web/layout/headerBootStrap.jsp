@@ -17,7 +17,7 @@
         </ul>
     </div>
     <div class="mx-auto order-0">
-        <a class="navbar-brand mx-auto" href="../admin">Categorias</i></a>
+        <a class="navbar-brand mx-auto" href="#">Categorias</i></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -25,10 +25,10 @@
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i></a>
+                <a class="nav-link" href="/carrinho"><i class="fas fa-cart-arrow-down"></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/carrinho"><i class="fas fa-cart-arrow-down"></i></a>
+                <a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i></a>
             </li>
         </ul>
     </div>

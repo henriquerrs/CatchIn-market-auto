@@ -7,6 +7,14 @@
 <%@page import="br.com.entra21java.bean.ClienteBean"%>
 <%@page import="jdk.nashorn.internal.parser.JSONParser"%>
 <%@include file="layout/masterBootStrap.jsp" %>
+<link href="tema/CustomCss/datatable.css" rel="stylesheet">
+<link href="tema/CustomCss/dataTables.bootstrap4.min.css" rel="stylesheet">
+<link href="tema/CustomCss/fixedHeader.bootstrap.min.css" rel="stylesheet">
+<link href="tema/CustomCss/responsive.bootstrap.min.css" rel="stylesheet">
+<title>Página de administração</title>
+
+
+
 <style>
     .slider .indicators .indicator-item {
         background-color: #ffffff;
@@ -49,31 +57,33 @@
         <%  List<ProdutoBean> produtos = new ProdutoDAO().obterProdutos();%>
         <div>
             <h3>Produtos</h3>
-            <table id="myTable" style="background-color: #d3e2f5;" class='table table-striped table-hover'>
+            <table id="table-admin" class="table table-striped table-bordered" style="width:100%">
                 <thead>
-                    <tr style="background-color: #343838;" class='table-primary'>
-                        <th style="color: white" class="center">Preço</th>
-                        <th style="color: white">Nome</th>
-                        <th style="color: white" class="center">Marca</th>
-                        <th style="color: white" class="center">Comprar</th>
+                    <tr>
+                        <th>Preço</th>
+                        <th>Nome</th>
+                        <th>Marca</th>
                     </tr>
                 </thead>
                 <tbody>
                     <% for (ProdutoBean produto : produtos) {%>
                     <tr>
-                        <th class="center"><%=produto.getPreco()%></th>
+                        <th><%=produto.getPreco()%></th>
                         <th><%=produto.getNome()%></th>
-                        <th class="center"><%=produto.getMarca()%></th>
-                        <th> 
-                            <a id="botao_compra" href='/editar?id=<%=produto.getId()%>' class='btn btn-success blue'><i class="material-icons center">border_color</i></a>
-
-                        </th>
+                        <th><%=produto.getMarca()%></th>
+                       
                     </tr>
                     <% }%>
                 </tbody>
-                <ul class="pagination pager" id="myPager">
-                </ul>
+                <tfoot>
+                    <tr>
+                        <th>Preço</th>
+                        <th>Nome</th>
+                        <th>Marca</th>
+                    </tr>
+                </tfoot>
             </table>
         </div>
     </div>
+<script type="text/javascript" src="tema/bootstrap/js/jsbootstrap.js">
 <%@include file="layout/footerBootstrap.jsp" %>
