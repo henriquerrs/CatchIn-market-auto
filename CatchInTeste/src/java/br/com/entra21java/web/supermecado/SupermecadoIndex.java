@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  * @author Crispim Paiano dos Santos
+ * @author Henrique Silva
  */
 @WebServlet(urlPatterns = "")
 public class SupermecadoIndex extends HttpServlet {

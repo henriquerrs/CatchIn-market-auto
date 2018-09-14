@@ -1,4 +1,3 @@
-
 package br.com.entra21java.web.supermecado;
 
 import br.com.entra21java.bean.ProdutoBean;
