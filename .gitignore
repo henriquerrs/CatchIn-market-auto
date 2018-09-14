@@ -1,2 +1,4 @@
 /CatchIn/build/
 /CatchInTeste/dist/
+*.xml
+*.properties
