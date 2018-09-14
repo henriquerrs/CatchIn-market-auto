@@ -7,7 +7,7 @@
 
 <%@page import="br.com.entra21java.bean.ClienteBean"%>
 <%@page import="jdk.nashorn.internal.parser.JSONParser"%>
-<%@include file="layout/masterBootStrap.jsp" %>
+<%@include file="layout/master.jsp" %>
 <!--<div class="container-fluid">
     <img class="materialboxed" width="100%" src="/libs/imagens/banner.jpg">
     navbar itens dropdown
