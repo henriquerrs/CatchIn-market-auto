@@ -92,7 +92,7 @@
                         <th><%=produto.getNome()%></th>
                         <th class="center"><%=produto.getMarca()%></th>
                         <th> 
-                            <a id="botao_compra" href='/alimentos/editar?id=<%=produto.getId()%>' class='btn btn-success blue'><i class="material-icons center">shopping_cart</i></a>
+                            <a id="botao_compra" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><i class="material-icons center">shopping_cart</i></a>
 
                         </th>
                     </tr>
