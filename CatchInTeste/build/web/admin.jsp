@@ -7,10 +7,6 @@
 <%@page import="br.com.entra21java.bean.ClienteBean"%>
 <%@page import="jdk.nashorn.internal.parser.JSONParser"%>
 <%@include file="layout/masterBootStrap.jsp" %>
-<!--<div class="container-fluid">
-    <img class="materialboxed" width="100%" src="/libs/imagens/banner.jpg">
-    navbar itens dropdown
-</div>-->
 <style>
     .slider .indicators .indicator-item {
         background-color: #ffffff;
@@ -80,4 +76,4 @@
             </table>
         </div>
     </div>
-                    <%@include file="layout/footerBootstrap.jsp" %>
+<%@include file="layout/footerBootstrap.jsp" %>

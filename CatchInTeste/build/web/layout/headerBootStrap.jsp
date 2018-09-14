@@ -12,7 +12,7 @@
                 <a class="nav-link" href="../admin"><i class="fas fa-shopping-bag"></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../admin">Cath In</i></a>
+                <a class="nav-link" href="../admin">Catch In</i></a>
             </li>
         </ul>
     </div>
