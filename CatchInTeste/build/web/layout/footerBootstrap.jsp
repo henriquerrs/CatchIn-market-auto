@@ -2,56 +2,72 @@
     Document   : footerBootstrap
     Created on : 03/09/2018, 08:29:51
     Author     : Leonardo Airam Vieira
+    Author     : Henrique Silva
 --%>
 
 <script src="../tema/bootstrap/jquery/jquery-3.3.1.slim.min.js"></script>
 <script src="../tema/bootstrap/jquery/popper.min.js"></script>
 <script src="../tema/bootstrap/js/bootstrap.min.js"></script>
 
-<footer class="page-footer" id="footer">
-    <style type="text/css">
-        .page-footer{
-            background-color: #343838;
-        }
-        nav{
-                background-color: #141861 !important;
-            }
-            body {
-                background-color: lightgrey;
-            }
-            .dropdown-content li{
-                text-align: center !important;
-            }
-            .select-wrapper input.select-dropdown {
-                font-size: x-large !important;
-            }
-            nav i {
-                font-size: xx-large !important;
-            }
-            nav ul a{
-                font-size: x-large !important;
-            }
-    </style>
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Sobre</h5>
-                <p class="grey-text text-lighten-4">Nosso site foi desenvolvido com o objetivo de automatizar e facilitar as compras do cotidiano.<br/> De forma simples e elegante, tornamos tudo isso possível para que você possa ter a melhor experiência!</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                    <li><a class="grey-text text-lighten-3" href="/termos">Política de Privacidade</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2018 Copyright CatchIn
-            </div>
-          </div>
-        </footer>
+<footer class="page-footer font-small teal pt-4" style="
+    background-color: #343a40">
 
-</body>
-</html>
+    <!-- Footer Links -->
+    <div class="container-fluid text-center text-md-left">
+
+        <!-- Grid row -->
+        <div class="row">
+
+            <!-- Grid column -->
+            <div class="col-md-6 mt-md-0 mt-3">
+
+                <!-- Content -->
+                <h5 class="text-uppercase">Sobre</h5>
+                <p>Nosso site foi desenvolvido com o objetivo de automatizar e facilitar as compras do cotidiano.
+                </p>
+                <p>De forma simples e elegante, tornamos tudo isso possível para que você possa ter a melhor experiência!
+                </p>
+
+            </div>
+            <!-- Grid column -->
+
+            <hr class="clearfix w-100 d-md-none pb-3">
+
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+
+                <!-- Links -->
+                
+
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 mb-md-0 mb-3">
+
+                <!-- Links -->
+                <h5 class="text-uppercase">Links</h5>
+
+                <ul class="list-unstyled">
+                    <li>
+                        <a href="/termos">Política de Privacidade</a>
+                    </li>
+                </ul>
+
+            </div>
+            <!-- Grid column -->
+
+        </div>
+        <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3" >© 2018 Copyright:
+        Catch In
+    </div>
+    <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
