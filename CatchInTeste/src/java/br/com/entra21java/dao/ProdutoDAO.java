@@ -7,15 +7,16 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 /**
  * @author Crispim Paiano dos Santos
  */
 public class ProdutoDAO {
-    
-    public List<ProdutoBean> obterProdutos(){
-        
+
+    public List<ProdutoBean> obterProdutos() {
+
         List<ProdutoBean> usuarios = new ArrayList<>();
         String sql = "SELECT * FROM produtos";
         try {
@@ -30,9 +31,9 @@ public class ProdutoDAO {
                 produto.setPeso(resultset.getDouble("peso"));
                 produto.setQuantidade(resultset.getInt("quantidade"));
                 produto.setMarca(resultset.getString("marca"));
-                produto.setCategoria(resultset.getString("categoria"));                
-                produto.setDescricao(resultset.getString("descricao"));         
-                
+                produto.setCategoria(resultset.getString("categoria"));
+                produto.setDescricao(resultset.getString("descricao"));
+
                 usuarios.add(produto);
             }
         } catch (SQLException e) {
@@ -42,20 +43,20 @@ public class ProdutoDAO {
         }
         return usuarios;
     }
-    
-    public int adicionarProduto(ProdutoBean produto){
-        
+
+    public int adicionarProduto(ProdutoBean produto) {
+
         String sql = "INSERT INTO produtos (nome, preco, peso, quantidade, marca, categoria, descricao) VALUES (?,?,?,?,?,?,?)";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             int quantidade = 1;
-            ps.setString(quantidade++,produto.getNome());
-            ps.setDouble(quantidade++,produto.getPreco());
-            ps.setDouble(quantidade++,produto.getPeso());
-            ps.setInt(quantidade++,produto.getQuantidade());
-            ps.setString(quantidade++,produto.getMarca());
-            ps.setString(quantidade++,produto.getCategoria());
-            ps.setString(quantidade++,produto.getDescricao());
+            ps.setString(quantidade++, produto.getNome());
+            ps.setDouble(quantidade++, produto.getPreco());
+            ps.setDouble(quantidade++, produto.getPeso());
+            ps.setInt(quantidade++, produto.getQuantidade());
+            ps.setString(quantidade++, produto.getMarca());
+            ps.setString(quantidade++, produto.getCategoria());
+            ps.setString(quantidade++, produto.getDescricao());
             ps.execute();
             ResultSet resultSet = ps.getGeneratedKeys();
             if (resultSet.next()) {
@@ -65,11 +66,12 @@ public class ProdutoDAO {
             e.printStackTrace();
         } finally {
             Conexao.fecharConexao();
-        }return -1;
-        
+        }
+        return -1;
+
     }
-    
-    public boolean excluirProduto(int id){
+
+    public boolean excluirProduto(int id) {
         String sql = "DELETE FROM produtos WHERE id = ?";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
@@ -77,12 +79,12 @@ public class ProdutoDAO {
             return ps.executeUpdate() == 1;
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally{
+        } finally {
             Conexao.fecharConexao();
         }
         return false;
     }
-    
+
     public boolean alterarProduto(ProdutoBean produto) {
         String sql = "UPDATE produtos SET nome = ?,preco = ?, peso = ?, quantidade = ?, marca = ?, categoria = ?, descricao = ? WHERE id= ?";
         try {
@@ -104,5 +106,25 @@ public class ProdutoDAO {
         return false;
     }
     
-    
+    public List<HashMap<String, String>> obterTodosParaSelect2(String buscaProduto){
+        List<HashMap<String, String>> buscando = new ArrayList<HashMap<String, String>>();
+        String sql = "SELECT * FROM produtos WHERE nome LIKE ? ORDER BY nome";
+        try {
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+            ps.setString(1, "%" + buscaProduto + "%");
+            ps.execute();
+            ResultSet resultSet = ps.getResultSet();
+            while (resultSet.next()) {
+                HashMap<String, String> atual = new HashMap<>();
+                atual.put("id", String.valueOf(resultSet.getInt("id")));
+                atual.put("text", resultSet.getString("nome"));
+                buscando.add(atual);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            Conexao.fecharConexao();
+        }
+        return buscando;
+    }
 }

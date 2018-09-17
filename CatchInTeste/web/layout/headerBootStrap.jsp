@@ -25,6 +25,9 @@
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
+                <a class="nav-link" href="/lista-de-compras"><i class="fas fa-clipboard-list"></i></a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="/carrinho"><i class="fas fa-cart-arrow-down"></i></a>
             </li>
             <li class="nav-item">
