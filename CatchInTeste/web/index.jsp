@@ -12,6 +12,7 @@
     <img class="materialboxed" width="100%" src="/libs/imagens/banner.jpg">
     navbar itens dropdown
 </div>-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <style>
     .slider .indicators .indicator-item {
         background-color: #ffffff;
