@@ -28,7 +28,24 @@
                 <a class="nav-link" href="/lista-de-compras"><i class="fas fa-clipboard-list"></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/carrinho"><i class="fas fa-cart-arrow-down"></i></a>
+                <!--a class="nav-link" href="/carrinho"><i class="fas fa-cart-arrow-down"></i></a-->
+                <div>
+                    <a class="nav-link" data-toggle="modal" data-target="#modalCarrinho" data-whatever="@mdo"><i class="fas fa-cart-arrow-down"></i></a>
+
+                    <div class="modal fade" id="modalCarrinho" tabindex="-1" role="dialog" aria-labelledby="modalHeader" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalHeader">Carrinho</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                   
+                                
+                            </div>
+                        </div>
+                    </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i></a>
