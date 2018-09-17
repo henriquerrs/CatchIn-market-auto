@@ -6,6 +6,7 @@
 package br.com.entra21java.web.supermecado;
 
 import br.com.entra21java.bean.ClienteBean;
+import br.com.entra21java.dao.CompraDAO;
 import br.com.entra21java.dao.ItemDAO;
 import java.io.IOException;
 import javax.servlet.ServletException;

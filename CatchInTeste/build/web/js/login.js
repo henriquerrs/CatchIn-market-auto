@@ -11,7 +11,12 @@ $(function () {
             success: function (data, textStatus, jqXHR) {
                 var resultado = JSON.parse(data);
                 sessionStorage.setItem("id", resultado.id);
-                window.location = "/";
+                sessionStorage.setItem("privilegio",resultado.privilegio);
+                if(resultado.privilegio<4){
+                    window.location = "/admin";
+                }else{
+                    window.location = "";
+                }
             },
             error: function (jqXHR, textStatus, errorThrown) {
                 alert("Falhou ");

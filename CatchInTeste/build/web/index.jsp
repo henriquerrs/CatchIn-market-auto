@@ -5,6 +5,8 @@
     Author     : Leonardo Airam
 --%>
 
+<%@page import="br.com.entra21java.dao.CompraDAO"%>
+<%@page import="br.com.entra21java.dao.ClienteDAO"%>
 <%@page import="br.com.entra21java.bean.ClienteBean"%>
 <%@page import="jdk.nashorn.internal.parser.JSONParser"%>
 <%@include file="layout/masterBootStrap.jsp" %>
@@ -73,6 +75,8 @@
         }
     </style>
     <%  List<ProdutoBean> produtos = new ProdutoDAO().obterProdutos();%>
+    <%  int idCompra = ((ClienteBean)session.getAttribute("cliente")).getIdCompra(); %>
+    <h1>Total das compras: R$<%=new CompraDAO().atualizarTotal(idCompra)%></h1>
     <table class="table">
         <thead>
             <tr style="background-color: #343838;" class='table-primary'>

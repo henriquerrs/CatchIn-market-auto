@@ -37,6 +37,7 @@ public class SupermercadoValidar extends HttpServlet {
             
             HashMap<String, Integer> retorno = new HashMap<>();
             retorno.put("id", cliente.getId());
+            retorno.put("privilegio", cliente.getPessoaBean().getIdPrivilegio());
             resp.getWriter().write(new Gson().toJson(retorno));
         } else {
             resp.sendRedirect("");

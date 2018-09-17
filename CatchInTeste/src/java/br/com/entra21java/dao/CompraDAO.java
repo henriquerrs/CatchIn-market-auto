@@ -65,4 +65,21 @@ public class CompraDAO {
 
     }
 
+    public int atualizarTotal(int idCompra) {
+        String sql = "SELECT SUM(it.quantidade*pr.preco) FROM itens it JOIN produtos pr ON pr.id = it.id_produto WHERE it.id_compra = ?";
+        try {
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+            ps.setInt(1, idCompra);
+            ResultSet resultSet = ps.executeQuery();
+            if (resultSet.next()){
+                return resultSet.getInt(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally{
+            Conexao.fecharConexao();
+        }
+        return -1;
+    }
+
 }
