@@ -19,10 +19,10 @@
         <link type="text/css" rel="stylesheet" href="../tema/CustomCss/style.css"/>
         <link rel="stylesheet" href="../tema/materialize-stepper/materialize-stepper.min.css">
         <!--Let browser know website is optimized for mobile-->
-
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
     </head>
 
     <body>
         <%@include file="header.jsp" %>
 
-        <div class="container">
+        

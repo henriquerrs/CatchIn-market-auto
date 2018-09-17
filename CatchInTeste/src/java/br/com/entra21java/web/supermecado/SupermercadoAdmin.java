@@ -11,11 +11,11 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * @author Crispim Paiano dos Santos
- * @author Henrique Silva
+ *
+ * @author henri
  */
-@WebServlet(urlPatterns = "")
-public class SupermecadoIndex extends HttpServlet {
+@WebServlet("/admin")
+public class SupermercadoAdmin extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -27,7 +27,7 @@ public class SupermecadoIndex extends HttpServlet {
         }
 
         List<ProdutoBean> produtos = new ProdutoDAO().obterProdutos();
-        req.getRequestDispatcher("/index.jsp").include(req, resp);
+        req.getRequestDispatcher("/admin.jsp").include(req, resp);
     }
-
+    
 }
