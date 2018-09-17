@@ -66,3 +66,7 @@ $(document).ready(function(){
 $(document).ready(function(){
   $('.slider').slider();
 });
+
+$('#modalProdutos').on('shown.bs.modal', function () {
+  $('#modalInput').trigger('focus')
+})

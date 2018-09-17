@@ -8,9 +8,10 @@
 <script src="../tema/bootstrap/jquery/jquery-3.3.1.slim.min.js"></script>
 <script src="../tema/bootstrap/jquery/popper.min.js"></script>
 <script src="../tema/bootstrap/js/bootstrap.min.js"></script>
+<script src="../tema/bootstrap/jquery/jquery-3.3.1.min.js" type="text/javascript"></script>
 
 <footer class="page-footer font-small teal pt-4" style="
-    background-color: #343a40">
+    background-color: #dcdcdc">
 
     <!-- Footer Links -->
     <div class="container-fluid text-center text-md-left">
