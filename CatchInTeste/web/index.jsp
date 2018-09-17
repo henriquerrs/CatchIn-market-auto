@@ -33,6 +33,10 @@
         /* text-align: left; */
     }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> 70dc78fb4b64f7e49973dce8573b0be2c54a529b
 =======
 
 >>>>>>> 70dc78fb4b64f7e49973dce8573b0be2c54a529b
