@@ -9,6 +9,9 @@
 <script src="../tema/bootstrap/jquery/popper.min.js"></script>
 <script src="../tema/bootstrap/js/bootstrap.min.js"></script>
 <script src="../tema/bootstrap/jquery/jquery-3.3.1.min.js" type="text/javascript"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+<script src="/js/customJSBootstrap.js"></script>
 
 <footer class="page-footer font-small teal pt-4" style="
     background-color: #dcdcdc">

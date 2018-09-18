@@ -106,25 +106,27 @@ public class ProdutoDAO {
         return false;
     }
     
-    public List<HashMap<String, String>> obterTodosParaSelect2(String buscaProduto){
-        List<HashMap<String, String>> buscando = new ArrayList<HashMap<String, String>>();
-        String sql = "SELECT * FROM produtos WHERE nome LIKE ? ORDER BY nome";
-        try {
-            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
-            ps.setString(1, "%" + buscaProduto + "%");
-            ps.execute();
-            ResultSet resultSet = ps.getResultSet();
-            while (resultSet.next()) {
-                HashMap<String, String> atual = new HashMap<>();
-                atual.put("id", String.valueOf(resultSet.getInt("id")));
-                atual.put("text", resultSet.getString("nome"));
-                buscando.add(atual);
+    public List<HashMap<String, Object>> obterTodosParaDataTable() {
+        List<HashMap<String, Object>> listaProdutos = new ArrayList<>();
+        String sql = "SELECT * FROM produtos";
+        if (Conexao.obterConexao()!= null) {
+            try {
+                Statement statement = Conexao.obterConexao().createStatement();
+                statement.execute(sql);
+                ResultSet resultSet = statement.getResultSet();
+                while (resultSet.next()) {
+                    HashMap<String, Object> produtos = new HashMap<>();
+                    produtos.put("nome", resultSet.getString("nome"));
+                    produtos.put("preco", resultSet.getDouble("preco"));
+                    produtos.put("marca", resultSet.getString("marca"));
+                    listaProdutos.add(produtos);
+                }
+            } catch (SQLException ex) {
+                ex.printStackTrace();
+            } finally {
+                Conexao.fecharConexao();
             }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        } finally {
-            Conexao.fecharConexao();
         }
-        return buscando;
+        return listaProdutos;
     }
 }

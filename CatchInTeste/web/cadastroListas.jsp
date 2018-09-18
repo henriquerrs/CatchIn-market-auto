@@ -40,5 +40,5 @@
             </tbody>
         </table>
     </div>
-</div>>
+</div>
 <%@include file="layout/footerBootstrap.jsp"%>
