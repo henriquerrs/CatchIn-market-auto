@@ -88,11 +88,23 @@
         }
     </style>
     <%  List<ProdutoBean> produtos = new ProdutoDAO().obterProdutos();%>
+<<<<<<< HEAD
     <script>
         $(document).ready(function () {
             $('#example').DataTable();
         });
     </script>
+=======
+    <table class="table">
+        <thead>
+            <tr style="background-color: #343838;" class='table-primary'>
+                <th style="color: white" class="center">Preço</th>
+                <th style="color: white">Nome</th>
+                <th style="color: white" class="center">Marca</th>
+                <th style="color: white" class="center">Comprar</th>
+            </tr>
+        </thead>
+>>>>>>> 7401bf74972fb972625ea6b5b6f6b6a9274797eb
 
 
         <!-- Panel Tickets -->
