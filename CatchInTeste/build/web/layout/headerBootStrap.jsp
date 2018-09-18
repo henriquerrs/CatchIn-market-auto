@@ -11,7 +11,9 @@
     <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
         <ul class="navbar-nav mr-auto">
             <% String pagina = ""; %>
-            <% if(((ClienteBean)session.getAttribute("cliente")).getPessoaBean().getIdPrivilegio() <4){ pagina = "admin";}%>
+            <% if (((ClienteBean) session.getAttribute("cliente")).getPessoaBean().getIdPrivilegio() < 4) {
+                    pagina = "admin";
+                }%>
             <li class="nav-item active">
                 <a class="nav-link" href="/<%=pagina%>"><i class="fas fa-shopping-bag"></i></a>
             </li>
@@ -46,10 +48,16 @@
                                     </button>
                                 </div>
                                 <div class="modal-body">
+                                    <% if (((ClienteBean) session.getAttribute("cliente")).getPessoaBean().getIdPrivilegio() < 4) {%>
+                                    <div class="form-group">
+                                        <h7>Você é um administrador</h7>
+                                    </div>
+                                    <%} else {%>
                                     <div class="form-group">
                                         <%  int idCompra = ((ClienteBean) session.getAttribute("cliente")).getIdCompra();%>
                                         <h7>Total das compras: R$<%=new CompraDAO().atualizarTotal(idCompra)%></h7>
                                     </div>
+                                    <%}%>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
