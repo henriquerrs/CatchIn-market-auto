@@ -35,23 +35,53 @@
         z-index: 100;
         /* text-align: left; */
     }
+    .carousel-inner {
+        height: 400px;
+    }
 </style>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img class="d-block w-100" src="libs/imagens/imagem1.jpg" alt="First slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="libs/imagens/imagem2.jpg" alt="Second slide">
+        </div>
+        <div class="carousel-item">
+            <img class="d-block w-100" src="libs/imagens/imagem3.jpg" alt="Third slide">
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
 <!--<div class="slider">
     <ul class="slides">
         <li>
-            <img src="libs/imagens/imagem1.jpg">  random image 
+            <img src="libs/imagens/imagem1.jpg" class="img-fluid">  random image 
             <div class="caption left-align">
                 <h5 class="light black-text text-lighten-3">Etiqueta Pêssego no CatchIn</h5>
             </div>
         </li>
         <li>
-            <img src="libs/imagens/imagem2.jpg">  random image 
+            <img src="libs/imagens/imagem2.jpg" class="img-fluid">  random image 
             <div class="caption right-align">
                 <h5 class="light white-text text-lighten-3">May the capitalismo be with you</h5>
             </div>
         </li>
         <li>
-            <img src="libs/imagens/imagem3.jpg">  random image 
+            <img src="libs/imagens/imagem3.jpg" class="img-fluid">  random image 
             <div class="caption right-align">
                 <h5 class="light grey-text text-lighten-3">Mercado? CatchIn</h5>
             </div>
@@ -75,8 +105,13 @@
         }
     </style>
     <%  List<ProdutoBean> produtos = new ProdutoDAO().obterProdutos();%>
+<<<<<<< HEAD
+    <%  int idCompra = ((ClienteBean) session.getAttribute("cliente")).getIdCompra();%>
+    <h1>Total das compras: R$<%=new CompraDAO().atualizarTotal(idCompra)%></h1>
+=======
     <!--%  int idCompra = ((ClienteBean)session.getAttribute("cliente")).getIdCompra(); %>
     <h1>Total das compras: R$<%=new CompraDAO().atualizarTotal(idCompra)%></h1-->
+>>>>>>> 9f3c42e323fd71f133b357e087a69dd102662105
     <table class="table">
         <thead>
             <tr style="background-color: #343838;" class='table-primary'>
@@ -94,28 +129,36 @@
                 <th><%=produto.getNome()%></th>
                 <th class="center"><%=produto.getMarca()%></th>
                 <th>
-                    <a id="botao_compra" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><i class="material-icons center">shopping_cart</i></a>
+                    <style>
+                        #botao_quantidade {
+                            width:35px;
+                        }
+                    </style>
+                    <div class="row">
+                        <input id="botao_quantidade" type="number" href="#">
+                        <a id="botao_compra" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><i class="fas fa-shopping-cart"></i></a>
+                    </div>
                 </th>
             </tr>
             <% }%>
         </tbody>
     </table>
 </div>
-    <!--    <div id="nome_centro_tabela" class='col-md-12'>
-    
-    <div>
-        <h3>Produtos</h3>
-        <table id="myTable" style="background-color: #d3e2f5;" class='table table-striped table-hover'>
-            <thead>
-                <tr style="background-color: #343838;" class='table-primary'>
-                    <th style="color: white" class="center">Preço</th>
-                    <th style="color: white">Nome</th>
-                    <th style="color: white" class="center">Marca</th>
-                    <th style="color: white" class="center">Comprar</th>
-                </tr>
-            </thead>
-            <tbody>
-    
+<!--    <div id="nome_centro_tabela" class='col-md-12'>
+
+<div>
+    <h3>Produtos</h3>
+    <table id="myTable" style="background-color: #d3e2f5;" class='table table-striped table-hover'>
+        <thead>
+            <tr style="background-color: #343838;" class='table-primary'>
+                <th style="color: white" class="center">Preço</th>
+                <th style="color: white">Nome</th>
+                <th style="color: white" class="center">Marca</th>
+                <th style="color: white" class="center">Comprar</th>
+            </tr>
+        </thead>
+        <tbody>
+
 </tbody>
 <ul class="pagination pager" id="myPager">
 </ul>

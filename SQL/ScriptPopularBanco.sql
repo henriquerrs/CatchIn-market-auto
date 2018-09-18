@@ -103,10 +103,10 @@ INSERT INTO itens (quantidade,id_compra,id_produto) VALUES
 (2,2,2),
 (3,2,1);
 
-SELECT * FROM privilegios;
-SELECT * FROM produtos;
-SELECT * FROM pessoas;
-SELECT * FROM compras;
-SELECT * FROM clientes;
-SELECT * FROM colaboradores;
-SELECT * FROM itens;
+#SELECT * FROM privilegios;
+#SELECT * FROM produtos;
+#SELECT * FROM pessoas;
+#SELECT * FROM compras;
+#SELECT * FROM clientes;
+#SELECT * FROM colaboradores;
+#SELECT * FROM itens;
