@@ -13,6 +13,13 @@
 <%@page import="java.util.List"%>
 <%@page import="br.com.entra21java.bean.ProdutoBean"%>
 <%@include file="layout/masterBootStrap.jsp" %>
+<link href="tema/CustomCss/datatable.css" rel="stylesheet">
+<link href="tema/CustomCss/dataTables.bootstrap4.min.css" rel="stylesheet">
+<link href="tema/CustomCss/fixedHeader.bootstrap.min.css" rel="stylesheet">
+<link href="tema/CustomCss/responsive.bootstrap.min.css" rel="stylesheet">
+<title>Página de Usuario</title>
+<script src="tema/bootstrap/jquery/jquery-3.3.1.min.js" type="text/javascript"></script>
+
 <!--<div class="container-fluid">
     <img class="materialboxed" width="100%" src="/libs/imagens/banner.jpg">
     navbar itens dropdown
@@ -92,71 +99,97 @@
             $('#example').DataTable();
         });
     </script>
-        <!-- Panel Tickets -->
-        <div class="panel box-shadow">
-            <div class="panel-body">
-                <table class="table table-striped table-hover table-bordered text-shadow" style="width:100%" id="tabela-ticket">
+    <!-- Panel Tickets -->
+    <div class="panel box-shadow">
+        <div class="panel-body">
+            <table id="table-admin" class="table table-striped table-bordered" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Preço</th>
+                        <th>Nome</th>
+                        <th>Marca</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for (ProdutoBean produto : produtos) {%>
+                    <tr>
+                        <th><%=produto.getPreco()%></th>
+                        <th><%=produto.getNome()%></th>
+                        <th><%=produto.getMarca()%></th>
+
+                    </tr>
+                    <% }%>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th>Preço</th>
+                        <th>Nome</th>
+                        <th>Marca</th>
+                    </tr>
+                </tfoot>
+            </table>
+            <!--table class="table table-striped table-hover table-bordered text-shadow" style="width:100%" id="tabela-ticket">
+                <thead>
+                    <tr class='table-primary'>
+                        <th style="background-color: grey; color: white" class="center">Preço</th>
+                        <th style="background-color: grey; color: white">Nome</th>
+                        <th style="background-color: grey; color: white" class="center">Marca</th>
+                        <th style="background-color: grey; color: white" class="center">Comprar</th>
+                    </tr>
+                </thead>
+                <tbody>
+            <% for (ProdutoBean produto : produtos) {%>
+            <tr>
+                <th class="center"><%=produto.getPreco()%></th>
+                <th><%=produto.getNome()%></th>
+                <th class="center"><%=produto.getMarca()%></th>
+                <th>
+                    <style>
+                        #botao_quantidade {
+                            width:35px;
+                        }
+                    </style>
+                    <div class="row">
+                        <input style="margin-left: 30%" id="botao_quantidade" type="number" href="#">
+                        <a style="margin-left: 5%" id="botao_compra" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><i class="fas fa-shopping-cart"></i></a>
+                    </div>
+                </th>
+            </tr>
+            <% }%>
+        </tbody>
+    </table-->
+        </div>
+
+
+        <!--        <table id="example" class="table table-striped table-bordered" style="width:100%">
                     <thead>
-                        <tr class='table-primary'>
-                            <th style="background-color: grey; color: white" class="center">Preço</th>
-                            <th style="background-color: grey; color: white">Nome</th>
-                            <th style="background-color: grey; color: white" class="center">Marca</th>
-                            <th style="background-color: grey; color: white" class="center">Comprar</th>
+                        <tr style="background-color: #343838;" class='table-primary'>
+                            <th style="color: white" class="center">Preço</th>
+                            <th style="color: white">Nome</th>
+                            <th style="color: white" class="center">Marca</th>
+                            <th style="color: white" class="center">Comprar</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <% for (ProdutoBean produto : produtos) {%>
-                        <tr>
-                            <th class="center"><%=produto.getPreco()%></th>
-                            <th><%=produto.getNome()%></th>
-                            <th class="center"><%=produto.getMarca()%></th>
-                            <th>
-                                <style>
-                                    #botao_quantidade {
-                                        width:35px;
-                                    }
-                                </style>
-                                <div class="row">
-                                    <input style="margin-left: 30%" id="botao_quantidade" type="number" href="#">
-                                    <a style="margin-left: 5%" id="botao_compra" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><i class="fas fa-shopping-cart"></i></a>
-                                </div>
-                            </th>
-                        </tr>
-                        <% }%>
-                    </tbody>
-                </table>
-            </div>
-
-
-<!--        <table id="example" class="table table-striped table-bordered" style="width:100%">
-            <thead>
-                <tr style="background-color: #343838;" class='table-primary'>
-                    <th style="color: white" class="center">Preço</th>
-                    <th style="color: white">Nome</th>
-                    <th style="color: white" class="center">Marca</th>
-                    <th style="color: white" class="center">Comprar</th>
-                </tr>
-            </thead>
-            <tbody>
-                <% for (ProdutoBean produto : produtos) {%>
-                <tr>
-                    <th class="center"><%=produto.getPreco()%></th>
-                    <th><%=produto.getNome()%></th>
-                    <th class="center"><%=produto.getMarca()%></th>
-                    <th>
-                        <style>
-                            #botao_quantidade {
-                                width:35px;
-                            }
-                        </style>
-                        <div class="row">
-                            <input id="botao_quantidade" type="number" href="#">
-                            <a id="botao_compra" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><i class="fas fa-shopping-cart"></i></a>
-                        </div>
-                    </th>
-                </tr>
-                <% }%>
-            </tbody>-->
+        <% for (ProdutoBean produto : produtos) {%>
+        <tr>
+            <th class="center"><%=produto.getPreco()%></th>
+            <th><%=produto.getNome()%></th>
+            <th class="center"><%=produto.getMarca()%></th>
+            <th>
+                <style>
+                    #botao_quantidade {
+                        width:35px;
+                    }
+                </style>
+                <div class="row">
+                    <input id="botao_quantidade" type="number" href="#">
+                    <a id="botao_compra" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><i class="fas fa-shopping-cart"></i></a>
+                </div>
+            </th>
+        </tr>
+        <% }%>
+    </tbody>-->
         </table>
     </div>
     <!--    <div id="nome_centro_tabela" class='col-md-12'>
@@ -180,4 +213,5 @@
     </table>
     </div>-->
 </div>
-<%@include file="layout/footerBootstrap.jsp" %>
+<script type="text/javascript" src="tema/bootstrap/js/jsbootstrap.js">
+    <%@include file="layout/footerBootstrap.jsp" %>
