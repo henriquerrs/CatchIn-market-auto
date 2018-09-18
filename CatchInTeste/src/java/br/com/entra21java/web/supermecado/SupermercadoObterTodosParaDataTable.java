@@ -22,8 +22,8 @@ public class SupermercadoObterTodosParaDataTable extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp)
             throws ServletException, IOException {
         HashMap<String, Object> resultado = new HashMap<>();
-        List<HashMap<String, Object>> registros = new ProdutoDAO().obterTodosParaDataTable();
-        resultado.put("data", registros);
+        List<HashMap<String, Object>> produtos = new ProdutoDAO().obterTodosParaDataTable();
+        resultado.put("data", produtos);
         resp.setContentType("text/html;charset=UTF-8");
         resp.getWriter().print(new Gson().toJson(resultado));
     }

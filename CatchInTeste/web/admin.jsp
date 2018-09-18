@@ -51,7 +51,7 @@
             margin-left: 37%;
         }
         body {
-            background-color: black !important;
+            background-color: silver !important;
         }
     </style>
     <div id="nome_centro_tabela" class='col-md-12'>
