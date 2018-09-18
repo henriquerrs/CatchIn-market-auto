@@ -75,8 +75,8 @@
         }
     </style>
     <%  List<ProdutoBean> produtos = new ProdutoDAO().obterProdutos();%>
-    <%  int idCompra = ((ClienteBean)session.getAttribute("cliente")).getIdCompra(); %>
-    <h1>Total das compras: R$<%=new CompraDAO().atualizarTotal(idCompra)%></h1>
+    <!--%  int idCompra = ((ClienteBean)session.getAttribute("cliente")).getIdCompra(); %>
+    <h1>Total das compras: R$<%=new CompraDAO().atualizarTotal(idCompra)%></h1-->
     <table class="table">
         <thead>
             <tr style="background-color: #343838;" class='table-primary'>
