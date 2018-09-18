@@ -10,12 +10,13 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
         <ul class="navbar-nav mr-auto">
-            
+            <% String pagina = ""; %>
+            <% if(((ClienteBean)session.getAttribute("cliente")).getPessoaBean().getIdPrivilegio() <4){ pagina = "admin";}%>
             <li class="nav-item active">
-                <a class="nav-link" href="/admin"><i class="fas fa-shopping-bag"></i></a>
+                <a class="nav-link" href="/<%=pagina%>"><i class="fas fa-shopping-bag"></i></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/admin">Catch In</i></a>
+                <a class="nav-link" href='/<%=pagina%>'>Catch In</i></a>
             </li>
         </ul>
     </div>
