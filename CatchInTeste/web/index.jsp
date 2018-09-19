@@ -129,11 +129,17 @@
                                 }
                             </style>
                             <div class="row">
+<<<<<<< HEAD
                                 <form action='/adicionar' method="get">
                                     <a id="botao_add_carrinho" class='btn btn-success blue'><i class="fas fa-shopping-cart"></i></a>
                                     <input id="botao_quantidade" name="quantidade" type="number" href="#">
                                     <button type="submit" id="botao_compra" name="id" value="<%=produto.getId()%>" class='btn btn-success blue'><i class="fas fa-cart-plus"></i></button>
                                 </form>
+=======
+                                <a id="botao_add_carrinho" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><img style="width: 18px; height: 19px" src="libs/imagens/tem um gay do seu lado...qual lado, decida voce.png"></a>
+                                    <input id="botao_quantidade" type="number" href="#">
+                                    <a id="botao_compra" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><i class="fas fa-cart-plus"></i></a>
+>>>>>>> 52cebad53e36cb8cf537ce643368599edc7add1b
                             </div>
                         </th>
                     </tr>
@@ -147,90 +153,8 @@
                     </tr>
                 </tfoot>
             </table>
-            <!--table class="table table-striped table-hover table-bordered text-shadow" style="width:100%" id="tabela-ticket">
-                <thead>
-                    <tr class='table-primary'>
-                        <th style="background-color: grey; color: white" class="center">Preço</th>
-                        <th style="background-color: grey; color: white">Nome</th>
-                        <th style="background-color: grey; color: white" class="center">Marca</th>
-                        <th style="background-color: grey; color: white" class="center">Comprar</th>
-                    </tr>
-                </thead>
-                <tbody>
-            <% for (ProdutoBean produto : produtos) {%>
-            <tr>
-                <th class="center"><%=produto.getPreco()%></th>
-                <th><%=produto.getNome()%></th>
-                <th class="center"><%=produto.getMarca()%></th>
-                <th>
-                    <style>
-                        #botao_quantidade {
-                            width:35px;
-                        }
-                    </style>
-                    <div class="row">
-                        <input style="margin-left: 30%" id="botao_quantidade" type="number" href="#">
-                        <a style="margin-left: 5%" id="botao_compra" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><i class="fas fa-shopping-cart"></i></a>
-                    </div>
-                </th>
-            </tr>
-            <% }%>
-        </tbody>
-    </table-->
         </div>
-
-
-        <!--        <table id="example" class="table table-striped table-bordered" style="width:100%">
-                    <thead>
-                        <tr style="background-color: #343838;" class='table-primary'>
-                            <th style="color: white" class="center">Preço</th>
-                            <th style="color: white">Nome</th>
-                            <th style="color: white" class="center">Marca</th>
-                            <th style="color: white" class="center">Comprar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-        <% for (ProdutoBean produto : produtos) {%>
-        <tr>
-            <th class="center"><%=produto.getPreco()%></th>
-            <th><%=produto.getNome()%></th>
-            <th class="center"><%=produto.getMarca()%></th>
-            <th>
-                <style>
-                    #botao_quantidade {
-                        width:35px;
-                    }
-                </style>
-                <div class="row">
-                    <input id="botao_quantidade" type="number" href="#">
-                    <a id="botao_compra" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><i class="fas fa-shopping-cart"></i></a>
-                </div>
-            </th>
-        </tr>
-        <% }%>
-    </tbody>-->
-        </table>
     </div>
-    <!--    <div id="nome_centro_tabela" class='col-md-12'>
-    
-    <div>
-        <h3>Produtos</h3>
-        <table id="myTable" style="background-color: #d3e2f5;" class='table table-striped table-hover'>
-            <thead>
-                <tr style="background-color: #343838;" class='table-primary'>
-                    <th style="color: white" class="center">Preço</th>
-                    <th style="color: white">Nome</th>
-                    <th style="color: white" class="center">Marca</th>
-                    <th style="color: white" class="center">Comprar</th>
-                </tr>
-            </thead>
-            <tbody>
-    
-    </tbody>
-    <ul class="pagination pager" id="myPager">
-    </ul>
-    </table>
-    </div>-->
 </div>
 <script type="text/javascript" src="tema/bootstrap/js/jsbootstrap.js">
     <%@include file="layout/footerBootstrap.jsp" %>
