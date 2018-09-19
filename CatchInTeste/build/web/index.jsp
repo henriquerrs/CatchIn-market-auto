@@ -76,10 +76,8 @@
     </a>
 </div>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
+<h3 style="text-align: center">May the capitalism be with you</h3>
+<br>
 <div class="container">
     <style type="text/css">
         #nome_centro_tabela{
@@ -108,6 +106,7 @@
                         <th>Preço</th>
                         <th>Nome</th>
                         <th>Marca</th>
+                        <th>Comprar</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -116,7 +115,25 @@
                         <th><%=produto.getPreco()%></th>
                         <th><%=produto.getNome()%></th>
                         <th><%=produto.getMarca()%></th>
-
+                        <th>
+                            <style>
+                                #botao_quantidade {
+                                    width:35px;
+                                    margin-left: 25%;
+                                }
+                                #botao_compra {
+                                    margin-left: 5%;
+                                }
+                                #botao_add_carrinho {
+                                    margin-left: 5%;
+                                }
+                            </style>
+                            <div class="row">
+                                    <a id="botao_add_carrinho" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><i class="fas fa-shopping-cart"></i></a>
+                                    <input id="botao_quantidade" type="number" href="#">
+                                    <a id="botao_compra" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><i class="fas fa-cart-plus"></i></a>
+                            </div>
+                        </th>
                     </tr>
                     <% }%>
                 </tbody>

@@ -15,7 +15,7 @@
                     pagina = "admin";
                 }%>
             <li class="nav-item active">
-                <a class="nav-link" href="/<%=pagina%>"><i class="fas fa-shopping-bag"></i></a>
+                <a style="margin-left: 0%" class="nav-link" href="/<%=pagina%>"><i class="fas fa-shopping-bag"></i></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href='/<%=pagina%>'>Catch In</i></a>
@@ -23,7 +23,6 @@
         </ul>
     </div>
     <div class="mx-auto order-0">
-        <a class="navbar-brand mx-auto" href="#">Categorias</i></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
             <span class="navbar-toggler-icon"></span>
         </button>
