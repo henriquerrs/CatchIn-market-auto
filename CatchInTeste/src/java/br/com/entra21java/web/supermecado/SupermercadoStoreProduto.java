@@ -27,10 +27,11 @@ public class SupermercadoStoreProduto extends HttpServlet{
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
     
         HttpSession session = req.getSession();
-        int idCompra = ((ClienteBean) session.getAttribute("cliente")).getIdCompra();
+        int quantidadeCompra = Integer.parseInt(req.getParameter("quantidade"));
         int idProduto = Integer.parseInt(req.getParameter("id"));
+        int idCompra = ((ClienteBean) session.getAttribute("cliente")).getIdCompra();
         
-        String situacao = new ItemDAO().adicionarCompra(idCompra, idProduto);
+        String situacao = new ItemDAO().adicionarCompra(idCompra, idProduto, quantidadeCompra);
         
         resp.sendRedirect("");
     

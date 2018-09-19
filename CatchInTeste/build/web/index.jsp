@@ -129,9 +129,11 @@
                                 }
                             </style>
                             <div class="row">
-                                    <a id="botao_add_carrinho" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><i class="fas fa-shopping-cart"></i></a>
-                                    <input id="botao_quantidade" type="number" href="#">
-                                    <a id="botao_compra" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><i class="fas fa-cart-plus"></i></a>
+                                <form action='/adicionar' method="get">
+                                    <a id="botao_add_carrinho" class='btn btn-success blue'><i class="fas fa-shopping-cart"></i></a>
+                                    <input id="botao_quantidade" name="quantidade" type="number" href="#">
+                                    <button type="submit" id="botao_compra" name="id" value="<%=produto.getId()%>" class='btn btn-success blue'><i class="fas fa-cart-plus"></i></button>
+                                </form>
                             </div>
                         </th>
                     </tr>

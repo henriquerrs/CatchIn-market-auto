@@ -79,14 +79,15 @@ public class ItemDAO {
         return itens;
     }
     
-    public String adicionarCompra(int idCompra, int idProduto) {
+    public String adicionarCompra(int idCompra, int idProduto, int quantidade) {
 
-        String sql = "INSERT INTO itens (quantidade,id_compra,id_produto) VALUES (69,?,?);";
+        String sql = "INSERT INTO itens (quantidade,id_compra,id_produto) VALUES (?,?,?);";
         String status = "";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
-            ps.setInt(1, idCompra);
-            ps.setInt(2, idProduto);
+            ps.setInt(1, quantidade);
+            ps.setInt(2, idCompra);
+            ps.setInt(3, idProduto);
             ps.execute();
             ResultSet resultSet = ps.getGeneratedKeys();
             if (resultSet.next()) {
