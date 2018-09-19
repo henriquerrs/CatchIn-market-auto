@@ -129,17 +129,17 @@
                                 }
                             </style>
                             <div class="row">
-<<<<<<< HEAD
+
                                 <form action='/adicionar' method="get">
-                                    <a id="botao_add_carrinho" class='btn btn-success blue'><i class="fas fa-shopping-cart"></i></a>
                                     <input id="botao_quantidade" name="quantidade" type="number" href="#">
+                                    <a id="botao_add_carrinho" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><img style="width: 18px; height: 19px" src="libs/imagens/tem um gay do seu lado...qual lado, decida voce.png"></a>
                                     <button type="submit" id="botao_compra" name="id" value="<%=produto.getId()%>" class='btn btn-success blue'><i class="fas fa-cart-plus"></i></button>
                                 </form>
-=======
-                                <a id="botao_add_carrinho" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><img style="width: 18px; height: 19px" src="libs/imagens/tem um gay do seu lado...qual lado, decida voce.png"></a>
-                                    <input id="botao_quantidade" type="number" href="#">
-                                    <a id="botao_compra" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><i class="fas fa-cart-plus"></i></a>
->>>>>>> 52cebad53e36cb8cf537ce643368599edc7add1b
+
+                                <!--a id="botao_add_carrinho" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><img style="width: 18px; height: 19px" src="libs/imagens/tem um gay do seu lado...qual lado, decida voce.png"></a>
+                                    <input id="botao_quantidade" name="quantidade" type="number" href="#">
+                                    <a id="botao_compra" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><i class="fas fa-cart-plus"></i></a-->
+
                             </div>
                         </th>
                     </tr>
@@ -150,6 +150,7 @@
                         <th>Preço</th>
                         <th>Nome</th>
                         <th>Marca</th>
+                        <th>Comprar</th>
                     </tr>
                 </tfoot>
             </table>
