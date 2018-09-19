@@ -29,6 +29,7 @@
     </div>
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
+            <% if (((ClienteBean) session.getAttribute("cliente")).getPessoaBean().getIdPrivilegio() == 4) { %>
             <li class="nav-item">
                 <a class="nav-link" href="/lista-de-compras"><i class="fas fa-clipboard-list"></i></a>
             </li>
@@ -65,6 +66,7 @@
                         </div>
                     </div>
             </li>
+            <% } %>
             <li class="nav-item">
                 <a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i></a>
             </li>

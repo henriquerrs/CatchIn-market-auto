@@ -3,7 +3,7 @@
     Created on : 27/08/2018, 14:00:58
     Author     : Henrique Silva
 --%>
-
+<%@include file="validarAdmin.jsp" %>
 <%@page import="br.com.entra21java.bean.ClienteBean"%>
 <%@page import="jdk.nashorn.internal.parser.JSONParser"%>
 <%@include file="layout/masterBootStrap.jsp" %>

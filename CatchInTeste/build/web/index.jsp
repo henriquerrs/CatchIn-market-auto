@@ -4,7 +4,7 @@
     Author     : Henrique Silva
     Author     : Leonardo Airam
 --%>
-
+<%@include file="validarCliente.jsp" %>
 <%@page import="br.com.entra21java.dao.CompraDAO"%>
 <%@page import="br.com.entra21java.dao.ClienteDAO"%>
 <%@page import="br.com.entra21java.bean.ClienteBean"%>
