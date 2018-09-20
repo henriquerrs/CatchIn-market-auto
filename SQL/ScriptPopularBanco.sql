@@ -75,7 +75,7 @@ INSERT INTO produtos(nome, preco, peso, quantidade, marca, categoria, descricao)
 
 INSERT INTO pessoas(nome,senha,email,cpf,idade,telefone,id_privilegio) VALUES
 ('Crispim','123','crispim@gmail.com','11111111111',20,'33333333',1),
-('Sara','123','Sara@gmail.com','11111111111',21,'33333333',2),
+('Sara','123','Sara@gmail.com','11111111111',21,'33333333',4),
 ('Leonardo','123','Leonardo@gmail.com','11111111111',18,'33333333',3),
 ('Henrique','123','Henrique@gmail.com','11111111111',17,'33333333',4);
 
@@ -100,8 +100,8 @@ INSERT INTO colaboradores(cargo,id_pessoa) VALUES
 INSERT INTO itens (quantidade,id_compra,id_produto) VALUES
 (1,2,1),
 (2,2,2),
-(2,2,2),
-(3,2,1);
+(2,2,3),
+(3,2,4);
 
 #SELECT * FROM privilegios;
 #SELECT * FROM produtos;

@@ -80,9 +80,15 @@ public class ItemDAO {
     }
     
     public String adicionarCompra(int idCompra, int idProduto, int quantidade) {
-
-        String sql = "INSERT INTO itens (quantidade,id_compra,id_produto) VALUES (?,?,?);";
         String status = "";
+        
+        int quantidadeCadastrado = verificarProdutoCadastrado(idCompra, idProduto);
+        if(quantidadeCadastrado>0){
+            atualizarCompra(idCompra, idProduto, quantidadeCadastrado, quantidade);
+            return status = "atualizado";
+        };
+        
+        String sql = "INSERT INTO itens (quantidade,id_compra,id_produto) VALUES (?,?,?);";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             ps.setInt(1, quantidade);
@@ -100,6 +106,56 @@ public class ItemDAO {
         }
         return status = "fracassado";
 
+    }
+    
+    public int verificarProdutoCadastrado(int idCompra, int idProduto){
+        String sql = "SELECT quantidade FROM itens WHERE id_compra = ? AND id_produto = ?";
+        
+        try {
+            PreparedStatement ps =Conexao.obterConexao().prepareStatement(sql);
+            ps.setInt(1, idCompra);
+            ps.setInt(2, idProduto);
+            ResultSet resultSet = ps.executeQuery();
+            if (resultSet.next()){
+                return resultSet.getInt(1);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            Conexao.fecharConexao();
+        }
+        return 0;
+    }
+    
+    public void atualizarCompra(int idCompra, int idProduto, int quantidadeCadastrado, int quantidade){
+        String sql = "UPDATE itens SET quantidade = ?+? WHERE id_compra = ? AND id_produto = ?";
+        try {
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
+            ps.setInt(1, quantidadeCadastrado);
+            ps.setInt(2, quantidade);
+            ps.setInt(3, idCompra);
+            ps.setInt(4, idProduto);
+            ps.execute();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            Conexao.fecharConexao();
+        }
+        
+    }
+    
+    public void excluirItem(int idCompra, int idProduto){
+        String sql = "DELETE FROM itens WHERE id_compra = ? AND id_produto = ?";
+        try {
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+            ps.setInt(1, idCompra);
+            ps.setInt(2, idProduto);
+            ps.execute();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            Conexao.fecharConexao();
+        }
     }
     
 }
