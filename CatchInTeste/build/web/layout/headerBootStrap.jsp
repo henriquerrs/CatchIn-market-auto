@@ -4,6 +4,7 @@
     Author     : Alunos
 --%>
 
+<%@page import="br.com.entra21java.bean.ProdutoBean"%>
 <%@page import="br.com.entra21java.dao.ItemDAO"%>
 <%@page import="java.util.List"%>
 <%@page import="br.com.entra21java.bean.ItemBean"%>
@@ -74,6 +75,11 @@
                                             <tbody>
                                                 <% for (ItemBean item : itens) {%>
                                                 <tr>
+                                                    <%if(item.getId() == ){
+                                                        <%item.getQuantidade() = item.getQuantidade()%>
+                                                    <%}
+                                                    
+                                                    %>
                                                     <th><%=item.getProduto().getPreco()%></th>
                                                     <th><%=item.getProduto().getNome()%></th>
                                                     <th><%=item.getQuantidade()%></th>
