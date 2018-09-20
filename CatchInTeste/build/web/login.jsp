@@ -17,14 +17,14 @@
                         <div class="input-field col s12">
                             <i class="material-icons prefix">account_circle</i>
                             <label for="login">Login</label>
-                            <input id="login" type="text" class="validate" name="login">
+                            <input id="login" type="text" class="validate" name="login" value="henrique@gmail.com">
                         </div>
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
                             <i class="material-icons prefix">lock_open</i>
                             <label for="senha">Senha</label>
-                            <input id="senha" type="password" class="validate" name="senha">
+                            <input id="senha" type="password" class="validate" name="senha" value="123">
                         </div>
                     </div>
                     <div class="input-field col s12">

@@ -7,6 +7,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,7 +15,7 @@ import java.util.List;
  * @author Crispim Paiano dos Santos
  */
 public class CompraDAO {
-
+    
     public List<CompraBean> obterCompras() {
         List<CompraBean> compras = new ArrayList<>();
         String sql = "SELECT * FROM compras cp "
@@ -28,14 +29,14 @@ public class CompraDAO {
                 compra.setId(resultSet.getInt("cp.id"));
                 compra.setIdClientes(resultSet.getInt("cp.id_cliente"));
                 compra.setTotal(resultSet.getDouble("cp.total"));
-
+                
                 ClienteBean cliente = new ClienteBean();
                 cliente.setIdPessoa(resultSet.getInt("cl.nome"));
                 cliente.setEndereco(resultSet.getString("cl.endereco"));
                 compra.setCliente(cliente);
-
+                
                 compra.setItens(new ItemDAO().obterItensPeloIdCompra(compra.getId()));
-
+                
                 compras.add(compra);
             }
         } catch (SQLException e) {
@@ -47,7 +48,7 @@ public class CompraDAO {
     }
     
     public int criarCompra() {
-
+        
         String sql = "INSERT INTO compras (total) VALUES (0);";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
@@ -62,24 +63,27 @@ public class CompraDAO {
             Conexao.fecharConexao();
         }
         return -1;
-
+        
     }
-
-    public int atualizarTotal(int idCompra) {
-        String sql = "SELECT SUM(it.quantidade*pr.preco) FROM itens it JOIN produtos pr ON pr.id = it.id_produto WHERE it.id_compra = ?";
+    
+    public String atualizarTotal(int idCompra) {
+        String sql = "SELECT CONCAT(\"R$ \", ROUND(SUM(it.quantidade*pr.preco), 2)) \n"
+                + "FROM itens it \n"
+                + "JOIN produtos pr ON pr.id = it.id_produto \n"
+                + "WHERE it.id_compra = ?";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
             ps.setInt(1, idCompra);
             ResultSet resultSet = ps.executeQuery();
-            if (resultSet.next()){
-                return resultSet.getInt(1);
+            if (resultSet.next()) {
+                return resultSet.getString(1).replace(".", ",");
             }
         } catch (SQLException e) {
             e.printStackTrace();
-        } finally{
+        } finally {
             Conexao.fecharConexao();
         }
-        return -1;
+        return "R$ 0,00";
     }
-
+    
 }

@@ -1,5 +1,5 @@
 $(function () {
-    $("#tabela-ticket").DataTable({
+  /*  $("#table-carrinho").DataTable({
         "ajax": "/produtos/obtertodosparadatatable",
         "language": {
             "sEmptyTable": "Nenhum registro encontrado",
@@ -32,9 +32,7 @@ $(function () {
             }
         },
 
-        /*"language": {
-         "url": "/libs/datatable/Portuguese-Brasil.lang"
-         },*/
+     
         "columns": [
             {"data": "preco"},
             {"data": "nome"},
@@ -46,5 +44,5 @@ $(function () {
                 }
             }
         ]
-    });
+    });*/
 });

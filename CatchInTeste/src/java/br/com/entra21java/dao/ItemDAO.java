@@ -144,17 +144,18 @@ public class ItemDAO {
         
     }
     
-    public void excluirItem(int idItem){
+    public boolean excluirItem(int idItem){
         String sql = "DELETE FROM itens WHERE id = ?";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
             ps.setInt(1, idItem);
-            ps.execute();
+            return ps.executeUpdate() == 1;
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
             Conexao.fecharConexao();
         }
+        return false;
     }
     
 }

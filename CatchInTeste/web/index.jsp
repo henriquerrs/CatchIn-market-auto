@@ -13,41 +13,13 @@
 <%@page import="java.util.List"%>
 <%@page import="br.com.entra21java.bean.ProdutoBean"%>
 <%@include file="layout/masterBootStrap.jsp" %>
-<link href="tema/CustomCss/datatable.css" rel="stylesheet">
-<link href="tema/CustomCss/dataTables.bootstrap4.min.css" rel="stylesheet">
-<link href="tema/CustomCss/fixedHeader.bootstrap.min.css" rel="stylesheet">
-<link href="tema/CustomCss/responsive.bootstrap.min.css" rel="stylesheet">
 <title>Página de Usuario</title>
-<script src="tema/bootstrap/jquery/jquery-3.3.1.min.js" type="text/javascript"></script>
 
 <!--<div class="container-fluid">
     <img class="materialboxed" width="100%" src="/libs/imagens/banner.jpg">
     navbar itens dropdown
 </div>-->
-<style>
-    .slider .indicators .indicator-item {
-        background-color: #ffffff;
-        border: 3px solid #ffffff;
-        -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-        -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    }
-    .slider .indicators .indicator-item.active {
-        background-color: #666666;
-    }
-    .slider {
-        width: 100%;
-        margin: 0 auto;
-    }
-    .slider .indicators {
-        bottom: 60px;
-        z-index: 100;
-        /* text-align: left; */
-    }
-    .carousel-inner {
-        height: 400px;
-    }
-</style>
+
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -92,11 +64,6 @@
         }
     </style>
     <%  List<ProdutoBean> produtos = new ProdutoDAO().obterProdutos();%>
-    <script>
-        $(document).ready(function () {
-            $('#example').DataTable();
-        });
-    </script>
     <!-- Panel Tickets -->
     <div class="panel box-shadow">
         <div class="panel-body">
@@ -130,7 +97,7 @@
                             </style>
                             <form action='/adicionar' method="get">
                                 <a id="botao_add_carrinho" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><img style="width: 18px; height: 19px; margin-left: 5%" src="libs/imagens/tem um gay do seu lado...qual lado, decida voce.png"></a>
-                                <input type="number" id="botao_quantidade" name="quantidade" style="margin-left: 25%;" min="0" max="50" value="0">
+                                <input type="number" id="botao_quantidade" name="quantidade" style="margin-left: 25%;" min="0" max="50" value="1">
                                 <button type="submit" id="botao_compra" name="id" value="<%=produto.getId()%>" class='btn btn-success blue'><i class="fas fa-cart-plus"></i></button>
                             </form>
 
@@ -154,5 +121,4 @@
         </div>
     </div>
 </div>
-<script type="text/javascript" src="tema/bootstrap/js/jsbootstrap.js">
-    <%@include file="layout/footerBootstrap.jsp" %>
+<%@include file="layout/footerBootstrap.jsp" %>

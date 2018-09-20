@@ -16,28 +16,6 @@
 
 
 
-<style>
-    .slider .indicators .indicator-item {
-        background-color: #ffffff;
-        border: 3px solid #ffffff;
-        -webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-        -moz-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-    }
-    .slider .indicators .indicator-item.active {
-        background-color: #666666;
-    }
-    .slider {
-        width: 100%;
-        margin: 0 auto;
-    }
-    .slider .indicators {
-        bottom: 60px;
-        z-index: 100;
-        /* text-align: left; */
-    }
-
-</style>
 <div class="container">
     <%@page import="br.com.entra21java.dao.ProdutoDAO"%>
     <%@page import="java.util.List"%>
@@ -83,14 +61,14 @@
                                     </div>
                                 </div>
                                 <div class="row">
-                                <div class="form-group col s6">
-                                    <label for="recipient-name" class="col-form-label">Peso:</label>
-                                    <input type="number" class="form-control" id="recipient-peso" name="peso">
-                                </div>
-                                <div class="form-group col s6">
-                                    <label for="recipient-name" class="col-form-label">Quantidade:</label>
-                                    <input type="number" class="form-control" id="recipient-quantidade" name="quantidade">
-                                </div>
+                                    <div class="form-group col s6">
+                                        <label for="recipient-name" class="col-form-label">Peso:</label>
+                                        <input type="number" class="form-control" id="recipient-peso" name="peso">
+                                    </div>
+                                    <div class="form-group col s6">
+                                        <label for="recipient-name" class="col-form-label">Quantidade:</label>
+                                        <input type="number" class="form-control" id="recipient-quantidade" name="quantidade">
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="recipient-name" class="col-form-label">Marca:</label>
@@ -142,5 +120,4 @@
             </table>
         </div>
     </div>
-    <script type="text/javascript" src="tema/bootstrap/js/jsbootstrap.js">
-        <%@include file="layout/footerBootstrap.jsp" %>
+    <%@include file="layout/footerBootstrap.jsp" %>
