@@ -130,7 +130,7 @@
                             </style>
                             <form action='/adicionar' method="get">
                                 <a id="botao_add_carrinho" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><img style="width: 18px; height: 19px; margin-left: 5%" src="libs/imagens/tem um gay do seu lado...qual lado, decida voce.png"></a>
-                                <input type="number" id="botao_quantidade" name="quantidade" style="margin-left: 25%;" min="0" max="50" value="0" href="#">
+                                <input type="number" id="botao_quantidade" name="quantidade" style="margin-left: 25%;" min="0" max="50" value="0">
                                 <button type="submit" id="botao_compra" name="id" value="<%=produto.getId()%>" class='btn btn-success blue'><i class="fas fa-cart-plus"></i></button>
                             </form>
 
