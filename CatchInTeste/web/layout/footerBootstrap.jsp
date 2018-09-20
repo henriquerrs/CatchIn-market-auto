@@ -14,7 +14,7 @@
 <script src="/js/customJSBootstrap.js"></script>
 
 <footer class="page-footer font-small teal pt-4" style="
-    background-color: #dcdcdc">
+        background-color: #dcdcdc">
 
     <!-- Footer Links -->
     <div class="container-fluid text-center text-md-left">
@@ -41,7 +41,7 @@
             <div class="col-md-3 mb-md-0 mb-3">
 
                 <!-- Links -->
-                
+
 
             </div>
             <!-- Grid column -->
