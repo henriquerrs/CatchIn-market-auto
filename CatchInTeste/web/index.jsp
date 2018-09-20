@@ -128,19 +128,16 @@
                                     margin-left: 5%;
                                 }
                             </style>
-                            <div class="row">
-
-                                <form action='/adicionar' method="get">
-                                    <input id="botao_quantidade" name="quantidade" type="number" href="#">
-                                    <a id="botao_add_carrinho" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><img style="width: 18px; height: 19px" src="libs/imagens/tem um gay do seu lado...qual lado, decida voce.png"></a>
-                                    <button type="submit" id="botao_compra" name="id" value="<%=produto.getId()%>" class='btn btn-success blue'><i class="fas fa-cart-plus"></i></button>
-                                </form>
+                            <form action='/adicionar' method="get">
+                                <a id="botao_add_carrinho" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><img style="width: 18px; height: 19px; margin-left: 5%" src="libs/imagens/tem um gay do seu lado...qual lado, decida voce.png"></a>
+                                <input type="number" id="botao_quantidade" name="quantidade" style="margin-left: 25%;" min="0" max="50" value="0" href="#">
+                                <button type="submit" id="botao_compra" name="id" value="<%=produto.getId()%>" class='btn btn-success blue'><i class="fas fa-cart-plus"></i></button>
+                            </form>
 
                                 <!--a id="botao_add_carrinho" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><img style="width: 18px; height: 19px" src="libs/imagens/tem um gay do seu lado...qual lado, decida voce.png"></a>
                                     <input id="botao_quantidade" name="quantidade" type="number" href="#">
                                     <a id="botao_compra" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><i class="fas fa-cart-plus"></i></a-->
 
-                            </div>
                         </th>
                     </tr>
                     <% }%>

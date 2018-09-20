@@ -4,6 +4,10 @@
     Author     : Alunos
 --%>
 
+<%@page import="br.com.entra21java.bean.ProdutoBean"%>
+<%@page import="br.com.entra21java.dao.ItemDAO"%>
+<%@page import="java.util.List"%>
+<%@page import="br.com.entra21java.bean.ItemBean"%>
 <%@page import="br.com.entra21java.dao.CompraDAO"%>
 <%@page import="br.com.entra21java.bean.ClienteBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -57,6 +61,36 @@
                                         <%  int idCompra = ((ClienteBean) session.getAttribute("cliente")).getIdCompra();%>
                                         <h7>Total das compras: R$<%=new CompraDAO().atualizarTotal(idCompra)%></h7>
                                     </div>
+                                    <div class="form-group">
+                                        <% List<ItemBean> itens = new ItemDAO().obterItensPeloIdCompra(idCompra); %>
+                                        <table id="table-carrinho" class="table table-striped table-bordered" style="width:100%">
+                                            <thead>
+                                                <tr>
+                                                    <th>Preço</th>
+                                                    <th>Nome</th>
+                                                    <th>Marca</th>
+                                                    <th>Opção</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <% for (ItemBean item : itens) {%>
+                                                <tr>
+                                                    <th><%=item.getProduto().getPreco()%></th>
+                                                    <th><%=item.getProduto().getNome()%></th>
+                                                    <th><%=item.getQuantidade()%></th>
+                                                </tr>
+                                                <% }%>
+                                            </tbody>
+                                            <tfoot>
+                                                <tr>
+                                                    <th>Preço</th>
+                                                    <th>Nome</th>
+                                                    <th>Marca</th>
+                                                    <th>Opção</th>
+                                                </tr>
+                                            </tfoot>
+                                        </table>
+                                    </div>
                                     <%}%>
                                 </div>
                                 <div class="modal-footer">
@@ -66,7 +100,7 @@
                         </div>
                     </div>
             </li>
-            <% } %>
+            <% }%>
             <li class="nav-item">
                 <a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i></a>
             </li>
