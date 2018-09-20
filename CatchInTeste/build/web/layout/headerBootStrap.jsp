@@ -75,11 +75,6 @@
                                             <tbody>
                                                 <% for (ItemBean item : itens) {%>
                                                 <tr>
-                                                    <%if(item.getId() == ){
-                                                        <%item.getQuantidade() = item.getQuantidade()%>
-                                                    <%}
-                                                    
-                                                    %>
                                                     <th><%=item.getProduto().getPreco()%></th>
                                                     <th><%=item.getProduto().getNome()%></th>
                                                     <th><%=item.getQuantidade()%></th>
