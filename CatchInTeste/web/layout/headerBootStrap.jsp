@@ -68,7 +68,7 @@
                                                 <tr>
                                                     <th>Preço</th>
                                                     <th>Nome</th>
-                                                    <th>Marca</th>
+                                                    <th>Quantidade</th>
                                                     <th>Opção</th>
                                                 </tr>
                                             </thead>
@@ -78,6 +78,7 @@
                                                     <th><%=item.getProduto().getPreco()%></th>
                                                     <th><%=item.getProduto().getNome()%></th>
                                                     <th><%=item.getQuantidade()%></th>
+                                                    <th><a href="/produtos/excluir?id=<%=item.getId()%>">Excluir</a></th>
                                                 </tr>
                                                 <% }%>
                                             </tbody>
@@ -85,7 +86,7 @@
                                                 <tr>
                                                     <th>Preço</th>
                                                     <th>Nome</th>
-                                                    <th>Marca</th>
+                                                    <th>Quantidade</th>
                                                     <th>Opção</th>
                                                 </tr>
                                             </tfoot>
