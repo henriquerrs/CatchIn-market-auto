@@ -1,13 +1,14 @@
 <!-- Bootstrap CSS -->
-<link rel="stylesheet" href="../tema/bootstrap/css/bootstrap.min.css">
+<link href="../tema/bootstrap/css/bootstrap.min.css" rel="stylesheet" >
 
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 
-<link href="tema/CustomCss/datatable.css" rel="stylesheet">
-<link href="tema/CustomCss/dataTables.bootstrap4.min.css" rel="stylesheet">
-<link href="tema/CustomCss/fixedHeader.bootstrap.min.css" rel="stylesheet">
-<link href="tema/CustomCss/responsive.bootstrap.min.css" rel="stylesheet">
+<link href="../tema/CustomCss/datatable.css" rel="stylesheet">
+<link href="../tema/CustomCss/dataTables.bootstrap4.min.css" rel="stylesheet">
+<link href="../tema/CustomCss/fixedHeader.bootstrap.min.css" rel="stylesheet">
+<link href="../tema/CustomCss/responsive.bootstrap.min.css" rel="stylesheet">
+<link href="../tema/CustomCss/style.css" rel="stylesheet">
 
 <style>
     .slider .indicators .indicator-item {

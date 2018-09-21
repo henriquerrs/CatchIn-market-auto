@@ -1,7 +1,7 @@
 <%-- 
     Document   : headerBootStrap
     Created on : 03/09/2018, 09:56:29
-    Author     : Alunos
+    Author     : Henrique
 --%>
 
 <%@page import="br.com.entra21java.bean.ProdutoBean"%>
@@ -11,6 +11,7 @@
 <%@page import="br.com.entra21java.dao.CompraDAO"%>
 <%@page import="br.com.entra21java.bean.ClienteBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@include file="css.jsp" %>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
         <ul class="navbar-nav mr-auto">

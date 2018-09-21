@@ -12,6 +12,7 @@
 <%@page import="java.util.List"%>
 <%@page import="br.com.entra21java.bean.ProdutoBean"%>
 <%@include file="layout/masterBootStrap.jsp" %>
+
 <title>Página de Usuario</title>
 
 <!--<div class="container-fluid">
