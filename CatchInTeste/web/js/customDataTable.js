@@ -1,6 +1,5 @@
-$(function () {
-  /*  $("#table-carrinho").DataTable({
-        "ajax": "/produtos/obtertodosparadatatable",
+$(document).ready(function () {
+    $('#table-admin').DataTable({
         "language": {
             "sEmptyTable": "Nenhum registro encontrado",
             "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
@@ -22,27 +21,12 @@ $(function () {
             "oAria": {
                 "sSortAscending": ": Ordenar colunas de forma ascendente",
                 "sSortDescending": ": Ordenar colunas de forma descendente"
-            },
-            "select": {
-                "rows": {
-                    "_": "Selecionado %d linhas",
-                    "0": "Nenhuma linha selecionada",
-                    "1": "Selecionado 1 linha"
-                }
             }
-        },
-
-     
-        "columns": [
-            {"data": "preco"},
-            {"data": "nome"},
-            {"data": "marca"},
-            {"data": "comprar"},
-            {"data": null,
-                "render": function (data) {
-                    return "<a class='btn btn-info' href='/interno/ticket?id=" + data.id + "'><i class='icon wb-info-circle'></i> Consultar</a>";
-                }
-            }
-        ]
-    });*/
+        }
+    });
 });
+
+$(document).ready(function () {
+    $('#table-carrinho').DataTable();
+});
+

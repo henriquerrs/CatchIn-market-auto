@@ -51,18 +51,6 @@
 <h3 style="text-align: center">May the capitalism be with you</h3>
 <br>
 <div class="container">
-    <style type="text/css">
-        #nome_centro_tabela{
-            text-align: center;
-        }
-
-        #botao_compra {
-            margin-left: 37%;
-        }
-        body {
-            background-color: silver !important;
-        }
-    </style>
     <%  List<ProdutoBean> produtos = new ProdutoDAO().obterProdutos();%>
     <!-- Panel Tickets -->
     <div class="panel box-shadow">
