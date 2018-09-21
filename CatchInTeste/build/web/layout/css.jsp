@@ -11,6 +11,59 @@
 <link href="../tema/CustomCss/style.css" rel="stylesheet">
 
 <style>
+    #nav_bar {
+        width:100%;
+        position:fixed;
+        padding:0;
+        top:0;
+        vertical-align:middle;
+        line-height:30px;
+        z-index:2;
+    }
+</style>
+
+<style>
+    #logo_catchIn{
+        margin-left: 0%;
+    }
+    #botao_logout{
+        color: white; 
+        position: relative; 
+        float: right; 
+        padding-top: 0%;
+    }
+    #botao_lista {
+        color: white; 
+        position: relative; 
+        float: left;  
+        padding-top: 0%;
+    }
+    #fieldset_preview{
+        border: 2px solid white; 
+        margin: 5px;
+    }
+    #produto_no_carrinho{
+        margin-top: 2px;
+        color: white;
+    }
+    #preco_dos_produtos{
+        margin: 5px 0 0 0;
+        color: white;
+    }
+    #menu_centro {
+        border: 2px solid white;
+        border-top: 0;
+        position: fixed;
+        top: 0; 
+        width: 300px; 
+        padding-top: 0%; 
+        border-bottom-left-radius: 35px; 
+        border-bottom-right-radius: 35px;
+        margin-top: 0%;
+    }
+</style>
+
+<style>
     .slider .indicators .indicator-item {
         background-color: #ffffff;
         border: 3px solid #ffffff;

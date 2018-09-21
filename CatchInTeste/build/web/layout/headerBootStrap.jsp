@@ -12,7 +12,7 @@
 <%@page import="br.com.entra21java.bean.ClienteBean"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@include file="css.jsp" %>
-<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+<nav id="nav_bar" class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="navbar-collapse collapse w-100 order-1 order-md-0 dual-collapse2">
         <ul class="navbar-nav mr-auto">
             <% String pagina = ""; %>
@@ -20,33 +20,38 @@
                     pagina = "admin";
                 }%>
             <li class="nav-item active">
-                <a style="margin-left: 0%" class="nav-link" href="/<%=pagina%>"><i class="fas fa-shopping-bag"></i></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href='/<%=pagina%>'>Catch In</i></a>
+                <a id="logo_catchIn" class="nav-link" href="/<%=pagina%>"><img src="../libs/imagens/LogoCatchIn (2).png"> </a>
             </li>
         </ul>
     </div>
-    <div class="mx-auto order-0">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+    <div class="container">
+        <fieldset id="menu_centro">
+            <li class="nav-link">
+                <a id="botao_logout" class="nav-link" href="/logout">Log Out - <i class="fas fa-sign-out-alt"></i></a>
+                <a id="botao_lista" class="nav-link" href="/lista-de-compras">Sua Lista - <i class="fas fa-clipboard-list"></i></a>
+            </li>
+        </fieldset>
     </div>
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
-            <% if (((ClienteBean) session.getAttribute("cliente")).getPessoaBean().getIdPrivilegio() == 4) { %>
-            <li class="nav-item">
-                <a class="nav-link" href="/lista-de-compras"><i class="fas fa-clipboard-list"></i></a>
-            </li>
-            <li class="nav-item">
-                <!--a class="nav-link" href="/carrinho"><i class="fas fa-cart-arrow-down"></i></a-->
-                <div>
-                    <a class="nav-link" data-toggle="modal" data-target="#modalCarrinho" data-whatever="@mdo"><i class="fas fa-cart-arrow-down"></i></a>
-            </li>
-            <% }%>
-            <li class="nav-item">
-                <a class="nav-link" href="/logout"><i class="fas fa-sign-out-alt"></i></a>
-            </li>
+
+
+            <fieldset id="fieldset_preview">
+                <% if (((ClienteBean) session.getAttribute("cliente")).getPessoaBean().getIdPrivilegio() == 4) { %>
+                <li class="nav-item">
+                    <!--a class="nav-link" href="/carrinho"><i class="fas fa-cart-arrow-down"></i></a-->
+                    <a  class="nav-link" data-toggle="modal" data-target="#modalCarrinho" data-whatever="@mdo">
+                        <%  int idCompra = ((ClienteBean) session.getAttribute("cliente")).getIdCompra();%>
+                        <!--<p id="produto_no_carrinho"><h7 >Você tem: <%%> produtos no <i class="fas fa-cart-arrow-down"></i></h7></p>-->
+                        <p id="produto_no_carrinho"><h7 >Você tem: <%%> produtos no <i class="fas fa-cart-arrow-down"></i></h7></p>
+                        <p id="preco_dos_produtos"><h7>Sua compra está custando: R$<%=new CompraDAO().atualizarTotal(idCompra)%></h7></p>
+                    </a>
+                    <% }%>
+            </fieldset>
+
         </ul>
     </div>
 </nav>
+<br/>
+<br/>
+<br/>
