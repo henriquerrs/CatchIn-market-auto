@@ -4,7 +4,7 @@
     Author     : Henrique
     Author     : Sara
 --%>
-<%@include file="layout/master.jsp" %>
+<%@include file="layout/masterBootStrap.jsp" %>
 <style type="text/css">
     body{
         background-color: white !important;
@@ -13,7 +13,7 @@
 <div>
     <link rel="stylesheet" type="text/css" href="tema/materialize/css/style.css">
     <h2>Política de privacidade para 
-        <a href='http://catchIn.nz'>CatchIn</a>
+        <a href='/login'>CatchIn</a>
     </h2>
     <p>Todas as suas informações pessoais recolhidas, serão usadas para o ajudar a tornar a sua visita no nosso site o mais produtiva e agradável possível.</p>
     <p>A garantia da confidencialidade dos dados pessoais dos utilizadores do nosso site é importante para o CatchIn.</p>
@@ -30,4 +30,4 @@
     <p>O CatchIn possui ligações para outros sites, os quais, a nosso ver, podem conter informações / ferramentas úteis para os nossos visitantes. A nossa política de privacidade não é aplicada a sites de terceiros, pelo que, caso visite outro site a partir do nosso deverá ler a politica de privacidade do mesmo.</p>
     <p>Não nos responsabilizamos pela política de privacidade ou conteúdo presente nesses mesmos sites.</p>
 </div>
-<%@include file="layout/footer.jsp" %>
+<%@include file="layout/footerBootstrap.jsp" %>

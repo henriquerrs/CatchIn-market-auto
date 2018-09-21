@@ -103,4 +103,14 @@
     body {
         background-color: silver !important;
     }
+    #nome_centro_tabela{
+        text-align: center;
+    }
+
+    #botao_compra {
+        margin-left: 37%;
+    }
+    body {
+        background-color: silver !important;
+    }
 </style>

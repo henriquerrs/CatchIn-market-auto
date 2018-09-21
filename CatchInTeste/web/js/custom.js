@@ -13,21 +13,21 @@ $(function () {
     });
 
 
- document.addEventListener('DOMContentLoaded', function() {
-    var elems = document.querySelectorAll('.autocomplete');
-    var instances = M.Autocomplete.init(elems, options);
-  });
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.autocomplete');
+        var instances = M.Autocomplete.init(elems, options);
+    });
 
 
 
-  // Or with jQuery
-       
+    // Or with jQuery
+
 //    $(document).ready(function(){
 //        $('.datepicker').datepicker();
 //    });
 
     $('.datepicker').datepicker({
-        
+
         format: 'dd/mm/yyyy',
         i18n: {
             minDate: null,
@@ -53,29 +53,30 @@ $(function () {
             weekdaysAbbrev: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S'],
             today: 'Hoje',
             close: 'Fechar'
-            
-            //The format to show on the `input` element
+
+                    //The format to show on the `input` element
         }
 
     });
 });
 
-$(document).ready(function(){
-  $('#myTable').pageMe({
-    pagerSelector:'#myPager',
-    activeColor: 'indigo',
-    prevText:'Anterior',
-    nextText:'Siguiente',
-    showPrevNext:true,
-    hidePageNumbers:false,
-    perPage:10
-  });
+$(document).ready(function () {
+    $('#myTable').pageMe({
+        pagerSelector: '#myPager',
+        activeColor: 'indigo',
+        prevText: 'Anterior',
+        nextText: 'Siguiente',
+        showPrevNext: true,
+        hidePageNumbers: false,
+        perPage: 10
+    });
 });
 
-$(document).ready(function(){
-  $('.slider').slider();
+$(document).ready(function () {
+    $('.slider').slider();
 });
 
 $('#modalProdutos').on('shown.bs.modal', function () {
-  $('#modalInput').trigger('focus')
-})
+    $('#modalInput').trigger('focus');
+});
+
