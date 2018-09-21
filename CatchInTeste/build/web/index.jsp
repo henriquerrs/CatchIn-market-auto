@@ -7,7 +7,6 @@
 <%@include file="validarCliente.jsp" %>
 <%@page import="br.com.entra21java.dao.CompraDAO"%>
 <%@page import="br.com.entra21java.dao.ClienteDAO"%>
-<%@page import="br.com.entra21java.bean.ClienteBean"%>
 <%@page import="jdk.nashorn.internal.parser.JSONParser"%>
 <%@page import="br.com.entra21java.dao.ProdutoDAO"%>
 <%@page import="java.util.List"%>

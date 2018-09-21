@@ -15,7 +15,7 @@ import java.util.List;
  * @author Crispim Paiano dos Santos
  */
 public class CompraDAO {
-    
+
     public List<CompraBean> obterCompras() {
         List<CompraBean> compras = new ArrayList<>();
         String sql = "SELECT * FROM compras cp "
@@ -29,14 +29,14 @@ public class CompraDAO {
                 compra.setId(resultSet.getInt("cp.id"));
                 compra.setIdClientes(resultSet.getInt("cp.id_cliente"));
                 compra.setTotal(resultSet.getDouble("cp.total"));
-                
+
                 ClienteBean cliente = new ClienteBean();
                 cliente.setIdPessoa(resultSet.getInt("cl.nome"));
                 cliente.setEndereco(resultSet.getString("cl.endereco"));
                 compra.setCliente(cliente);
-                
+
                 compra.setItens(new ItemDAO().obterItensPeloIdCompra(compra.getId()));
-                
+
                 compras.add(compra);
             }
         } catch (SQLException e) {
@@ -46,9 +46,9 @@ public class CompraDAO {
         }
         return compras;
     }
-    
+
     public int criarCompra() {
-        
+
         String sql = "INSERT INTO compras (total) VALUES (0);";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
@@ -63,9 +63,9 @@ public class CompraDAO {
             Conexao.fecharConexao();
         }
         return -1;
-        
+
     }
-    
+
     public String atualizarTotal(int idCompra) {
         String sql = "SELECT CONCAT(\"R$ \", ROUND(SUM(it.quantidade*pr.preco), 2)) \n"
                 + "FROM itens it \n"
@@ -75,7 +75,7 @@ public class CompraDAO {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
             ps.setInt(1, idCompra);
             ResultSet resultSet = ps.executeQuery();
-            if (resultSet.next()) {
+            if (resultSet.next() && resultSet.getString(1) != null) {
                 return resultSet.getString(1).replace(".", ",");
             }
         } catch (SQLException e) {
@@ -85,5 +85,5 @@ public class CompraDAO {
         }
         return "R$ 0,00";
     }
-    
+
 }
