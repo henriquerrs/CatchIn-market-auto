@@ -48,7 +48,7 @@
     </a>
 </div>
 <br/>
-<div class="center-block">
+<div class="col-sm-offset-5 col-sm-12 text-center">
     <button style="text-align: center" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalCliente" data-whatever="@mdo">Informações Cliente</button>
 </div>
 <div class="modal fade" id="modalCliente" tabindex="-1" role="dialog" aria-labelledby="modalClientes" aria-hidden="true">
