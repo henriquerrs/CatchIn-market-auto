@@ -39,7 +39,7 @@
                                 <th><%=item.getProduto().getPreco()%></th>
                                 <th><%=item.getProduto().getNome()%></th>
                                 <th><%=item.getQuantidade()%></th>
-                                <th><a href="/excluir?id=<%=item.getId()%>">Excluir</a></th>
+                                <th><a href="/excluirItem?id=<%=item.getId()%>">Excluir</a></th>
                             </tr>
                             <% }%>
                         </tbody>

@@ -6,8 +6,6 @@
 package br.com.entra21java.web.supermecado;
 
 import br.com.entra21java.bean.ClienteBean;
-import br.com.entra21java.dao.CompraDAO;
-import br.com.entra21java.dao.ItemDAO;
 import br.com.entra21java.dao.ProdutoListaDAO;
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -19,30 +17,21 @@ import javax.servlet.http.HttpSession;
 
 /**
  *
- * @author Crispim
+ * @author crisp
  */
-@WebServlet("/adicionar")
-public class SupermercadoStoreProduto extends HttpServlet{
+@WebServlet("/paraCarinho")
+public class SupermercadoListaParaCarrinho extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-    
+
         HttpSession session = req.getSession();
-        
-        int quantidadeCompra = Integer.parseInt(req.getParameter("quantidade"));
-        int idProduto = Integer.parseInt(req.getParameter("idProduto"));
-        String idStatus = req.getParameter("idStatus");
-        System.out.println("VALORES: "+quantidadeCompra+"<>"+idProduto+"<>"+idStatus);
-        
-        int idCompra = ((ClienteBean) session.getAttribute("cliente")).getIdCompra();
         int idLista = ((ClienteBean) session.getAttribute("cliente")).getIdLista();
+        int idCompra = ((ClienteBean) session.getAttribute("cliente")).getIdCompra();
         
-        if(idStatus.equals("carrinho")){ new ItemDAO().adicionarCompra(idCompra, idProduto, quantidadeCompra);}
-        if(idStatus.equals("lista")) new ProdutoListaDAO().adicionarLista(idLista, idProduto, quantidadeCompra);
-        
-        resp.sendRedirect("");
-    
-    }    
+        new ProdutoListaDAO().passarParaCarrinho(idLista, idCompra);
+
+        resp.sendRedirect("/lista-de-compras");
+    }
     
 }
-

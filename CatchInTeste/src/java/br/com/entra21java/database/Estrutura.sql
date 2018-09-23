@@ -1,3 +1,5 @@
+-- MySQL Workbench Forward Engineering
+
 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
@@ -5,10 +7,10 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 -- Schema mydb
 -- -----------------------------------------------------
+DROP DATABASE supermercado_catchin;
 -- -----------------------------------------------------
 -- Schema supermercado_catchin
 -- -----------------------------------------------------
-DROP DATABASE IF EXISTS supermercado_catchin;
 CREATE SCHEMA IF NOT EXISTS `supermercado_catchin` DEFAULT CHARACTER SET utf8 ;
 USE `supermercado_catchin` ;
 
@@ -58,6 +60,16 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
+-- Table `supermercado_catchin`.`listas`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `supermercado_catchin`.`listas` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  PRIMARY KEY (`id`))
+ENGINE = InnoDB
+DEFAULT CHARACTER SET = utf8;
+
+
+-- -----------------------------------------------------
 -- Table `supermercado_catchin`.`clientes`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `supermercado_catchin`.`clientes` (
@@ -65,9 +77,11 @@ CREATE TABLE IF NOT EXISTS `supermercado_catchin`.`clientes` (
   `endereco` VARCHAR(45) NULL DEFAULT NULL,
   `id_pessoa` INT(11) NOT NULL,
   `id_compra` INT(11) NOT NULL,
+  `id_lista` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_clientes_pessoas1_idx` (`id_pessoa` ASC),
   INDEX `fk_clientes_compras1_idx` (`id_compra` ASC),
+  INDEX `fk_clientes_listas1_idx` (`id_lista` ASC),
   CONSTRAINT `fk_clientes_pessoas1`
     FOREIGN KEY (`id_pessoa`)
     REFERENCES `supermercado_catchin`.`pessoas` (`id`)
@@ -76,6 +90,11 @@ CREATE TABLE IF NOT EXISTS `supermercado_catchin`.`clientes` (
   CONSTRAINT `fk_clientes_compras1`
     FOREIGN KEY (`id_compra`)
     REFERENCES `supermercado_catchin`.`compras` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_clientes_listas1`
+    FOREIGN KEY (`id_lista`)
+    REFERENCES `supermercado_catchin`.`listas` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB
@@ -143,41 +162,24 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `supermercado_catchin`.`listas`
+-- Table `supermercado_catchin`.`produto_lista`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `supermercado_catchin`.`listas` (
+CREATE TABLE IF NOT EXISTS `supermercado_catchin`.`produto_lista` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `id_cliente` INT(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  INDEX `fk_Clientes_has_Produtos_Clientes1_idx` (`id_cliente` ASC),
-  CONSTRAINT `fk_Clientes_has_Produtos_Clientes1`
-    FOREIGN KEY (`id_cliente`)
-    REFERENCES `supermercado_catchin`.`clientes` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
-
-
--- -----------------------------------------------------
--- Table `supermercado_catchin`.`produtos_listas`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `supermercado_catchin`.`produtos_listas` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `id_lista` INT(11) NOT NULL,
   `id_produto` INT(11) NOT NULL,
+  `id_lista` INT(11) NOT NULL,
   `quantidade` INT(11) NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   INDEX `fk_DefaultCompras_has_Produtos_Produtos1_idx` (`id_produto` ASC),
-  INDEX `fk_DefaultCompras_has_Produtos_DefaultCompras1_idx` (`id_lista` ASC),
-  CONSTRAINT `fk_DefaultCompras_has_Produtos_DefaultCompras1`
-    FOREIGN KEY (`id_lista`)
-    REFERENCES `supermercado_catchin`.`listas` (`id_cliente`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+  INDEX `fk_produtos_listas_listas1_idx` (`id_lista` ASC),
   CONSTRAINT `fk_DefaultCompras_has_Produtos_Produtos1`
     FOREIGN KEY (`id_produto`)
     REFERENCES `supermercado_catchin`.`produtos` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_produtos_listas_listas1`
+    FOREIGN KEY (`id_lista`)
+    REFERENCES `supermercado_catchin`.`listas` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB

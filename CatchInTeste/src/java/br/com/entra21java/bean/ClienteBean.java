@@ -7,8 +7,16 @@ package br.com.entra21java.bean;
 public class ClienteBean {
     
     private PessoaBean pessoaBean;
-    private int id, idPessoa, idCompra;
+    private int id, idPessoa, idCompra, idLista;
     private String endereco;
+
+    public int getIdLista() {
+        return idLista;
+    }
+
+    public void setIdLista(int idLista) {
+        this.idLista = idLista;
+    }
 
     public int getIdCompra() {
         return idCompra;

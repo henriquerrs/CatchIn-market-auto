@@ -48,7 +48,7 @@
     </a>
 </div>
 <br/>
-<h3 style="text-align: center">May the capitalism be with you</h3>
+<h3 style="text-align: center">Sua compra certa, onde o cliente é valorizado</h3>
 <br>
 <div class="container">
     <%  List<ProdutoBean> produtos = new ProdutoDAO().obterProdutos();%>
@@ -72,9 +72,10 @@
                         <th><%=produto.getMarca()%></th>
                         <th>
                             <form action='/adicionar' method="get">
-                                <a id="botao_add_carrinho" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><img style="width: 18px; height: 19px; margin-left: 5%" src="libs/imagens/add list.png"></a>
+                                <button type="submit" id="botao_lista" name="idStatus" value="lista" class='btn btn-success blue'><img style="width: 18px; height: 19px; margin-left: 5%" src="libs/imagens/add list.png"></button>
+                                <input type="hidden" id="produtoCompra" name="idProduto" value="<%=produto.getId()%>">
                                 <input type="number" id="botao_quantidade" name="quantidade" style="margin-left: 25%;" min="0" max="50" value="1">
-                                <button type="submit" id="botao_compra" name="id" value="<%=produto.getId()%>" class='btn btn-success blue'><i class="fas fa-cart-plus"></i></button>
+                                <button type="submit" id="botao_compra" name="idStatus" value="carrinho" class='btn btn-success blue'><i class="fas fa-cart-plus"></i></button>
                             </form>
                         </th>
                     </tr>

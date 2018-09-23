@@ -4,6 +4,8 @@
     Author     : Alunos
 --%>
 
+<%@page import="br.com.entra21java.dao.ProdutoListaDAO"%>
+<%@page import="br.com.entra21java.bean.ProdutoListaBean"%>
 <%@page import="br.com.entra21java.dao.ProdutoDAO"%>
 <%@page import="br.com.entra21java.bean.ProdutoBean"%>
 <%@page import="java.util.List"%>
@@ -16,11 +18,11 @@
 <h3 style="text-align: center">May the capitalism be with you</h3>
 <br>
 <div class="container">
-
-    <%  List<ProdutoBean> produtos = new ProdutoDAO().obterProdutos();%>
+    <%  int idLista = ((ClienteBean) session.getAttribute("cliente")).getIdLista();%>
+    <%  List<ProdutoListaBean> produtos = new ProdutoListaDAO().obterItensPeloIdLista(idLista);%>
     <div class="col">
         <div class="col offset-5">
-            <a id="botao_finaizar_compra" href='#' class='btn btn-success blue'>Finalizar Compra</a>
+            <a id="botao_finaizar_compra" href='/paraCarinho' class='btn btn-success blue'>Adicionar ao Carrinho</a>
         </div>
     </div>
     <!-- Panel Tickets -->
@@ -32,18 +34,17 @@
                         <th>Nome</th>
                         <th style="text-align: center">Preço</th>
                         <th style="text-align: center">Quantidade</th>
-                        <th style="text-align: center">Editar/Excluir</th>
+                        <th style="text-align: center">Excluir</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <% for (ProdutoBean produto : produtos) {%>
+                    <% for (ProdutoListaBean produto : produtos) {%>
                     <tr>
-                        <th><%=produto.getNome()%></th>
-                        <th><%=produto.getPreco()%></th>
+                        <th><%=produto.getProdutoBean().getNome()%></th>
+                        <th><%=produto.getProdutoBean().getPreco()%></th>
                         <th><%=produto.getQuantidade()%></th>
                         <th>
-                            <a style="margin-left: 27%" id="botao_excluir_lista" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><i class="fas fa-trash"></i></a>
-                            <a id="botao_editar_compra" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success red'><i class="far fa-edit"></i></a>
+                            <a href="/excluirLista?id=<%= produto.getId()%>">Excluir</a>
                         </th>
                     </tr>
                     <% }%>

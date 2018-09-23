@@ -85,11 +85,17 @@ INSERT INTO compras(total) VALUES
 (3.10),
 (4.10);
 
-INSERT INTO clientes(endereco, id_compra, id_pessoa) VALUES
-('Rua AAA',1,1),
-('Rua BBB',2,2),
-('Rua CCC',3,3),
-('Rua DDD',4,4);
+INSERT INTO listas() VALUES
+(),
+(),
+(),
+();
+
+INSERT INTO clientes(endereco, id_compra, id_pessoa, id_lista) VALUES
+('Rua AAA',1,1,1),
+('Rua BBB',2,2,2),
+('Rua CCC',3,3,3),
+('Rua DDD',4,4,4);
 
 INSERT INTO colaboradores(cargo,id_pessoa) VALUES
 ('Gerente',1),
@@ -102,6 +108,9 @@ INSERT INTO itens (quantidade,id_compra,id_produto) VALUES
 (2,2,2),
 (2,2,3),
 (3,2,4);
+
+INSERT INTO produto_lista (quantidade,id_lista,id_produto) VALUES
+(20,4,20);
 
 #SELECT * FROM privilegios;
 #SELECT * FROM produtos;

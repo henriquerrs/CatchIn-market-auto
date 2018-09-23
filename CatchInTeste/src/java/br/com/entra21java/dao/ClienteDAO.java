@@ -28,6 +28,7 @@ public class ClienteDAO {
                 usuario.setId(resultset.getInt("cl.id"));
                 usuario.setEndereco(resultset.getString("cl.endereco"));
                 usuario.setIdPessoa(resultset.getInt("cl.id_privilegio"));
+                usuario.setIdLista(resultset.getInt("cl.id_lista"));
 
                 PessoaBean pessoa = new PessoaBean();
                 pessoa.setId(resultset.getInt("ps.id"));
@@ -52,14 +53,16 @@ public class ClienteDAO {
 
     public int adicionarCliente(ClienteBean cliente) {
 
-        String sql = "INSERT INTO clientes (endereco, id_compra, id_pessoa) VALUES (?,?,?);";
+        String sql = "INSERT INTO clientes (endereco, id_compra, id_lista, id_pessoa) VALUES (?,?,?,?);";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             int quantidade = 1;
             int idCompra = new CompraDAO().criarCompra();
+            int idLista = new ListaDAO().adicionarLista();
             int idPessoa = new PessoaDAO().adicionarPessoa(cliente.getPessoaBean());
             ps.setString(quantidade++, cliente.getEndereco());
             ps.setInt(quantidade++, idCompra);
+            ps.setInt(quantidade++, idLista);
             ps.setInt(quantidade++, idPessoa);
             ps.execute();
             
@@ -130,6 +133,7 @@ public class ClienteDAO {
                 cliente.setEndereco(resultset.getString("cl.endereco"));
                 cliente.setIdPessoa(resultset.getInt("cl.id_pessoa"));
                 cliente.setIdCompra(resultset.getInt("cl.id_compra"));
+                cliente.setIdLista(resultset.getInt("cl.id_lista"));
 
                 PessoaBean pessoa = new PessoaBean();
                 pessoa.setId(resultset.getInt("ps.id"));

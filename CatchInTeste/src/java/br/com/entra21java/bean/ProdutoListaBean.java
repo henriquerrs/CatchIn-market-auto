@@ -8,7 +8,31 @@ public class ProdutoListaBean {
     
     private ListaBean listaBean;
     private ProdutoBean produtoBean;
-    private int idLista, idProduto, quantidade;
+    private int id, idLista, idProduto, quantidade;
+
+    public int getIdLista() {
+        return idLista;
+    }
+
+    public void setIdLista(int idLista) {
+        this.idLista = idLista;
+    }
+
+    public int getIdProduto() {
+        return idProduto;
+    }
+
+    public void setIdProduto(int idProduto) {
+        this.idProduto = idProduto;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public ListaBean getListaBean() {
         return listaBean;
@@ -24,22 +48,6 @@ public class ProdutoListaBean {
 
     public void setProdutoBean(ProdutoBean produtoBean) {
         this.produtoBean = produtoBean;
-    }
-
-    public int getListas_id() {
-        return idLista;
-    }
-
-    public void setListas_id(int listas_id) {
-        this.idLista = listas_id;
-    }
-
-    public int getProdutos_id() {
-        return idProduto;
-    }
-
-    public void setProdutos_id(int produtos_id) {
-        this.idProduto = produtos_id;
     }
 
     public int getQuantidade() {
