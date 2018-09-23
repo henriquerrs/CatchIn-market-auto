@@ -114,3 +114,28 @@
         background-color: silver !important;
     }
 </style>
+<style>
+                                #botao_quantidade {
+                                    width:35px;
+                                    margin-left: 25%;
+                                }
+                                #botao_compra {
+                                    margin-left: 5%;
+                                }
+                                #botao_add_carrinho {
+                                    margin-left: 5%;
+                                }
+                            </style>
+                            
+                            <style type="text/css">
+        #nome_centro_tabela{
+            text-align: center;
+        }
+
+        #botao_compra {
+            margin-left: 37%;
+        }
+        body {
+            background-color: silver !important;
+        }
+    </style>

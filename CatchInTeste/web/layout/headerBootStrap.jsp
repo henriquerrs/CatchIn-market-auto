@@ -36,8 +36,8 @@
         <ul class="navbar-nav ml-auto">
 
 
+            <% if (((ClienteBean) session.getAttribute("cliente")).getPessoaBean().getIdPrivilegio() == 4) { %>
             <fieldset id="fieldset_preview">
-                <% if (((ClienteBean) session.getAttribute("cliente")).getPessoaBean().getIdPrivilegio() == 4) { %>
                 <li class="nav-item">
                     <!--a class="nav-link" href="/carrinho"><i class="fas fa-cart-arrow-down"></i></a-->
                     <a  class="nav-link" data-toggle="modal" data-target="#modalCarrinho" data-whatever="@mdo">
@@ -46,8 +46,8 @@
                         <p id="produto_no_carrinho"><h7 >Você tem: <%%> produtos no <i class="fas fa-cart-arrow-down"></i></h7></p>
                         <p id="preco_dos_produtos"><h7>Sua compra está custando: R$<%=new CompraDAO().atualizarTotal(idCompra)%></h7></p>
                     </a>
-                    <% }%>
             </fieldset>
+            <% }%>
 
         </ul>
     </div>

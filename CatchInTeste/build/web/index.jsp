@@ -71,18 +71,6 @@
                         <th><%=produto.getNome()%></th>
                         <th><%=produto.getMarca()%></th>
                         <th>
-                            <style>
-                                #botao_quantidade {
-                                    width:35px;
-                                    margin-left: 25%;
-                                }
-                                #botao_compra {
-                                    margin-left: 5%;
-                                }
-                                #botao_add_carrinho {
-                                    margin-left: 5%;
-                                }
-                            </style>
                             <form action='/adicionar' method="get">
                                 <a id="botao_add_carrinho" href='/adicionar?id=<%=produto.getId()%>' class='btn btn-success blue'><img style="width: 18px; height: 19px; margin-left: 5%" src="libs/imagens/add list.png"></a>
                                 <input type="number" id="botao_quantidade" name="quantidade" style="margin-left: 25%;" min="0" max="50" value="1">

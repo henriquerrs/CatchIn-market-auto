@@ -15,23 +15,12 @@
 <title>Página de administração</title>
 
 
-
+<br>
+<br>
 <div class="container">
     <%@page import="br.com.entra21java.dao.ProdutoDAO"%>
     <%@page import="java.util.List"%>
     <%@page import="br.com.entra21java.bean.ProdutoBean"%>
-    <style type="text/css">
-        #nome_centro_tabela{
-            text-align: center;
-        }
-
-        #botao_compra {
-            margin-left: 37%;
-        }
-        body {
-            background-color: silver !important;
-        }
-    </style>
     <div id="nome_centro_tabela" class='col-md-12'>
         <%  List<ProdutoBean> produtos = new ProdutoDAO().obterProdutos();%>
         <div>
@@ -47,36 +36,42 @@
                             </button>
                         </div>
 
-                        <form action="/adicionarProduto" method="post">
+                        <form action="/adicionarProduto" data-toggle="validator" method="post">
                             <br>
                             <div class="modal-body">
                                 <div class="row">
                                     <div class="form-group col s6">
                                         <label for="recipient-name" class="col-form-label">Nome:</label>
-                                        <input type="text" class="form-control" id="recipient-name" name="nome">
+                                        <input type="text" class="form-control" id="recipient-name" name="nome" data-error="Por favor, informe um nome do produto." required>
+                                        <div class="helper-block with-errors"></div>
                                     </div>
                                     <div class="form-group col s6">
                                         <label for="recipient-name" class="col-form-label">Preço:</label>
-                                        <input type="number" class="form-control" id="recipient-preco" name="preco">
+                                        <input type="number" class="form-control" id="recipient-preco" name="preco" data-error="Por favor, informe um preço do produto." required>
+                                        <div class="helper-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col s6">
                                         <label for="recipient-name" class="col-form-label">Peso:</label>
-                                        <input type="number" class="form-control" id="recipient-peso" name="peso">
+                                        <input type="number" class="form-control" id="recipient-peso" name="peso" data-error="Por favor, informe um peso do produto." required>
+                                        <div class="helper-block with-errors"></div>
                                     </div>
                                     <div class="form-group col s6">
                                         <label for="recipient-name" class="col-form-label">Quantidade:</label>
-                                        <input type="number" class="form-control" id="recipient-quantidade" name="quantidade">
+                                        <input type="number" class="form-control" id="recipient-quantidade" name="quantidade" data-error="Por favor, informe um quantidade do produto." required>
+                                        <div class="helper-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="recipient-name" class="col-form-label">Marca:</label>
-                                    <input type="text" class="form-control" id="recipient-marca" name="marca">
+                                    <input type="text" class="form-control" id="recipient-marca" name="marca" data-error="Por favor, informe um marca do produto." required>
+                                    <div class="helper-block with-errors"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="recipient-name" class="col-form-label">Categoria:</label>
-                                    <input type="text" class="form-control" id="recipient-categoria" name="categoria">
+                                    <input type="text" class="form-control" id="recipient-categoria" name="categoria" data-error="Por favor, informe um categoria do produto." required>
+                                    <div class="helper-block with-errors"></div>
                                 </div>
                                 <div class="form-group">
                                     <label for="message-text" class="col-form-label">Descrição:</label>
@@ -93,11 +88,14 @@
             </div>
             <h3>Produtos</h3>
             <table id="table-admin" class="table table-striped table-bordered" style="width:100%">
+                
                 <thead>
                     <tr>
                         <th>Preço</th>
                         <th>Nome</th>
                         <th>Marca</th>
+                        <th>Quantidade</th>
+                        <th>Ação</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -106,7 +104,8 @@
                         <th><%=produto.getPreco()%></th>
                         <th><%=produto.getNome()%></th>
                         <th><%=produto.getMarca()%></th>
-
+                        <th><%=produto.getQuantidade()%></th>
+                        <th><a href="/excluir?id=<%=produto.getId()%>">Excluir</a></th>
                     </tr>
                     <% }%>
                 </tbody>
@@ -115,6 +114,8 @@
                         <th>Preço</th>
                         <th>Nome</th>
                         <th>Marca</th>
+                        <th>Quantidade</th>
+                        <th>Ação</th>
                     </tr>
                 </tfoot>
             </table>
