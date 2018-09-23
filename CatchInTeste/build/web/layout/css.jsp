@@ -20,6 +20,9 @@
         line-height:30px;
         z-index:2;
     }
+    #div_cadastro {
+        margin-right: 0%
+    }
 </style>
 
 <style>

@@ -6,27 +6,23 @@
             <div class="col l12 m12 s12">
                 <div class="card">
                     <div class="card-content">
-                        <ul class="stepper horizontal">
-                            <li class="step active">
-                                <div class="step-title waves-effect waves-dark">Dados Pessoais</div>
-                                <div class="step-content">
                                     <div class="container-fluid">
                                         <div class="row">
                                             <div class="input-field col s6">
                                                 <i class="material-icons prefix">account_circle</i>
-                                                <input id="nome" type="text" name="nome" class="validate" required>
+                                                <input id="nome" type="text" class="validate" required name="nome">
                                                 <label for="nome">Nome</label>
                                             </div>
                                             <div class="input-field col s6">
                                                 <i class="material-icons prefix">account_circle</i>
-                                                <input id="endereco" type="text" name="endereco" class="validate" required>
+                                                <input id="endereco" type="text" class="validate" required name="enderco">
                                                 <label for="enderco">Endereço</label>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s6">
                                                 <i class="material-icons prefix">perm_contact_calendar</i>
-                                                <input id="idade_usuario" type="text" class="datepicker validate" required readonly="true">
+                                                <input id="idade_usuario" type="text" class="datepicker" readonly="true" name="idade_usuario">
                                                 <label for="idade_usuario">Data</label>
                                             </div>
                                             <div class="input-field col s6">
@@ -36,18 +32,25 @@
                                             </div>
                                         </div>
                                         <div class="row">
-                                            <div class="input-field col s12">
+                                            <div class="input-field col s6">
                                                 <i class="material-icons prefix">mail_outline</i>
-                                                <input id="email" type="email" name="email" required>
-                                                <label for="email">e-mail</label>
+                                                <input id="email" type="email" class="validate" required name="email">
+                                                <label for="email">e-mail</label><br>
+                                                <span style="color: red; font-size: smaller; margin-left: 11%">Este campo será usado para efetuar seu login</span>
+                                            </div>
+                                            <div class="input-field col s6">
+                                                <i class="material-icons prefix">lock_open</i>
+                                                <input id="senha" type="password" name="senha" class="validate" required>
+                                                <label for="password">Senha</label>
                                             </div>
                                         </div>
-                                        <div class="step-actions">
-                                            <button class="waves-effect waves-dark btn blue next-step">CONTINUE</button>
+                                        <div id="div_cadastro">
+                                            <button type="submit" class="waves-effect waves-light btn" id="cadastrar">Cadastrar</button>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
+                            <!--
+                            
                             <li class="step">
                                 <div class="step-title waves-effect waves-dark">Dados de Login</div>
                                 <div class="step-content">
@@ -55,14 +58,14 @@
                                         <div class="row">
                                             <div class="input-field col s12">
                                                 <i class="material-icons prefix">account_circle</i>
-                                                <input name="login" id="login" type="text" class="validate" required>
+                                                <input id="login" type="text" class="validate" required>
                                                 <label for="login">Login</label>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s12">
                                                 <i class="material-icons prefix">lock_open</i>
-                                                <input id="senha" type="password" class="validate" name="senha" required>
+                                                <input id="senha" type="password" class="validate" required>
                                                 <label for="password">Senha</label>
                                             </div>
                                         </div>
@@ -84,13 +87,12 @@
                                         <button type="submit" class="waves-effect waves-light btn" id="cadastrar">Cadastrar</button>
                                     </div>
                                 </div>
-                            </li>
+                            </li>-->
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 </form>    
 
-    <%@include file="layout/footer.jsp" %>
+<%@include file="layout/footer.jsp" %>
