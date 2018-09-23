@@ -64,33 +64,31 @@
             <form action="#" data-toggle="validator" method="post">
                 <br>
                 <div class="modal-body">
-                    <div class="row">
-                        <div class="form-group col s6">
+                    <div class="row form-group col s12">
                             <label for="recipient-name" class="col-form-label">Nome:</label>
-                            <input class="form-control" type="text" placeholder="info-nome" readonly>
+                            <input class="form-control" type="text" value="<%= ((ClienteBean) session.getAttribute("cliente")).getPessoaBean().getNome() %>" placeholder="info-nome" readonly>
                             <div class="helper-block with-errors"></div>
-                        </div>
-                        <div class="form-group col s6">
-                            <label for="recipient-name" class="col-form-label">Preço:</label>
-                            <input class="form-control" type="text" placeholder="info-endereco" readonly>
-                            <div class="helper-block with-errors"></div>
-                        </div>
+                    </div>
+                    <div class="row form-group col s12">
+                        <label for="recipient-name" class="col-form-label">Endereço:</label>
+                        <input class="form-control" type="text" value="<%= ((ClienteBean) session.getAttribute("cliente")).getEndereco() %>" placeholder="info-endereco" readonly>
+                        <div class="helper-block with-errors"></div>
                     </div>
                     <div class="row">
                         <div class="form-group col s6">
-                            <label for="recipient-name" class="col-form-label">Peso:</label>
-                            <input class="form-control" type="text" placeholder="data" readonly>
+                            <label for="recipient-name" class="col-form-label">CPF:</label>
+                            <input class="form-control" type="text" value="<%= ((ClienteBean) session.getAttribute("cliente")).getPessoaBean().getCpf() %>" placeholder="data" readonly>
                             <div class="helper-block with-errors"></div>
                         </div>
                         <div class="form-group col s6">
-                            <label for="recipient-name" class="col-form-label">Quantidade:</label>
-                            <input class="form-control" type="text" placeholder="info-telefone" readonly>
+                            <label for="recipient-name" class="col-form-label">Idade:</label>
+                            <input class="form-control" type="text" value="<%= ((ClienteBean) session.getAttribute("cliente")).getPessoaBean().getIdade() %>" placeholder="info-telefone" readonly>
                             <div class="helper-block with-errors"></div>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="recipient-name" class="col-form-label">Marca:</label>
-                        <input class="form-control" type="text" placeholder="info-email" readonly>
+                        <label for="recipient-name" class="col-form-label">Telefone:</label>
+                        <input class="form-control" type="text" value="<%= ((ClienteBean) session.getAttribute("cliente")).getPessoaBean().getTelefone() %>" placeholder="info-email" readonly>
                         <div class="helper-block with-errors"></div>
                     </div>
                 </div>
