@@ -105,7 +105,7 @@
                         <th><%=produto.getNome()%></th>
                         <th><%=produto.getMarca()%></th>
                         <th><%=produto.getQuantidade()%></th>
-                        <th><a href="/excluir?id=<%=produto.getId()%>">Excluir</a></th>
+                        <th><a href="/excluir?id=<%=produto.getId()%>"><i class="fas fa-trash-alt"></i></a></th>
                     </tr>
                     <% }%>
                 </tbody>

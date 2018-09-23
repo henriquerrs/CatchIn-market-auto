@@ -139,3 +139,8 @@
             background-color: silver !important;
         }
     </style>
+    <style type="text/css">
+    body{
+        background-color: white !important;
+    }
+</style>

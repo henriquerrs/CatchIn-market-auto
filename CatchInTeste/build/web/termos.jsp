@@ -5,11 +5,9 @@
     Author     : Sara
 --%>
 <%@include file="layout/masterBootStrap.jsp" %>
-<style type="text/css">
-    body{
-        background-color: white !important;
-    }
-</style>
+
+<br>
+<br>
 <div>
     <link rel="stylesheet" type="text/css" href="tema/materialize/css/style.css">
     <h2>Política de privacidade para 
