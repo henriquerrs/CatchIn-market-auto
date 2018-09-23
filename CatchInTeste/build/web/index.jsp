@@ -125,9 +125,9 @@
                         <th><%=produto.getMarca()%></th>
                         <th>
                             <form action='/adicionar' method="get">
-                                <button type="submit" id="botao_lista" name="idStatus" value="lista" class='btn btn-success blue'><img style="width: 18px; height: 19px; margin-left: 5%" src="libs/imagens/add list.png"></button>
+                                <button type="submit" id="botao_add_carrinho" name="idStatus" value="lista" class='btn btn-success blue'><img style="width: 18px; height: 19px; margin-left: 5%" src="libs/imagens/add list.png"></button>
                                 <input type="hidden" id="produtoCompra" name="idProduto" value="<%=produto.getId()%>">
-                                <input type="number" id="botao_quantidade" name="quantidade" style="margin-left: 25%;" min="0" max="50" value="1">
+                                <input type="number" id="botao_quantidade" name="quantidade" min="0" max="50" value="1">
                                 <button type="submit" id="botao_compra" name="idStatus" value="carrinho" class='btn btn-success blue'><i class="fas fa-cart-plus"></i></button>
                             </form>
                         </th>

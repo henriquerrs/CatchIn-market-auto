@@ -24,7 +24,7 @@
 
 <style>
     #logo_catchIn{
-        margin-left: 0%;
+        margin-left: 5%;
     }
     #botao_logout{
         color: white; 
@@ -60,6 +60,7 @@
         border-bottom-left-radius: 35px; 
         border-bottom-right-radius: 35px;
         margin-top: 0%;
+        margin-left: 4%;
     }
 </style>
 
@@ -115,31 +116,28 @@
     }
 </style>
 <style>
-                                #botao_quantidade {
-                                    width:35px;
-                                    margin-left: 25%;
-                                }
-                                #botao_compra {
-                                    margin-left: 5%;
-                                }
-                                #botao_add_carrinho {
-                                    margin-left: 5%;
-                                }
-                            </style>
-                            
-                            <style type="text/css">
-        #nome_centro_tabela{
-            text-align: center;
-        }
+    #botao_add_carrinho {
+        margin-left: 11%;
+    }
+    #botao_quantidade {
+        width:35px;
+        margin-left: 25%;
+    }
+    
+    #botao_compra {
+        margin-left: 5%;
+    }
+</style>
 
-        #botao_compra {
-            margin-left: 37%;
-        }
-        body {
-            background-color: silver !important;
-        }
-    </style>
-    <style type="text/css">
+<style type="text/css">
+    #nome_centro_tabela{
+        text-align: center;
+    }
+    body {
+        background-color: silver !important;
+    }
+</style>
+<style type="text/css">
     body{
         background-color: white !important;
     }
