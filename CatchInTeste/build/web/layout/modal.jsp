@@ -56,6 +56,7 @@
                 <%}%>
             </div>
             <div class="modal-footer">
+                <button id="finalizar" type="submit" class="btn btn-dark">Finalizar Compra</button>
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
             </div>
         </div>

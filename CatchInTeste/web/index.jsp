@@ -48,6 +48,59 @@
     </a>
 </div>
 <br/>
+<div class="center-block">
+    <button style="text-align: center" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalCliente" data-whatever="@mdo">Informações Cliente</button>
+</div>
+<div class="modal fade" id="modalCliente" tabindex="-1" role="dialog" aria-labelledby="modalClientes" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalClientes">Informações Cliente</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <form action="#" data-toggle="validator" method="post">
+                <br>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="form-group col s6">
+                            <label for="recipient-name" class="col-form-label">Nome:</label>
+                            <input class="form-control" type="text" placeholder="info-nome" readonly>
+                            <div class="helper-block with-errors"></div>
+                        </div>
+                        <div class="form-group col s6">
+                            <label for="recipient-name" class="col-form-label">Preço:</label>
+                            <input class="form-control" type="text" placeholder="info-endereco" readonly>
+                            <div class="helper-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col s6">
+                            <label for="recipient-name" class="col-form-label">Peso:</label>
+                            <input class="form-control" type="text" placeholder="data" readonly>
+                            <div class="helper-block with-errors"></div>
+                        </div>
+                        <div class="form-group col s6">
+                            <label for="recipient-name" class="col-form-label">Quantidade:</label>
+                            <input class="form-control" type="text" placeholder="info-telefone" readonly>
+                            <div class="helper-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="recipient-name" class="col-form-label">Marca:</label>
+                        <input class="form-control" type="text" placeholder="info-email" readonly>
+                        <div class="helper-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Fechar">Fechar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 <h3 style="text-align: center">Sua compra certa, onde o cliente é valorizado</h3>
 <br>
 <div class="container">
