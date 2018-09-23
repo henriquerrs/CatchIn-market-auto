@@ -14,19 +14,19 @@
                                         <div class="row">
                                             <div class="input-field col s6">
                                                 <i class="material-icons prefix">account_circle</i>
-                                                <input id="nome" type="text" class="validate required" name="nome">
+                                                <input id="nome" type="text" name="nome" class="validate" required>
                                                 <label for="nome">Nome</label>
                                             </div>
                                             <div class="input-field col s6">
                                                 <i class="material-icons prefix">account_circle</i>
-                                                <input id="endereco" type="text" class="validate" name="endereco" required>
+                                                <input id="endereco" type="text" name="endereco" class="validate" required>
                                                 <label for="enderco">Endereço</label>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="input-field col s6">
                                                 <i class="material-icons prefix">perm_contact_calendar</i>
-                                                <input id="idade_usuario" type="text" class="datepicker validate required" readonly="true">
+                                                <input id="idade_usuario" type="text" class="datepicker validate" required readonly="true">
                                                 <label for="idade_usuario">Data</label>
                                             </div>
                                             <div class="input-field col s6">
@@ -38,7 +38,7 @@
                                         <div class="row">
                                             <div class="input-field col s12">
                                                 <i class="material-icons prefix">mail_outline</i>
-                                                <input id="email" type="email" class="validate" name="email" required>
+                                                <input id="email" type="email" name="email" required>
                                                 <label for="email">e-mail</label>
                                             </div>
                                         </div>
@@ -78,7 +78,7 @@
                                 <div class="step-content">
                                     <div class="container">
                                         <p style="text-align: center; margin-top: 30%;">Muito bem jovem gafanhoto, agora você está apto à fazer compras como um bom capitalista opressor<p>
-                                        <!--<p style="text-align: center"> </p>-->
+                                        <p style="text-align: center"> </p>
                                     </div>
                                     <div class="step-actions">
                                         <button type="submit" class="waves-effect waves-light btn" id="cadastrar">Cadastrar</button>
