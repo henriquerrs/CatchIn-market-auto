@@ -74,10 +74,10 @@ INSERT INTO produtos(nome, preco, peso, quantidade, marca, categoria, descricao)
 ('SAL ROSA',20.85,5000,1,'Cisne','Carboidratosas','É sal, tenho certeza');
 
 INSERT INTO pessoas(nome,senha,email,cpf,idade,telefone,id_privilegio) VALUES
-('Crispim','3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2','crispim@gmail.com','11111111111',20,'33333333',1),
-('Sara','3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2','Sara@gmail.com','11111111111',21,'33333333',4),
-('Leonardo','3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2','Leonardo@gmail.com','11111111111',18,'33333333',3),
-('Henríque','3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2','Henrique@gmail.com','11111111111',17,'33333333',4);
+('Crispim','3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2','crispim@gmail.com','111.111.111-11',20,'(47)9 8866-4058',1),
+('Sara','3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2','Sara@gmail.com','222.222.222-22',21,'(47)9 1234-5678',4),
+('Leonardo','3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2','Leonardo@gmail.com','333.333.333-33',18,'(47)9 9793-1575',3),
+('Henríque','3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2','Henrique@gmail.com','444.444.444-44',17,'(47)9 9738-2791',4);
 
 INSERT INTO compras(total) VALUES
 (1.10),
