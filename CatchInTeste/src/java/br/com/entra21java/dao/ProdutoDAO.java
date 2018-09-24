@@ -72,10 +72,14 @@ public class ProdutoDAO {
     }
 
     public boolean excluirProduto(int id) {
-        String sql = "DELETE FROM produtos WHERE id = ?";
+        String sql = "DELETE FROM itens WHERE id_produto = ?;"
+                   + "DELETE FROM produto_lista WHERE id_produto = ?;"
+                   + "DELETE FROM produtos WHERE id = ?;";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
             ps.setInt(1, id);
+            ps.setInt(2, id);
+            ps.setInt(3, id);
             return ps.executeUpdate() == 1;
         } catch (SQLException e) {
             e.printStackTrace();

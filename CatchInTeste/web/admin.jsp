@@ -106,6 +106,7 @@
                         <td><%=produto.getMarca()%></td>
                         <td><%=produto.getQuantidade()%></td>
                         <td><a href="/excluir?id=<%=produto.getId()%>"><i class="fas fa-trash-alt"></i></a></td>
+                        <td><a href="/editar?id=<%=produto.getId()%>"><i class="fas fa-edit"></i></a></td>
                     </tr>
                     <% }%>
                 </tbody>
