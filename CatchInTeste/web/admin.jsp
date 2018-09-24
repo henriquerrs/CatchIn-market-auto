@@ -106,8 +106,8 @@
                         <td><%=produto.getMarca()%></td>
                         <td><%=produto.getQuantidade()%></td>
                         <td>
-                            <a href="/excluir?id=<%=produto.getId()%>"><i class="fas fa-trash-alt"></i></a>
-                            <a data-toggle="modal" data-target="#modalEditar" data-whatever="@mdo"><i class="fas fa-edit"></i></a>
+                            <a href="/excluir?id=<%=produto.getId()%>"><i class="fas fa-trash-alt" data-toggle="tooltip" data-placement="left" data-original-title="Excluir Item"></i></a>
+                            <a data-toggle="modal" data-target="#modalEditar" data-whatever="@mdo"><i class="fas fa-edit" data-toggle="tooltip" data-placement="left" data-original-title="Editar Item"></i></a>
                             <div class="modal fade" id="modalEditar" tabindex="-1" role="dialog" aria-labelledby="modalProdutos" aria-hidden="true">
                                 <div class="modal-dialog modal-lg" role="document">
                                     <div class="modal-content">
