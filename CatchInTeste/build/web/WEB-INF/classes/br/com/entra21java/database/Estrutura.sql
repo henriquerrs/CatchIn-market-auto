@@ -7,7 +7,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
 -- -----------------------------------------------------
 -- Schema mydb
 -- -----------------------------------------------------
-DROP DATABASE supermercado_catchin;
+DROP DATABASE IF EXISTS supermercado_catchin;
 -- -----------------------------------------------------
 -- Schema supermercado_catchin
 -- -----------------------------------------------------
