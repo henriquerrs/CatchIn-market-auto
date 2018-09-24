@@ -1,20 +1,20 @@
 ADMIN
-	editar lista de admin 
+	editar lista de admin = construction
 	máscara nos valores peso admin 
-	centralizar log out admin 
+	centralizar log out admin = ok
 Cliente
 	Tooltip botão lista compra
-	Datatable com ajax 
+	Datatable com ajax = null
 
 TERMOS
-	Margin left right
+	Margin left right = ok
 
-Web Beacons remover 
+Web Beacons remover = ok
 http://localhost:8080/termos null pointer deslogado 
 
-Sha 512 - 
+Sha 512 - ok
 
-URL acessando sem estar logado 
+URL acessando sem estar logado = verificar
 
-E-mail envio Necessário
-E-mail com hash PLUS
+E-mail envio Necessário = null
+E-mail com hash PLUS = null

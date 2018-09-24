@@ -72,11 +72,22 @@ public class ProdutoDAO {
     }
 
     public boolean excluirProduto(int id) {
-        String sql = "DELETE FROM produtos WHERE id = ?";
+        new ItemDAO().excluirItem(id);
+        new ProdutoListaDAO().excluirItem(id);
+        String sql ="DELETE FROM produtos WHERE id = ?;";
+        String sql2 ="DELETE FROM itens WHERE id_produto = ?;";
+        String sql3 ="DELETE FROM produto_lista WHERE id_produto = ?;";
         try {
-            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql3);
             ps.setInt(1, id);
-            return ps.executeUpdate() == 1;
+            ps.executeUpdate();
+            ps = Conexao.obterConexao().prepareStatement(sql2);
+            ps.setInt(1, id);
+            ps.executeUpdate();
+            ps = Conexao.obterConexao().prepareStatement(sql);
+            ps.setInt(1, id);
+            ps.executeUpdate();
+            return true;
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
