@@ -28,8 +28,8 @@ public class SupermercadoStoreExcluirProduto extends HttpServlet{
          
         int id = Integer.parseInt(req.getParameter("id"));
         
-         new ProdutoDAO().excluirProduto(id);
-         resp.sendRedirect("");
+        new ProdutoDAO().excluirProduto(id);
+        resp.sendRedirect("");
     }
     
 }

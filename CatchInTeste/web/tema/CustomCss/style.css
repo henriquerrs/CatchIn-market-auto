@@ -65,3 +65,8 @@ fieldset{
 placeholder {
     color: red;
 }
+
+.fa-edit:before {
+    content: "\f044";
+    color: #027afd;
+}
