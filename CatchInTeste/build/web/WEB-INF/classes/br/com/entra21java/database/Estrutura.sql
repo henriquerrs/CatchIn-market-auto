@@ -11,7 +11,7 @@ DROP DATABASE IF EXISTS supermercado_catchin;
 -- -----------------------------------------------------
 -- Schema supermercado_catchin
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `supermercado_catchin` DEFAULT CHARACTER SET utf8 ;
+CREATE SCHEMA IF NOT EXISTS `supermercado_catchin` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
 USE `supermercado_catchin` ;
 
 -- -----------------------------------------------------
@@ -31,7 +31,7 @@ DEFAULT CHARACTER SET = utf8;
 CREATE TABLE IF NOT EXISTS `supermercado_catchin`.`pessoas` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `nome` VARCHAR(45) NULL DEFAULT NULL,
-  `senha` VARCHAR(20) NULL DEFAULT NULL,
+  `senha` VARCHAR(150) NULL DEFAULT NULL,
   `email` VARCHAR(350) NULL DEFAULT NULL,
   `cpf` VARCHAR(11) NULL DEFAULT NULL,
   `idade` TINYINT(4) NULL DEFAULT NULL,
