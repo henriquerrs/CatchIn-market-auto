@@ -23,6 +23,10 @@
     #div_cadastro {
         margin-right: 0%
     }
+    #div_termos{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 </style>
 
 <style>

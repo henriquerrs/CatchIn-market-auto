@@ -8,7 +8,7 @@
 
 <br>
 <br>
-<div>
+<div id="div_termos">
     <link rel="stylesheet" type="text/css" href="tema/materialize/css/style.css">
     <h2>Política de privacidade para 
         <a href='/login'>CatchIn</a>
