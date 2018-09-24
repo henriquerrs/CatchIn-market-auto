@@ -27,7 +27,7 @@
 
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalAdmin" data-whatever="@mdo">Adicionar Produto</button>
             <div class="modal fade" id="modalAdmin" tabindex="-1" role="dialog" aria-labelledby="modalProdutos" aria-hidden="true">
-                <div class="modal-dialog" role="document">
+                <div class="modal-dialog modal-lg" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
                             <h5 class="modal-title" id="modalProdutos">Adicionar Produto</h5>
@@ -101,11 +101,11 @@
                 <tbody>
                     <% for (ProdutoBean produto : produtos) {%>
                     <tr>
-                        <th><%=produto.getPreco()%></th>
-                        <th><%=produto.getNome()%></th>
-                        <th><%=produto.getMarca()%></th>
-                        <th><%=produto.getQuantidade()%></th>
-                        <th><a href="/excluir?id=<%=produto.getId()%>"><i class="fas fa-trash-alt"></i></a></th>
+                        <td><%=produto.getPreco()%></td>
+                        <td><%=produto.getNome()%></td>
+                        <td><%=produto.getMarca()%></td>
+                        <td><%=produto.getQuantidade()%></td>
+                        <td><a href="/excluir?id=<%=produto.getId()%>"><i class="fas fa-trash-alt"></i></a></td>
                     </tr>
                     <% }%>
                 </tbody>

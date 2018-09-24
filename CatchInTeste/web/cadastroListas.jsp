@@ -40,12 +40,12 @@
                 <tbody>
                     <% for (ProdutoListaBean produto : produtos) {%>
                     <tr>
-                        <th><%=produto.getProdutoBean().getNome()%></th>
-                        <th><%=produto.getProdutoBean().getPreco()%></th>
-                        <th><%=produto.getQuantidade()%></th>
-                        <th>
+                        <td><%=produto.getProdutoBean().getNome()%></td>
+                        <td><%=produto.getProdutoBean().getPreco()%></td>
+                        <td><%=produto.getQuantidade()%></td>
+                        <td>
                             <a href="/excluirLista?id=<%= produto.getId()%>">Excluir</a>
-                        </th>
+                        </td>
                     </tr>
                     <% }%>
                 </tbody>

@@ -18,7 +18,7 @@ public class ListaDAO {
 
     public int adicionarLista() {
 
-        String sql = "INSERT INTO listas VALUES ();";
+        String sql = "INSERT INTO listas VALUE ();";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             ps.execute();

@@ -1,0 +1,20 @@
+ADMIN
+	editar lista de admin 
+	máscara nos valores peso admin 
+	centralizar log out admin 
+Cliente
+	Tooltip botão lista compra
+	Datatable com ajax 
+
+TERMOS
+	Margin left right
+
+Web Beacons remover 
+http://localhost:8080/termos null pointer deslogado 
+
+Sha 512 - 
+
+URL acessando sem estar logado 
+
+E-mail envio Necessário
+E-mail com hash PLUS
