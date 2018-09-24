@@ -45,7 +45,7 @@
 
 
             <% if (((ClienteBean) session.getAttribute("cliente")).getPessoaBean().getIdPrivilegio() == 4) { %>
-            <fieldset id="fieldset_preview">
+            <fieldset id="fieldset_preview" data-toggle="tooltip" data-placement="bottom" data-original-title="Veja seus produtos clicando aqui!">
                 <li class="nav-item">
                     <!--a class="nav-link" href="/carrinho"><i class="fas fa-cart-arrow-down"></i></a-->
                     <a  class="nav-link" data-toggle="modal" data-target="#modalCarrinho" data-whatever="@mdo">
