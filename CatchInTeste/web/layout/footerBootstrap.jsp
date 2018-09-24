@@ -5,14 +5,13 @@
     Author     : Henrique Silva
 --%>
 <%@include file="js.jsp" %>
-<footer class="page-footer font-small teal pt-4" style="
-        background-color: #dcdcdc">
+<footer class="page-footer font-small teal pt-4" style="background-color: #dcdcdc">
 
     <!-- Footer Links -->
     <div class="container-fluid text-center text-md-left">
 
         <!-- Grid row -->
-        <div class="row">
+        <div class="row"  style="margin-left: 1%">
 
             <!-- Grid column -->
             <div class="col-md-6 mt-md-0 mt-3">
@@ -23,7 +22,9 @@
                 </p>
                 <p>De forma simples e elegante, tornamos tudo isso possível para que você possa ter a melhor experiência!
                 </p>
-
+                <p>
+                    © 2018 Copyright:Catch In
+                </p>
             </div>
             <!-- Grid column -->
 
@@ -51,17 +52,8 @@
                 </ul>
 
             </div>
-            <!-- Grid column -->
 
         </div>
-        <!-- Grid row -->
-
-    </div>
-    <!-- Footer Links -->
-
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3" >© 2018 Copyright:
-        Catch In
     </div>
     <!-- Copyright -->
 
