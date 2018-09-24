@@ -71,12 +71,43 @@ public class ProdutoDAO {
 
     }
 
+    public List<ProdutoBean> obterProdutosParaDataTable(String comeco, String quantidade, String busca) {
+        busca = '%' + busca + '%';
+        List<ProdutoBean> usuarios = new ArrayList<>();
+        String sql = "SELECT * FROM produtos WHERE nome LIKE ? OR marca LIKE ? LIMIT " + comeco + ", " + quantidade;
+        try {
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+            ps.setString(1, busca);
+            ps.setString(2, busca);
+            ps.execute();
+            ResultSet resultset = ps.getResultSet();
+            while (resultset.next()) {
+                ProdutoBean produto = new ProdutoBean();
+                produto.setId(resultset.getInt("id"));
+                produto.setNome(resultset.getString("nome"));
+                produto.setPreco(resultset.getDouble("preco"));
+                produto.setPeso(resultset.getDouble("peso"));
+                produto.setQuantidade(resultset.getInt("quantidade"));
+                produto.setMarca(resultset.getString("marca"));
+                produto.setCategoria(resultset.getString("categoria"));
+                produto.setDescricao(resultset.getString("descricao"));
+
+                usuarios.add(produto);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            Conexao.fecharConexao();
+        }
+        return usuarios;
+    }
+
     public boolean excluirProduto(int id) {
         new ItemDAO().excluirItem(id);
         new ProdutoListaDAO().excluirItem(id);
-        String sql ="DELETE FROM produtos WHERE id = ?;";
-        String sql2 ="DELETE FROM itens WHERE id_produto = ?;";
-        String sql3 ="DELETE FROM produto_lista WHERE id_produto = ?;";
+        String sql = "DELETE FROM produtos WHERE id = ?;";
+        String sql2 = "DELETE FROM itens WHERE id_produto = ?;";
+        String sql3 = "DELETE FROM produto_lista WHERE id_produto = ?;";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql3);
             ps.setInt(1, id);
@@ -116,11 +147,11 @@ public class ProdutoDAO {
         }
         return false;
     }
-    
+
     public List<HashMap<String, Object>> obterTodosParaDataTable() {
         List<HashMap<String, Object>> listaProdutos = new ArrayList<>();
         String sql = "SELECT * FROM produtos";
-        if (Conexao.obterConexao()!= null) {
+        if (Conexao.obterConexao() != null) {
             try {
                 Statement statement = Conexao.obterConexao().createStatement();
                 statement.execute(sql);
@@ -140,4 +171,5 @@ public class ProdutoDAO {
         }
         return listaProdutos;
     }
+
 }

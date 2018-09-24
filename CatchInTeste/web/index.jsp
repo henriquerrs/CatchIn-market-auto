@@ -101,11 +101,11 @@
 </div>
 <br>
 <div class="container">
-    <%  List<ProdutoBean> produtos = new ProdutoDAO().obterProdutos();%>
+    
     <!-- Panel Tickets -->
     <div class="panel box-shadow">
         <div class="panel-body">
-            <table id="table-admin" class="table table-striped table-bordered" style="width:100%">
+            <table id="table-admin" class="table table-striped table-bordered">
                 <thead>
                     <tr>
                         <th>Preço</th>
@@ -115,21 +115,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <% for (ProdutoBean produto : produtos) {%>
-                    <tr>
-                        <td><%=produto.getPreco()%></td>
-                        <td><%=produto.getNome()%></td>
-                        <td><%=produto.getMarca()%></td>
-                        <td>
-                            <form action='/adicionar' method="get">
-                                <button type="submit" data-toggle="tooltip" id="botao_add_carrinho" name="idStatus" value="lista" class='btn btn-secondary' data-toggle="tooltip" data-placement="left" data-original-title="Adicione à lista"><img style="width: 18px; height: 19px; margin-left: 5%" src="libs/imagens/add list.png"></button>
-                                <input type="hidden" id="produtoCompra" name="idProduto" value="<%=produto.getId()%>">
-                                <input type="number" id="botao_quantidade" name="quantidade" min="0" max="50" value="1">
-                                <button type="submit" data-toggle="tooltip" id="botao_compra" name="idStatus" value="carrinho" class='btn btn-secondary' data-toggle="tooltip" data-placement="left" data-original-title="Adicione ao carrinho"><i class="fas fa-cart-plus"></i></button>
-                            </form>
-                        </td>
-                    </tr>
-                    <% }%>
                 </tbody>
                 <tfoot>
                     <tr>

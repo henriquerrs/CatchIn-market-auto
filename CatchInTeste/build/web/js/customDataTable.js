@@ -1,5 +1,7 @@
 $(document).ready(function () {
     $('#table-admin').DataTable({
+        responsive: true,
+        "serverSide": true,
         "language": {
             "sEmptyTable": "Nenhum registro encontrado",
             "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
@@ -22,7 +24,21 @@ $(document).ready(function () {
                 "sSortAscending": ": Ordenar colunas de forma ascendente",
                 "sSortDescending": ": Ordenar colunas de forma descendente"
             }
-        }
+        },
+        "ajax": "/produto/datatable",
+        "columns": [
+            {"data": "preco"},
+            {"data": "nome"},
+            {"data": "marca"},
+            {
+                "data": null,
+                "render": function (data) {
+                    return  "<a class='btn btn-info'  href='/produtos/editar?id=" + data.id + "'><i class='fa fa-edit'></i> Editar</a>\
+                    <a class='btn btn-danger' href='/produtos/excluir?id=" + data.id + "'><i class='fa fa-trash-alt'></i> Excluir</a>";
+                    //caminho do icone para editar na coluna funcionario
+                }
+            }
+        ]
     });
 });
 
