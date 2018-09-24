@@ -34,7 +34,8 @@ public class SupermercadoStore extends HttpServlet{
         pessoa.setSenha(req.getParameter("senha"));
         pessoa.setEmail(req.getParameter("email"));
         pessoa.setTelefone(req.getParameter("telefone"));
-        pessoa.setCpf(req.getParameter("cpf"));
+        pessoa.setCpf(req.getParameter("cpf").replace(".","").replace("-",""));
+        
         cliente.setPessoaBean(pessoa);
         
         int codigo = new ClienteDAO().adicionarCliente(cliente);
