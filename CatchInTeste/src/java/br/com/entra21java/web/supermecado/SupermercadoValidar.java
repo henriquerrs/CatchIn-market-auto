@@ -7,6 +7,7 @@ package br.com.entra21java.web.supermecado;
 
 import br.com.entra21java.bean.ClienteBean;
 import br.com.entra21java.bean.PessoaBean;
+import br.com.entra21java.dao.ConverterSHA512;
 import br.com.entra21java.dao.PessoaDAO;
 import com.google.gson.Gson;
 import java.io.IOException;
@@ -28,7 +29,7 @@ public class SupermercadoValidar extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String login = req.getParameter("login");
-        String senha = req.getParameter("senha");
+        String senha = new ConverterSHA512().transformarSenha(req.getParameter("senha"));
         ClienteBean cliente = new PessoaDAO().verificarLogin(login, senha);
 
         if (cliente != null) {

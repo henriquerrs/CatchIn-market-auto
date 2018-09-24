@@ -74,10 +74,10 @@ INSERT INTO produtos(nome, preco, peso, quantidade, marca, categoria, descricao)
 ('SAL ROSA',20.85,5000,1,'Cisne','Carboidratosas','É sal, tenho certeza');
 
 INSERT INTO pessoas(nome,senha,email,cpf,idade,telefone,id_privilegio) VALUES
-('Crispim','123','crispim@gmail.com','11111111111',20,'33333333',1),
-('Sara','123','Sara@gmail.com','11111111111',21,'33333333',4),
-('Leonardo','123','Leonardo@gmail.com','11111111111',18,'33333333',3),
-('Henrique','123','Henrique@gmail.com','11111111111',17,'33333333',4);
+('Crispim','3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2','crispim@gmail.com','11111111111',20,'33333333',1),
+('Sara','3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2','Sara@gmail.com','11111111111',21,'33333333',4),
+('Leonardo','3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2','Leonardo@gmail.com','11111111111',18,'33333333',3),
+('Henríque','3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2','Henrique@gmail.com','11111111111',17,'33333333',4);
 
 INSERT INTO compras(total) VALUES
 (1.10),
@@ -114,7 +114,7 @@ INSERT INTO produto_lista (quantidade,id_lista,id_produto) VALUES
 
 #SELECT * FROM privilegios;
 #SELECT * FROM produtos;
-#SELECT * FROM pessoas;
+SELECT * FROM pessoas;
 #SELECT * FROM compras;
 #SELECT * FROM clientes;
 #SELECT * FROM colaboradores;
