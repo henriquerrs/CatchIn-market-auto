@@ -33,11 +33,6 @@
                     </div>
                     <div  class="input-field col s12">
                     </div>
-                    <div  class="input-field col s12">
-                        <a class="btn-floating btn-large waves-effect waves-light indigo"><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn-floating btn-large waves-effect waves-light red"><i class="fab fa-google"></i></a>
-                        <a class="btn-floating btn-large waves-effect waves-light blue"><i class="fab fa-twitter"></i></a>
-                    </div>
                 </form>
             </fieldset>
         </div>

@@ -24,10 +24,49 @@
         margin-right: 0%
     }
     #div_termos{
-        margin-left: 5%;
-        margin-right: 5%;
+        margin: 2% 8%;
     }
 </style>
+
+
+
+<style>
+
+    .multiple_elements {
+        padding: 30px 0 10px 0;
+        text-align: center;
+    }
+
+    /*customizing tooltip color*/
+    /*right tooltip*/
+    .tooltip.right > .tooltip-arrow {
+        border-right-color: dodgerblue;
+    }
+
+    /*bottom tooltip*/
+    .tooltip.bottom > .tooltip-arrow {
+        border-bottom-color: dodgerblue;
+    }
+
+    /*top tooltip*/
+    .tooltip.top > .tooltip-arrow {
+        border-top-color: dodgerblue;
+    }
+
+    /*left tooltip*/
+    .tooltip.left > .tooltip-arrow {
+        border-left-color: dodgerblue;
+    }
+
+    /*tooltip inner*/
+    .tooltip > .tooltip-inner {
+        background-color: dodgerblue;
+        text-shadow: 0 1px 1px #000;
+        font-weight: normal;
+    }
+
+</style>
+
 
 <style>
     #logo_catchIn{
@@ -37,6 +76,11 @@
         color: white; 
         position: relative; 
         float: right; 
+        padding-top: 0%;
+    }
+    #botao_logout_adm{
+        color: white; 
+        text-align: center;
         padding-top: 0%;
     }
     #botao_lista {
@@ -63,6 +107,18 @@
         position: fixed;
         top: 0; 
         width: 300px; 
+        padding-top: 0%; 
+        border-bottom-left-radius: 35px; 
+        border-bottom-right-radius: 35px;
+        margin-top: 0%;
+        margin-left: 4%;
+    }
+    #menu_centro_adm {
+        border: 2px solid white;
+        border-top: 0;
+        position: fixed;
+        top: 0; 
+        width: 200px; 
         padding-top: 0%; 
         border-bottom-left-radius: 35px; 
         border-bottom-right-radius: 35px;
@@ -130,7 +186,7 @@
         width:35px;
         margin-left: 25%;
     }
-    
+
     #botao_compra {
         margin-left: 5%;
     }

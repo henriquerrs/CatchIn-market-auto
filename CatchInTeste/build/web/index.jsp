@@ -29,10 +29,10 @@
     </ol>
     <div class="carousel-inner">
         <div class="carousel-item active">
-            <img class="d-block w-100" src="libs/imagens/imagem1.jpg" alt="First slide">
+            <img class="d-block w-100" src="libs/imagens/BANNER2.jpg" style="margin-top: 3%" alt="First slide">
         </div>
         <div class="carousel-item">
-            <img class="d-block w-100" src="libs/imagens/imagem2.jpg" alt="Second slide">
+            <img class="d-block w-100" src="libs/imagens/BANNER1-2.jpg" style="margin-top: 3%" alt="Second slide">
         </div>
         <div class="carousel-item">
             <img class="d-block w-100" src="libs/imagens/imagem3.jpg" alt="Third slide">
@@ -49,7 +49,7 @@
 </div>
 <br/>
 <div class="col-sm-offset-5 col-sm-12 text-center">
-    <button style="text-align: center" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalCliente" data-whatever="@mdo">Informações Cliente</button>
+    <button style="text-align: center" type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalCliente" data-whatever="@mdo">Informações Cliente</button>
 </div>
 <div class="modal fade" id="modalCliente" tabindex="-1" role="dialog" aria-labelledby="modalClientes" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -99,7 +99,6 @@
         </div>
     </div>
 </div>
-<h3 style="text-align: center">Sua compra certa, onde o cliente é valorizado</h3>
 <br>
 <div class="container">
     <%  List<ProdutoBean> produtos = new ProdutoDAO().obterProdutos();%>
@@ -123,10 +122,10 @@
                         <td><%=produto.getMarca()%></td>
                         <td>
                             <form action='/adicionar' method="get">
-                                <button type="submit" id="botao_add_carrinho" name="idStatus" value="lista" class='btn btn-success blue'><img style="width: 18px; height: 19px; margin-left: 5%" src="libs/imagens/add list.png"></button>
+                                <button type="submit" data-toggle="tooltip" id="botao_add_carrinho" name="idStatus" value="lista" class='btn btn-secondary' data-toggle="tooltip" data-placement="left" data-original-title="Adicione à lista"><img style="width: 18px; height: 19px; margin-left: 5%" src="libs/imagens/add list.png"></button>
                                 <input type="hidden" id="produtoCompra" name="idProduto" value="<%=produto.getId()%>">
                                 <input type="number" id="botao_quantidade" name="quantidade" min="0" max="50" value="1">
-                                <button type="submit" id="botao_compra" name="idStatus" value="carrinho" class='btn btn-success blue'><i class="fas fa-cart-plus"></i></button>
+                                <button type="submit" data-toggle="tooltip" id="botao_compra" name="idStatus" value="carrinho" class='btn btn-secondary' data-toggle="tooltip" data-placement="left" data-original-title="Adicione ao carrinho"><i class="fas fa-cart-plus"></i></button>
                             </form>
                         </td>
                     </tr>

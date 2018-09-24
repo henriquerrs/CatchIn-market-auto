@@ -25,12 +25,18 @@
         </ul>
     </div>
     <div class="container">
+        <% if (((ClienteBean) session.getAttribute("cliente")).getPessoaBean().getIdPrivilegio() == 4) { %>
         <fieldset id="menu_centro">
             <li class="nav-link">
                 <a id="botao_logout" class="nav-link" href="/logout">Log Out - <i class="fas fa-sign-out-alt"></i></a>
-                <% if (((ClienteBean) session.getAttribute("cliente")).getPessoaBean().getIdPrivilegio() == 4) { %>
                 <a id="botao_lista" class="nav-link" href="/lista-de-compras">Sua Lista - <i class="fas fa-clipboard-list"></i></a>
-                <% }%>
+
+                <% } else {%>
+                <fieldset id="menu_centro_adm">
+
+                <a id="botao_logout_adm" class="nav-link" href="/logout">Log Out - <i class="fas fa-sign-out-alt"></i></a>
+                </fieldset>
+                    <%}%>
             </li>
         </fieldset>
     </div>
@@ -44,11 +50,14 @@
                     <!--a class="nav-link" href="/carrinho"><i class="fas fa-cart-arrow-down"></i></a-->
                     <a  class="nav-link" data-toggle="modal" data-target="#modalCarrinho" data-whatever="@mdo">
                         <%  int idCompra = ((ClienteBean) session.getAttribute("cliente")).getIdCompra();%>
-                        
+
                         <% List<ItemBean> itens = new ItemDAO().obterItensPeloIdCompra(idCompra); %>
-                        <% int quantidadeNoCarrinho = 0; for (ItemBean item : itens) quantidadeNoCarrinho++;%>
+                        <% int quantidadeNoCarrinho = 0;
+                            for (ItemBean item : itens) {
+                                quantidadeNoCarrinho++;
+                            }%>
                         <!--<p id="produto_no_carrinho"><h7 >Você tem: <%%> produtos no <i class="fas fa-cart-arrow-down"></i></h7></p>-->
-                        <p id="produto_no_carrinho"><h7 >Você tem: <%= quantidadeNoCarrinho %> produtos no <i class="fas fa-cart-arrow-down"></i></h7></p>
+                        <p id="produto_no_carrinho"><h7 >Você tem: <%= quantidadeNoCarrinho%> produtos no <i class="fas fa-cart-arrow-down"></i></h7></p>
                         <p id="preco_dos_produtos"><h7>Sua compra está custando:<%=new CompraDAO().atualizarTotal(idCompra)%></h7></p>
                     </a>
             </fieldset>
