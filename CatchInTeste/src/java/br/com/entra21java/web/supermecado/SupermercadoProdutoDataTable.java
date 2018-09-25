@@ -30,11 +30,33 @@ public class SupermercadoProdutoDataTable extends HttpServlet {
         String comeco = req.getParameter("start");
         String tamanho = req.getParameter("length");
         String busca = req.getParameter("search[value]");
+        String draw = req.getParameter("draw");
+        String ordemColuna = req.getParameter("order[0][column]");
+        String ordemDirecao = req.getParameter("order[0][dir]");
+        final ProdutoDAO produtoDAO = new ProdutoDAO();
 
-        List<ProdutoBean> produtos = new ProdutoDAO().obterProdutosParaDataTable(comeco, tamanho, busca);
+        switch (ordemColuna) {
+            case "0":
+                ordemColuna = "preco";
+                break;
+            case "1":
+                ordemColuna = "nome";
+                break;
+            case "2":
+                ordemColuna = "marca";
+                break;
+        }
+
+        List<ProdutoBean> produtos = produtoDAO.obterProdutosParaDataTable(comeco, tamanho, busca, ordemColuna, ordemDirecao);
+        int quantidadeTotal = produtoDAO.obterQuantidadeTotal();
+        int quantidadeFiltrada = produtoDAO.obterQuantidadeFiltrada(busca);
+
         resp.setContentType("application/json");
         HashMap<String, Object> resultados = new HashMap<>();
         resultados.put("data", produtos);
+        resultados.put("draw", draw);
+        resultados.put("recordsTotal", quantidadeTotal);
+        resultados.put("recordsFiltered", quantidadeFiltrada);
         resp.getWriter().write(new Gson().toJson(resultados));
 
     }

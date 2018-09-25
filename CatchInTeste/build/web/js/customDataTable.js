@@ -26,16 +26,24 @@ $(document).ready(function () {
             }
         },
         "ajax": "/produto/datatable",
+        "order": [[0, "asc"]],
         "columns": [
-            {"data": "preco"},
+            {"data": null,
+            "render": function(data){
+              return "R$ "+data.preco  
+            }},
             {"data": "nome"},
             {"data": "marca"},
             {
                 "data": null,
+                bSortable: false,
                 "render": function (data) {
-                    return  "<a class='btn btn-info'  href='/produtos/editar?id=" + data.id + "'><i class='fa fa-edit'></i> Editar</a>\
-                    <a class='btn btn-danger' href='/produtos/excluir?id=" + data.id + "'><i class='fa fa-trash-alt'></i> Excluir</a>";
-                    //caminho do icone para editar na coluna funcionario
+                    return  "<form action='/adicionar' method='get'>\
+                                <button type='submit' data-toggle='tooltip' id='botao_add_carrinho' name='idStatus' value='lista' class='btn btn-secondary' data-toggle='tooltip' data-placement='left' data-original-title='Adicione à lista'><img style='width: 18px; height: 19px; margin-left: 5%' src='libs/imagens/add list.png'></button>\
+                                <input type='hidden' id='produtoCompra' name='idProduto' value='" + data.id + "'>\
+                                <input type='number' id='botao_quantidade' name='quantidade' min='0' max='50' value='1'>\
+                                <button type='submit' data-toggle='tooltip' id='botao_compra' name='idStatus' value='carrinho' class='btn btn-secondary' data-toggle='tooltip' data-placement='left' data-original-title='Adicione ao carrinho'><i class='fas fa-cart-plus'></i></button>\
+                            </form>";
                 }
             }
         ]

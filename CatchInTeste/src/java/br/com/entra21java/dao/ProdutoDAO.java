@@ -71,10 +71,11 @@ public class ProdutoDAO {
 
     }
 
-    public List<ProdutoBean> obterProdutosParaDataTable(String comeco, String quantidade, String busca) {
+    public List<ProdutoBean> obterProdutosParaDataTable(String comeco, String quantidade, String busca,
+            String ordemColuna, String ordemDirecao) {
         busca = '%' + busca + '%';
         List<ProdutoBean> usuarios = new ArrayList<>();
-        String sql = "SELECT * FROM produtos WHERE nome LIKE ? OR marca LIKE ? LIMIT " + comeco + ", " + quantidade;
+        String sql = "SELECT * FROM produtos WHERE nome LIKE ? OR marca LIKE ? ORDER BY " + ordemColuna + " " + ordemDirecao + " LIMIT " + comeco + ", " + quantidade;
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
             ps.setString(1, busca);
@@ -170,6 +171,43 @@ public class ProdutoDAO {
             }
         }
         return listaProdutos;
+    }
+
+    public int obterQuantidadeTotal() {
+        String sql = "SELECT COUNT(id) AS 'quantidade' FROM produtos";
+        int quantidadeTotal = 0;
+        try {
+            Statement st = Conexao.obterConexao().createStatement();
+            ResultSet rs = st.executeQuery(sql);
+            if (rs.next()) {
+                quantidadeTotal = rs.getInt("quantidade");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            Conexao.fecharConexao();
+        }
+        return quantidadeTotal;
+    }
+
+    public int obterQuantidadeFiltrada(String busca) {
+        String sql = "SELECT COUNT(id) AS 'quantidade' FROM produtos WHERE nome LIKE ? OR marca LIKE ?";
+        busca = '%' + busca + '%';
+        int quantidadeFiltrada = 0;
+        try {
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+            ps.setString(1, busca);
+            ps.setString(2, busca);
+            ResultSet rs = ps.executeQuery();
+            if (rs.next()) {
+                quantidadeFiltrada = rs.getInt("quantidade");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            Conexao.fecharConexao();
+        }
+        return quantidadeFiltrada;
     }
 
 }
