@@ -105,7 +105,7 @@
     <!-- Panel Tickets -->
     <div class="panel box-shadow">
         <div class="panel-body">
-            <table id="table-admin" class="table table-striped table-bordered">
+            <table id="table-cliente" class="table table-striped table-bordered">
                 <thead>
                     <tr>
                         <th>Preço</th>

@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $('#table-admin').DataTable({
+    $('#table-cliente').DataTable({
         responsive: true,
         "serverSide": true,
         "language": {
@@ -49,6 +49,56 @@ $(document).ready(function () {
         ]
     });
 });
+
+$(document).ready(function () {
+    $('#table-admin').DataTable({
+        responsive: true,
+        "serverSide": true,
+        "language": {
+            "sEmptyTable": "Nenhum registro encontrado",
+            "sInfo": "Mostrando de _START_ até _END_ de _TOTAL_ registros",
+            "sInfoEmpty": "Mostrando 0 até 0 de 0 registros",
+            "sInfoFiltered": "(Filtrados de _MAX_ registros)",
+            "sInfoPostFix": "",
+            "sInfoThousands": ".",
+            "sLengthMenu": "_MENU_ resultados por página",
+            "sLoadingRecords": "Carregando...",
+            "sProcessing": "Processando...",
+            "sZeroRecords": "Nenhum registro encontrado",
+            "sSearch": "Pesquisar",
+            "oPaginate": {
+                "sNext": "Próximo",
+                "sPrevious": "Anterior",
+                "sFirst": "Primeiro",
+                "sLast": "Último"
+            },
+            "oAria": {
+                "sSortAscending": ": Ordenar colunas de forma ascendente",
+                "sSortDescending": ": Ordenar colunas de forma descendente"
+            }
+        },
+        "ajax": "/produto/datatable",
+        "order": [[0, "asc"]],
+        "columns": [
+            {"data": null,
+            "render": function(data){
+              return "R$ "+data.preco
+            }},
+            {"data": "nome"},
+            {"data": "marca"},
+            {"data": "quantidade"},
+            {
+                "data": null,
+                bSortable: false,
+                "render": function (data) {
+                    return  "<a href='/excluir?id="+data.id+"'><i class='fas fa-trash-alt' data-toggle='tooltip' data-placement='left' data-original-title='Excluir Item'></i></a>\
+                            <a data-toggle='modal' data-target='#modalEditar' data-whatever='@mdo'><i class='fas fa-edit' data-toggle='tooltip' data-placement='left' data-original-title='Editar Item'></i></a>";
+                }
+            }
+        ]
+    });
+});
+
 
 $(document).ready(function () {
     $('#table-carrinho').DataTable({
