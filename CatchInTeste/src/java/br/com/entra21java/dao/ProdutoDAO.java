@@ -44,6 +44,33 @@ public class ProdutoDAO {
         return usuarios;
     }
 
+    public ProdutoBean obterProdutoPeloId(int id) {
+        ProdutoBean produto = null;
+        String sql = "SELECT * FROM produtos WHERE id = ?";
+        try {
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+            ps.setInt(1, id);
+            ps.execute();
+            ResultSet resultset = ps.getResultSet();
+            while (resultset.next()) {
+                produto = new ProdutoBean();
+                produto.setId(resultset.getInt("id"));
+                produto.setNome(resultset.getString("nome"));
+                produto.setPreco(resultset.getDouble("preco"));
+                produto.setPeso(resultset.getDouble("peso"));
+                produto.setQuantidade(resultset.getInt("quantidade"));
+                produto.setMarca(resultset.getString("marca"));
+                produto.setCategoria(resultset.getString("categoria"));
+                produto.setDescricao(resultset.getString("descricao"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            Conexao.fecharConexao();
+        }
+        return produto;
+    }
+
     public int adicionarProduto(ProdutoBean produto) {
 
         String sql = "INSERT INTO produtos (nome, preco, peso, quantidade, marca, categoria, descricao) VALUES (?,?,?,?,?,?,?)";

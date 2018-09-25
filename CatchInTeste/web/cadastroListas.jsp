@@ -44,7 +44,7 @@
                         <td><%=produto.getProdutoBean().getPreco()%></td>
                         <td><%=produto.getQuantidade()%></td>
                         <td>
-                            <a href="/excluirLista?id=<%= produto.getId()%>">Excluir</a>
+                            <a href="/excluirLista?id=<%= produto.getId()%>"><i class="fas fa-trash-alt"></i></a>
                         </td>
                     </tr>
                     <% }%>

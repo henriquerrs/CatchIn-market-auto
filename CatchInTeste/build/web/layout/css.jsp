@@ -26,11 +26,6 @@
     #div_termos{
         margin: 2% 8%;
     }
-</style>
-
-
-
-<style>
 
     .multiple_elements {
         padding: 30px 0 10px 0;
@@ -65,10 +60,6 @@
         font-weight: normal;
     }
 
-</style>
-
-
-<style>
     #logo_catchIn{
         margin-left: 5%;
     }
@@ -125,9 +116,6 @@
         margin-top: 0%;
         margin-left: 4%;
     }
-</style>
-
-<style>
     .slider .indicators .indicator-item {
         background-color: #ffffff;
         border: 3px solid #ffffff;
@@ -177,8 +165,6 @@
     body {
         background-color: silver !important;
     }
-</style>
-<style>
     #botao_add_carrinho {
         margin-left: 11%;
     }
@@ -190,18 +176,16 @@
     #botao_compra {
         margin-left: 5%;
     }
-</style>
-
-<style type="text/css">
     #nome_centro_tabela{
         text-align: center;
     }
     body {
         background-color: silver !important;
     }
-</style>
-<style type="text/css">
     body{
         background-color: white !important;
+    }
+    #texto_centralizado{
+        text-align: center;
     }
 </style>

@@ -29,9 +29,9 @@ $(document).ready(function () {
         "order": [[0, "asc"]],
         "columns": [
             {"data": null,
-            "render": function(data){
-              return "R$ "+data.preco  
-            }},
+                "render": function (data) {
+                    return "R$ " + data.preco
+                }},
             {"data": "nome"},
             {"data": "marca"},
             {
@@ -81,9 +81,9 @@ $(document).ready(function () {
         "order": [[0, "asc"]],
         "columns": [
             {"data": null,
-            "render": function(data){
-              return "R$ "+data.preco
-            }},
+                "render": function (data) {
+                    return "R$ " + data.preco
+                }},
             {"data": "nome"},
             {"data": "marca"},
             {"data": "quantidade"},
@@ -91,12 +91,35 @@ $(document).ready(function () {
                 "data": null,
                 bSortable: false,
                 "render": function (data) {
-                    return  "<a href='/excluir?id="+data.id+"'><i class='fas fa-trash-alt' data-toggle='tooltip' data-placement='left' data-original-title='Excluir Item'></i></a>\
-                            <a data-toggle='modal' data-target='#modalEditar' data-whatever='@mdo'><i class='fas fa-edit' data-toggle='tooltip' data-placement='left' data-original-title='Editar Item'></i></a>";
+                    return  "<a href='/excluir?id=" + data.id + "'><i class='fas fa-trash-alt' data-toggle='tooltip' data-placement='left' data-original-title='Excluir Item'></i></a>\
+                            <a class='editar-produto' data-id='" + data.id + "' data-whatever='@mdo'><i class='fas fa-edit' data-toggle='tooltip' data-placement='left' data-original-title='Editar Item'></i></a>";
                 }
             }
         ]
     });
+
+    $("#table-admin").on("click", ".editar-produto", function () {
+        $id = $(this).data("id");
+        $.ajax({
+            url: "/produto/buscar",
+            data: {
+                id: $id
+            },
+            success: function(result){
+                $("#recipiente-id").val(result.id);
+                $("#recipiente-nome").val(result.nome);
+                $("#recipiente-preco").val(result.preco);
+                $("#recipiente-peso").val(result.peso);
+                $("#recipiente-quantidade").val(result.quantidade);
+                $("#recipiente-marca").val(result.marca);
+                $("#recipiente-categoria").val(result.categoria);
+                $("#recipiente-descricao").val(result.descricao);
+                $("#modalEditar").modal("show");
+                
+            }
+        });
+    });
+
 });
 
 
