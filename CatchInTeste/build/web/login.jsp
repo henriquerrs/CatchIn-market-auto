@@ -34,10 +34,10 @@
                             <input id="senha" type="password" class="validate" name="senha">
                         </div>
                     </div>
-                    <div class="input-field col s12">
-                        <button type="button" class="waves-effect waves-light btn col s12" id="entrar">Entrar</button>
-                    </div>
-                    <a style="margin-left: 75%" href="/cadastro" class="waves-effect waves-light">Registre-se</a>
+                    
+                        <button type="button" class="waves-effect waves-light btn col s12 blue" id="entrar">Entrar</button>
+                        <div class="row"></div>
+                        <a style="margin-left: 75%" href="/cadastro" class="waves-effect waves-light btn col s3 blue">Registre-se</a>
                     <div class="row">
                     </div>
                 </form>

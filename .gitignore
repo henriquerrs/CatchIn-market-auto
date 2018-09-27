@@ -20,3 +20,4 @@
 *.properties
 CatchInTeste/build/web/gfv3ee6.dpf
 CatchInTeste/nbproject/private/private.xml
+*.class
