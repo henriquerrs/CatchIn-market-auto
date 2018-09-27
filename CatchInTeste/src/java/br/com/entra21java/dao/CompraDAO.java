@@ -86,4 +86,33 @@ public class CompraDAO {
         return "R$ 0,00";
     }
 
+     public CompraBean buscarPeloId(int id){
+        CompraBean compra = null;
+        String sql = "SELECT * FROM produtos WHERE id=?";
+        try {
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+            ps.setInt(1, id);
+            ps.execute();
+            ResultSet resultSet = ps.getResultSet();
+            while (resultSet.next()) {
+                compra = new CompraBean();
+                compra.setId(resultSet.getInt("cp.id"));
+                compra.setIdClientes(resultSet.getInt("cp.id_cliente"));
+                compra.setTotal(resultSet.getDouble("cp.total"));
+
+                ClienteBean cliente = new ClienteBean();
+                cliente.setIdPessoa(resultSet.getInt("cl.nome"));
+                cliente.setEndereco(resultSet.getString("cl.endereco"));
+                compra.setCliente(cliente);
+
+                compra.setItens(new ItemDAO().obterItensPeloIdCompra(compra.getId()));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            Conexao.fecharConexao();
+        }
+        return compra;
+    }
+
 }

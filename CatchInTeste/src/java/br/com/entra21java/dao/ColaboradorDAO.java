@@ -124,5 +124,41 @@ public class ColaboradorDAO {
         }
         return false;
     }
+
+      public ColaboradorBean obterPeloId(int id){
+        
+        ColaboradorBean funcionario = null;
+        String sql = "SELECT * FROM colaboradores cb JOIN pessoas ps ON cb.id_pessoa = ps.id";
+        try {
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+            ps.execute();
+            ResultSet resultset = ps.getResultSet();
+            if (resultset.next()) {
+                funcionario = new ColaboradorBean();
+                funcionario.setId(resultset.getInt("cl.id"));
+                funcionario.setCargo(resultset.getString("cl.endereco"));
+                funcionario.setIdPessoa(resultset.getInt("cl.id_privilegio"));
+
+                PessoaBean pessoa = new PessoaBean();
+                pessoa.setId(resultset.getInt("ps.id"));
+                pessoa.setNome(resultset.getString("ps.nome"));
+                pessoa.setSenha(resultset.getString("ps.senha"));
+                pessoa.setEmail(resultset.getString("ps.email"));
+                pessoa.setCpf(resultset.getString("ps.cpf"));
+                pessoa.setIdade(resultset.getByte("ps.idade"));
+                pessoa.setTelefone(resultset.getString("ps.telefone"));
+                pessoa.setIdPrivilegio(resultset.getInt("ps.id_privilegio"));
+                funcionario.setPessoaBean(pessoa);
+                
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            Conexao.fecharConexao();
+        }
+        return funcionario;
+    }
     
 }
+
+
