@@ -59,6 +59,9 @@
             <div class="modal-footer">
                 <!--button id="finalizar" type="submit" class="btn btn-dark">Finalizar Compra</button-->
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <form action='/excluirCompra' method='get'>
+                    <button type="submit" id="finalizar" class="btn btn-dark" data-dismiss="modal" aria-label="Finalizar">Finalizar</button>
+                </form>
             </div>
         </div>
     </div>

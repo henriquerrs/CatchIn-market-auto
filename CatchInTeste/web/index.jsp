@@ -94,7 +94,6 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Fechar">Fechar</button>
-                    <button type="button" class="btn btn-dark" data-dismiss="modal" aria-label="Finalizar">Finalizar</button>
                 </div>
             </form>
         </div>

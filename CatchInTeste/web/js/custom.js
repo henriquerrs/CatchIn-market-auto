@@ -84,3 +84,6 @@ $('#modalProdutos').on('shown.bs.modal', function () {
     $('#modalInput').trigger('focus');
 });
 
+$('#finalizar').click(function (){
+    alert("Compra finalizada");
+});

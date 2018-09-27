@@ -156,4 +156,18 @@ public class ItemDAO {
         return false;
     }
     
+    public boolean excluirCompra(int idCompra){
+        String sql = "DELETE FROM itens WHERE id_compra = ?";
+        try {
+            PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
+            ps.setInt(1, idCompra);
+            return ps.executeUpdate() == 1;
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            Conexao.fecharConexao();
+        }
+        return false;
+    }
+    
 }

@@ -18,3 +18,6 @@ URL acessando sem estar logado = verificar
 
 E-mail envio Necessário = null
 E-mail com hash PLUS = null
+
+astah uml
+star uml

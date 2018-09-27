@@ -7,6 +7,8 @@
 <script src="../js/dataTables.bootstrap4.min.js"></script>
 <script src="../js/portuguese-Brasil.json"></script>
 <script src="../js/customDataTable.js"></script>
+<script src="../js/custom.js"></script>
+
 
 <script>
     $(document).ready(function () {
