@@ -8,6 +8,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -51,7 +53,7 @@ public class PessoaDAO {
 
     public int adicionarPessoa(PessoaBean pessoa) {
         
-        String sql = "INSERT INTO pessoas (nome,senha,email,telefone, cpf,id_privilegio) VALUES (?,?,?,?,?,4);";
+        String sql = "INSERT INTO pessoas (nome,senha,email,telefone,idade, cpf,id_privilegio) VALUES (?,?,?,?,?,?,4);";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             int quantidade = 1;
@@ -59,6 +61,7 @@ public class PessoaDAO {
             ps.setString(quantidade++, pessoa.getSenha());
             ps.setString(quantidade++, pessoa.getEmail());
             ps.setString(quantidade++, pessoa.getTelefone());
+            ps.setByte(quantidade++, pessoa.getIdade());
             ps.setString(quantidade++, pessoa.getCpf());
             ps.execute();
             ResultSet resultSet = ps.getGeneratedKeys();
@@ -124,6 +127,22 @@ public class PessoaDAO {
             Conexao.fecharConexao();
         }
         return pessoa;
+    }
+    
+    public byte retornarAno(String idade){
+        byte idadeFinal = 0;
+        try {
+            int dia = Integer.parseInt(idade.substring(0,2));
+            int mes = Integer.parseInt(idade.substring(3,5));;
+            int ano = Integer.parseInt(idade.substring(6,10));;
+            LocalDate hoje = LocalDate.now();
+            LocalDate dataNascimento= LocalDate.of(ano, mes, dia);
+            Period diferenca = Period.between(dataNascimento, hoje);
+            idadeFinal = Byte.parseByte(String.valueOf(diferenca.getYears()));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return idadeFinal;
     }
 
 }

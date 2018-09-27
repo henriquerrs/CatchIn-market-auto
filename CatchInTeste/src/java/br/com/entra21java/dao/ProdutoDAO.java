@@ -164,9 +164,10 @@ public class ProdutoDAO {
             ps.setDouble(quantidade++, produto.getPreco());
             ps.setDouble(quantidade++, produto.getPeso());
             ps.setInt(quantidade++, produto.getQuantidade());
-            ps.setDouble(quantidade++, produto.getPeso());
-            ps.setDouble(quantidade++, produto.getPeso());
-            ps.setDouble(quantidade++, produto.getPeso());
+            ps.setString(quantidade++, produto.getMarca());
+            ps.setString(quantidade++, produto.getCategoria());
+            ps.setString(quantidade++, produto.getDescricao());
+            ps.setInt(quantidade++, produto.getId());
             return ps.executeUpdate() == 1;
         } catch (SQLException e) {
             e.printStackTrace();

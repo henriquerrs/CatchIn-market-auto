@@ -8,8 +8,8 @@
                 </button>
             </div>
             <form action='/editar' method='get'>
-                <input type="hidden" id="recipiente-id">
                 <div class='modal-body'>
+                    <input type="hidden" id="recipiente-id" name="id_produto">
                     <div class='row'>
                         <div class='form-group col s6'>
                             <label for='recipient-name' class='col-form-label'>Nome:</label>

@@ -9,6 +9,7 @@ import br.com.entra21java.bean.ClienteBean;
 import br.com.entra21java.bean.PessoaBean;
 import br.com.entra21java.dao.ClienteDAO;
 import br.com.entra21java.dao.ConverterSHA512;
+import br.com.entra21java.dao.PessoaDAO;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import javax.servlet.ServletException;
@@ -37,7 +38,9 @@ public class SupermercadoStore extends HttpServlet{
         pessoa.setEmail(req.getParameter("email"));
         pessoa.setTelefone(req.getParameter("telefone"));
         pessoa.setCpf(req.getParameter("cpf"));
-        
+        byte idade = new PessoaDAO().retornarAno(req.getParameter("idade_usuario"));
+        pessoa.setIdade(idade);
+                
         cliente.setPessoaBean(pessoa);
         
         int codigo = new ClienteDAO().adicionarCliente(cliente);
