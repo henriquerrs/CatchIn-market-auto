@@ -238,4 +238,34 @@ public class ProdutoDAO {
         return quantidadeFiltrada;
     }
 
+
+    public ProdutoBean buscarIdProduto(int id){
+        ProdutoBean produto = null;
+        String sql = "SELECT * FROM produtos WHERE id=?";
+        try {
+            PreparedStatement st = Conexao.obterConexao().prepareStatement(sql);
+            st.setInt(1, id);
+            st.execute();
+            ResultSet resultset = st.getResultSet();
+            if(resultset.next()) {
+                produto = new ProdutoBean();
+                produto.setId(resultset.getInt("id"));
+                produto.setNome(resultset.getString("nome"));
+                produto.setPreco(resultset.getDouble("preco"));
+                produto.setPeso(resultset.getDouble("peso"));
+                produto.setQuantidade(resultset.getInt("quantidade"));
+                produto.setMarca(resultset.getString("marca"));
+                produto.setCategoria(resultset.getString("categoria"));                
+                produto.setDescricao(resultset.getString("descricao"));         
+                
+                return produto;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally{
+            Conexao.fecharConexao();
+        }
+        return produto;
+    }
+        
 }
