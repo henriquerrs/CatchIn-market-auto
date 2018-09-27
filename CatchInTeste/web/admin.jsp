@@ -47,14 +47,14 @@
                                     </div>
                                     <div class="form-group col s6">
                                         <label for="recipient-name" class="col-form-label">Preço:</label>
-                                        <input type="number" class="form-control" id="recipient-preco" name="preco" data-error="Por favor, informe um preço do produto." required>
+                                        <input type="number" step="0.01" class="form-control" id="recipient-preco" name="preco" data-error="Por favor, informe um preço do produto." required>
                                         <div class="helper-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col s6">
                                         <label for="recipient-name" class="col-form-label">Peso:</label>
-                                        <input type="number" class="form-control" id="recipient-peso" name="peso" data-error="Por favor, informe um peso do produto." required>
+                                        <input type="number" step="0.01" class="form-control" id="recipient-peso" name="peso" data-error="Por favor, informe um peso do produto." required>
                                         <div class="helper-block with-errors"></div>
                                     </div>
                                     <div class="form-group col s6">

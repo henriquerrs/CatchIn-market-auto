@@ -31,7 +31,7 @@
                                 <th class="text-center">Preço</th>
                                 <th>Nome</th>
                                 <th class="text-center">Quantidade</th>
-                                <th class="text-center">Opção</th>
+                                <th class="text-center">Ação</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -40,16 +40,16 @@
                                 <td class="text-center"><%=item.getProduto().getPreco()%></td>
                                 <td><%=item.getProduto().getNome()%></td>
                                 <td class="text-center"><%=item.getQuantidade()%></td>
-                                <td class="text-center"><a href="/excluirItem?id=<%=item.getId()%>"><i class="fas fa-trash-alt"></i></a></td>
+                                <td class="text-center"><a class="btn btn-danger" href="/excluirItem?id=<%=item.getId()%>"><i class="fas fa-trash-alt"></i></a></td>
                             </tr>
                             <% }%>
                         </tbody>
                         <tfoot>
                             <tr>
-                                <th>Preço</th>
-                                <th>Nome</th>
-                                <th>Quantidade</th>
-                                <th>Opção</th>
+                                <th class="text-center">Preço</th>
+                                <th class="text-center">Nome</th>
+                                <th class="text-center">Quantidade</th>
+                                <th class="text-center">Ação</th>
                             </tr>
                         </tfoot>
                     </table>

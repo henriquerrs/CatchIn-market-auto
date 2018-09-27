@@ -4,6 +4,7 @@
     Author     : Alunos
 --%>
 
+<%@include file="validarCliente.jsp" %>
 <%@page import="br.com.entra21java.dao.ProdutoListaDAO"%>
 <%@page import="br.com.entra21java.bean.ProdutoListaBean"%>
 <%@page import="br.com.entra21java.dao.ProdutoDAO"%>
@@ -25,36 +26,37 @@
             <a id="botao_finaizar_compra" href='/paraCarinho' class='btn btn-success blue'>Adicionar ao Carrinho</a>
         </div>
     </div>
+    <br>
     <!-- Panel Tickets -->
     <div class="panel box-shadow">
         <div class="panel-body">
             <table id="table-lista" class="table table-striped table-bordered" style="width:100%">
                 <thead>
                     <tr>
-                        <th>Nome</th>
-                        <th style="text-align: center">Preço</th>
-                        <th style="text-align: center">Quantidade</th>
-                        <th style="text-align: center">Excluir</th>
+                        <th class="text-center" >Nome</th>
+                        <th class="text-center">Preço</th>
+                        <th class="text-center">Quantidade</th>
+                        <th class="text-center">Ação</th>
                     </tr>
                 </thead>
                 <tbody>
                     <% for (ProdutoListaBean produto : produtos) {%>
                     <tr>
-                        <td><%=produto.getProdutoBean().getNome()%></td>
-                        <td><%=produto.getProdutoBean().getPreco()%></td>
-                        <td><%=produto.getQuantidade()%></td>
+                        <td class="text-center" ><%=produto.getProdutoBean().getNome()%></td>
+                        <td class="text-center" >R$ <%=produto.getProdutoBean().getPreco()%></td>
+                        <td class="text-center" ><%=produto.getQuantidade()%></td>
                         <td>
-                            <a href="/excluirLista?id=<%= produto.getId()%>"><i class="fas fa-trash-alt"></i></a>
+                            <a class=" center btn btn-danger btn-sm col-12" href="/excluirLista?id=<%= produto.getId()%>"><i class="fas fa-trash-alt"></i></a>
                         </td>
                     </tr>
                     <% }%>
                 </tbody>
                 <tfoot>
                     <tr>
-                        <th>Nome</th>
-                        <th style="text-align: center">Preço</th>
-                        <th style="text-align: center">Quantidade</th>
-                        <th style="text-align: center">Editar/Excluir</th>
+                        <th class="text-center" >Nome</th>
+                        <th class="text-center" >Preço</th>
+                        <th class="text-center" >Quantidade</th>
+                        <th class="text-center" >Ação</th>
                     </tr>
                 </tfoot>
             </table>
