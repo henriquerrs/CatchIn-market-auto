@@ -30,7 +30,6 @@ public class ListaDAOTest {
        Conexao.truncate();
        
        ClienteBean cliente = new ClienteBean();
-       cliente.setEndereco("Avenida dos Maracujás");
         
        PessoaBean pessoa = new PessoaBean();
        pessoa.setTelefone("99999999");
