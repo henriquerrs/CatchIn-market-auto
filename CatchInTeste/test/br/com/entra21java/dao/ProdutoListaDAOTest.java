@@ -63,6 +63,7 @@ public class ProdutoListaDAOTest {
         ListaBean lista = new ListaBean();
 
         ClienteBean cliente = new ClienteBean();
+        cliente.setEndereco("Avenida dos Maracujás");
 
         PessoaBean pessoa = new PessoaBean();
         pessoa.setTelefone("99999999");
@@ -128,6 +129,7 @@ public class ProdutoListaDAOTest {
         ListaBean lista = new ListaBean();
 
         ClienteBean cliente = new ClienteBean();
+        cliente.setEndereco("Avenida dos Maracujás");
 
         PessoaBean pessoa = new PessoaBean();
         pessoa.setTelefone("99999999");
@@ -196,6 +198,7 @@ public class ProdutoListaDAOTest {
         ListaBean lista = new ListaBean();
           
         ClienteBean cliente = new ClienteBean();
+        cliente.setEndereco("Avenida dos Maracujás");
         
         PessoaBean pessoa = new PessoaBean();
         pessoa.setTelefone("99999999");
@@ -264,6 +267,7 @@ public class ProdutoListaDAOTest {
         ListaBean lista = new ListaBean();
           
         ClienteBean cliente = new ClienteBean();
+        cliente.setEndereco("Avenida dos Maracujás");
         
         PessoaBean pessoa = new PessoaBean();
         pessoa.setTelefone("99999999");
@@ -332,6 +336,7 @@ public class ProdutoListaDAOTest {
         ListaBean lista = new ListaBean();
           
         ClienteBean cliente = new ClienteBean();
+        cliente.setEndereco("Avenida dos Maracujás");
         
         PessoaBean pessoa = new PessoaBean();
         pessoa.setTelefone("99999999");
@@ -392,6 +397,7 @@ public class ProdutoListaDAOTest {
         ListaBean lista = new ListaBean();
           
         ClienteBean cliente = new ClienteBean();
+        cliente.setEndereco("Avenida dos Maracujás");
         
         PessoaBean pessoa = new PessoaBean();
         pessoa.setTelefone("99999999");
@@ -457,6 +463,7 @@ public class ProdutoListaDAOTest {
         ListaBean lista = new ListaBean();
           
         ClienteBean cliente = new ClienteBean();
+        cliente.setEndereco("Avenida dos Maracujás");
         
         PessoaBean pessoa = new PessoaBean();
         pessoa.setTelefone("99999999");

@@ -40,6 +40,7 @@ public class CompraDAOTest {
         pessoa.setIdade(age);
         
         ClienteBean cliente = new ClienteBean();
+        cliente.setEndereco("Avenida dos Maracujás");
         cliente.setPessoaBean(pessoa);
         
         List<ItemBean> itens = new ArrayList<>();
@@ -93,6 +94,7 @@ public class CompraDAOTest {
         pessoa.setIdade(age);
         
         ClienteBean cliente = new ClienteBean();
+        cliente.setEndereco("Avenida dos Maracujás");
         cliente.setPessoaBean(pessoa);
         
         List<ItemBean> itens = new ArrayList<>();
@@ -143,6 +145,7 @@ public class CompraDAOTest {
         pessoa.setIdade(age);
         
         ClienteBean cliente = new ClienteBean();
+        cliente.setEndereco("Avenida dos Maracujás");
         cliente.setPessoaBean(pessoa);
         
         List<ItemBean> itens = new ArrayList<>();
@@ -199,6 +202,7 @@ public class CompraDAOTest {
         pessoa.setIdade(age);
         
         ClienteBean cliente = new ClienteBean();
+        cliente.setEndereco("Avenida dos Maracujás");
         cliente.setPessoaBean(pessoa);
         
         List<ItemBean> itens = new ArrayList<>();
