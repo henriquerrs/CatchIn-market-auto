@@ -35,9 +35,9 @@
                         </div>
                     </div>
                     
-                        <button type="button" class="waves-effect waves-light btn col s12 blue" id="entrar">Entrar</button>
+                        <button style="margin-left: 5%" type="button" class="waves-effect waves-light btn col s10 blue" id="entrar">Entrar</button>
                         <div class="row"></div>
-                        <a style="margin-left: 75%" href="/cadastro" class="waves-effect waves-light btn col s3 blue">Registre-se</a>
+                        <a style="margin-left: 83%" href="/cadastro">Registrar</a>
                     <div class="row">
                     </div>
                 </form>
