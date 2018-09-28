@@ -8,6 +8,7 @@
 <script src="../js/portuguese-Brasil.json"></script>
 <script src="../js/customDataTable.js"></script>
 <script src="../js/custom.js"></script>
+<script src="../js/pnotify.custom.min.js"></script>
 
 
 <script>
