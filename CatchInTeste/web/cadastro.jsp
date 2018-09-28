@@ -138,6 +138,6 @@
             </div>
         </div>
     </div>
-</form>    
+</form> 
 
 <%@include file="layout/footer.jsp" %>

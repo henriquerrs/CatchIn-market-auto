@@ -26,7 +26,14 @@ public class ClienteDAO {
             while (resultset.next()) {
                 ClienteBean usuario = new ClienteBean();
                 usuario.setId(resultset.getInt("cl.id"));
-                usuario.setEndereco(resultset.getString("cl.endereco"));
+                usuario.setIdPessoa(resultset.getInt("cl.nome"));
+                usuario.setCep(resultset.getString("cl.cep"));
+                usuario.setLogradouro(resultset.getString("cl.logradouro"));
+                usuario.setComplemento(resultset.getString("cl.complemento"));
+                usuario.setBairro(resultset.getString("cl.bairro"));
+                usuario.setCidade(resultset.getString("cl.cidade"));
+                usuario.setUf(resultset.getString("cl.uf"));
+                usuario.setNumero(resultset.getString("cl.numero"));
                 usuario.setIdPessoa(resultset.getInt("cl.id_privilegio"));
                 usuario.setIdLista(resultset.getInt("cl.id_lista"));
 
@@ -53,17 +60,23 @@ public class ClienteDAO {
 
     public int adicionarCliente(ClienteBean cliente) {
 
-        String sql = "INSERT INTO clientes (endereco, id_compra, id_lista, id_pessoa) VALUES (?,?,?,?);";
+        String sql = "INSERT INTO clientes (id_compra, id_lista, id_pessoa, cep,logradouro,complemento,bairro,cidade,uf,numero) VALUES (?,?,?,?,?,?,?,?,?,?);";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
             int quantidade = 1;
             int idCompra = new CompraDAO().criarCompra();
             int idLista = new ListaDAO().adicionarLista();
             int idPessoa = new PessoaDAO().adicionarPessoa(cliente.getPessoaBean());
-            ps.setString(quantidade++, cliente.getEndereco());
             ps.setInt(quantidade++, idCompra);
             ps.setInt(quantidade++, idLista);
             ps.setInt(quantidade++, idPessoa);
+            ps.setString(quantidade++, cliente.getCep());
+            ps.setString(quantidade++, cliente.getLogradouro());
+            ps.setString(quantidade++, cliente.getComplemento());
+            ps.setString(quantidade++, cliente.getBairro());
+            ps.setString(quantidade++, cliente.getCidade());
+            ps.setString(quantidade++, cliente.getUf());
+            ps.setString(quantidade++, cliente.getNumero());
             ps.execute();
             
             ResultSet resultSet = ps.getGeneratedKeys();
@@ -95,13 +108,20 @@ public class ClienteDAO {
     }
 
     public boolean alterar(ClienteBean cliente) {
-        String sql = "UPDATE clientes cl JOIN pessoas ps ON cl.id_pessoa = ps.id SET cl.endereco = ?, "
+        String sql = "UPDATE clientes cl JOIN pessoas ps ON cl.id_pessoa = ps.id SET"
+                + "cl.cep = ?,cl.logradouro = ?,cl.complemento = ?,cl.bairro = ?,cl.cidade = ?,cl.uf = ?,cl.numero = ?, "
                 + "cl.id_pessoa = ?, ps.nome = ?, ps.senha = ?, ps.email = ?, ps.cpf = ?, ps.idade = ?,"
                 + " ps.telefone = ?, ps.id_privilegio = ? WHERE cl.id = ?";
         try {
             PreparedStatement ps = Conexao.obterConexao().prepareStatement(sql);
             int quantidade = 1;
-            ps.setString(quantidade++, cliente.getEndereco());
+            ps.setString(quantidade++, cliente.getCep());
+            ps.setString(quantidade++, cliente.getLogradouro());
+            ps.setString(quantidade++, cliente.getComplemento());
+            ps.setString(quantidade++, cliente.getBairro());
+            ps.setString(quantidade++, cliente.getCidade());
+            ps.setString(quantidade++, cliente.getUf());
+            ps.setString(quantidade++, cliente.getNumero());
             ps.setInt(quantidade++, cliente.getIdPessoa());
             ps.setString(quantidade++, cliente.getPessoaBean().getNome());
             ps.setString(quantidade++, cliente.getPessoaBean().getSenha());
@@ -130,7 +150,13 @@ public class ClienteDAO {
             if (resultset.next()) {
                 ClienteBean cliente = new ClienteBean();
                 cliente.setId(resultset.getInt("cl.id"));
-                cliente.setEndereco(resultset.getString("cl.endereco"));
+                cliente.setCep(resultset.getString("cl.cep"));
+                cliente.setLogradouro(resultset.getString("cl.logradouro"));
+                cliente.setComplemento(resultset.getString("cl.complemento"));
+                cliente.setBairro(resultset.getString("cl.bairro"));
+                cliente.setCidade(resultset.getString("cl.cidade"));
+                cliente.setUf(resultset.getString("cl.uf"));
+                cliente.setNumero(resultset.getString("cl.numero"));
                 cliente.setIdPessoa(resultset.getInt("cl.id_pessoa"));
                 cliente.setIdCompra(resultset.getInt("cl.id_compra"));
                 cliente.setIdLista(resultset.getInt("cl.id_lista"));

@@ -30,7 +30,13 @@ public class SupermercadoStore extends HttpServlet{
         resp.setContentType("text/html;charset=utf-8");
         ClienteBean cliente = new ClienteBean();
         
-        cliente.setEndereco(new String(req.getParameter("endereco").getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8));
+        cliente.setCep(new String(req.getParameter("cep").getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8));
+        cliente.setLogradouro(new String(req.getParameter("logradouro").getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8));
+        cliente.setComplemento(new String(req.getParameter("complemento").getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8));
+        cliente.setBairro(new String(req.getParameter("bairro").getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8));
+        cliente.setCidade(new String(req.getParameter("cidade").getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8));
+        cliente.setUf(new String(req.getParameter("uf").getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8));
+        cliente.setNumero(new String(req.getParameter("numero").getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8));
         
         PessoaBean pessoa = new PessoaBean();
         pessoa.setNome(new String(req.getParameter("nome").getBytes(StandardCharsets.ISO_8859_1), StandardCharsets.UTF_8));

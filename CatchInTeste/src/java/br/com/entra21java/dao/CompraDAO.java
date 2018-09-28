@@ -31,8 +31,14 @@ public class CompraDAO {
                 compra.setTotal(resultSet.getDouble("cp.total"));
 
                 ClienteBean cliente = new ClienteBean();
-                cliente.setIdPessoa(resultSet.getInt("cl.nome"));
-                cliente.setEndereco(resultSet.getString("cl.endereco"));
+                cliente.setIdPessoa(resultSet.getInt("cl.id_pessoa"));
+                cliente.setCep(resultSet.getString("cl.cep"));
+                cliente.setLogradouro(resultSet.getString("cl.logradouro"));
+                cliente.setComplemento(resultSet.getString("cl.complemento"));
+                cliente.setBairro(resultSet.getString("cl.bairro"));
+                cliente.setCidade(resultSet.getString("cl.cidade"));
+                cliente.setUf(resultSet.getString("cl.uf"));
+                cliente.setNumero(resultSet.getString("cl.numero"));
                 compra.setCliente(cliente);
 
                 compra.setItens(new ItemDAO().obterItensPeloIdCompra(compra.getId()));
@@ -102,7 +108,13 @@ public class CompraDAO {
 
                 ClienteBean cliente = new ClienteBean();
                 cliente.setIdPessoa(resultSet.getInt("cl.nome"));
-                cliente.setEndereco(resultSet.getString("cl.endereco"));
+                cliente.setCep(resultSet.getString("cl.cep"));
+                cliente.setLogradouro(resultSet.getString("cl.logradouro"));
+                cliente.setComplemento(resultSet.getString("cl.complemento"));
+                cliente.setBairro(resultSet.getString("cl.bairro"));
+                cliente.setCidade(resultSet.getString("cl.cidade"));
+                cliente.setUf(resultSet.getString("cl.uf"));
+                cliente.setNumero(resultSet.getString("cl.numero"));
                 compra.setCliente(cliente);
 
                 compra.setItens(new ItemDAO().obterItensPeloIdCompra(compra.getId()));
