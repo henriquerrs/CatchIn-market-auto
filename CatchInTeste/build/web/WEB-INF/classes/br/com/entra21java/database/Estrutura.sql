@@ -74,7 +74,13 @@ DEFAULT CHARACTER SET = utf8;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `supermercado_catchin`.`clientes` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `endereco` VARCHAR(45) NULL DEFAULT NULL,
+  `cep` VARCHAR(11) NULL DEFAULT NULL,
+  `logradouro` VARCHAR(60) NULL DEFAULT NULL,
+  `complemento` VARCHAR(60) NULL DEFAULT NULL,
+  `bairro` VARCHAR(60) NULL DEFAULT NULL,
+  `cidade` VARCHAR(60) NULL DEFAULT NULL,
+  `uf` VARCHAR(2) NULL DEFAULT NULL,
+  `numero` VARCHAR(5) NULL DEFAULT NULL,
   `id_pessoa` INT(11) NOT NULL,
   `id_compra` INT(11) NOT NULL,
   `id_lista` INT(11) NOT NULL,
