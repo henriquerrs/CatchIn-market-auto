@@ -26,7 +26,6 @@ public class ClienteDAOTest {
         Conexao.truncate();
         
         ClienteBean cliente = new ClienteBean();
-        cliente.setEndereco("Avenida dos Maracujás");
         
         PessoaBean pessoa = new PessoaBean();
         pessoa.setCpf("11111111111");
@@ -61,7 +60,6 @@ public class ClienteDAOTest {
         Conexao.truncate();
         
         ClienteBean cliente = new ClienteBean();
-        cliente.setEndereco("Avenida dos Maracujás");
          
         PessoaBean pessoa = new PessoaBean();
         pessoa.setCpf("11111111111");
@@ -94,7 +92,6 @@ public class ClienteDAOTest {
         Conexao.truncate();
         
         ClienteBean cliente = new ClienteBean();
-        cliente.setEndereco("Avenida dos Maracujás");
         
         PessoaBean pessoa = new PessoaBean();
         pessoa.setCpf("11111111111");
@@ -131,8 +128,8 @@ public class ClienteDAOTest {
         Conexao.truncate();
         
         ClienteBean cliente = new ClienteBean();
-        cliente.setEndereco("Avenida dos Maracujás");
-        
+        cliente.setCidade("Blumenau");
+        cliente.setBairro("Centro");
         
         PessoaBean pessoa = new PessoaBean();
         pessoa.setCpf("11111111111");
@@ -154,7 +151,6 @@ public class ClienteDAOTest {
         
         cliente.setPessoaBean(pessoa);
         
-        cliente.setEndereco("Rua das palmeiras");
         
         new ClienteDAO().alterar(cliente);
         
@@ -168,7 +164,6 @@ public class ClienteDAOTest {
         Conexao.truncate();
         
         ClienteBean cliente = new ClienteBean();
-        cliente.setEndereco("Avenida dos Maracujás");
         
          
         PessoaBean pessoa = new PessoaBean();
