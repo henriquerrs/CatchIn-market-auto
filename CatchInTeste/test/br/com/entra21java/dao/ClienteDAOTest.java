@@ -9,15 +9,20 @@ import br.com.entra21java.bean.ClienteBean;
 import br.com.entra21java.bean.PessoaBean;
 import br.com.entra21java.bean.PrivilegioBean;
 import br.com.entra21java.database.Conexao;
+import java.util.List;
+import org.junit.After;
+import org.junit.AfterClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Before;
+import org.junit.BeforeClass;
 
 /**
  *
  * @author Sara Reis
  */
 public class ClienteDAOTest {
-    
+
     /**
      * Test of obterCliente method, of class ClienteDAO.
      */
@@ -215,6 +220,80 @@ public class ClienteDAOTest {
         cliente.setPessoaBean(pessoa);
         
         assertEquals(cliente, new ClienteDAO().obterPeloIdPessoa(i));
+    }
+
+    /**
+     * Test of obterCliente method, of class ClienteDAO.
+     */
+    @Test
+    public void testObterCliente() {
+        System.out.println("obterCliente");
+        ClienteDAO instance = new ClienteDAO();
+        List<ClienteBean> expResult = null;
+        List<ClienteBean> result = instance.obterCliente();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of adicionarCliente method, of class ClienteDAO.
+     */
+    @Test
+    public void testAdicionarCliente() {
+        System.out.println("adicionarCliente");
+        ClienteBean cliente = null;
+        ClienteDAO instance = new ClienteDAO();
+        int expResult = 0;
+        int result = instance.adicionarCliente(cliente);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of excluirCliente method, of class ClienteDAO.
+     */
+    @Test
+    public void testExcluirCliente() {
+        System.out.println("excluirCliente");
+        int id = 0;
+        ClienteDAO instance = new ClienteDAO();
+        boolean expResult = false;
+        boolean result = instance.excluirCliente(id);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of alterar method, of class ClienteDAO.
+     */
+    @Test
+    public void testAlterar() {
+        System.out.println("alterar");
+        ClienteBean cliente = null;
+        ClienteDAO instance = new ClienteDAO();
+        boolean expResult = false;
+        boolean result = instance.alterar(cliente);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of obterPeloIdPessoa method, of class ClienteDAO.
+     */
+    @Test
+    public void testObterPeloIdPessoa() {
+        System.out.println("obterPeloIdPessoa");
+        int id = 0;
+        ClienteDAO instance = new ClienteDAO();
+        ClienteBean expResult = null;
+        ClienteBean result = instance.obterPeloIdPessoa(id);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
     }
     
 }
