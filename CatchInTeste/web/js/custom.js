@@ -30,9 +30,14 @@ $(function () {
 //        $('.datepicker').datepicker();
 //    });
 
+var d = new Date();
     $('.datepicker').datepicker({
 
         format: 'dd/mm/yyyy',
+        yearRange: 100,
+        maxYear: d.getFullYear(),
+        minYear: '1900',
+
         i18n: {
             minDate: null,
             maxDate: null,
