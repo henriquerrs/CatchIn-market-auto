@@ -8,6 +8,7 @@
 <script type="text/javascript" src="/js/teste.js"></script>
 <script type="text/javascript" src="/js/custom.js"></script>
 <script type="text/javascript" src="/js/login.js"></script>
+<script type="text/javascript" src="js/cep.js"></script>
 <script type="text/javascript" src="https://cdn.rawgit.com/pinzon1992/materialize_table_pagination/f9a8478f/js/pagination.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
 

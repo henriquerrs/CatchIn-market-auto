@@ -71,7 +71,7 @@
                     </div>
                     <div class="row form-group col s12">
                         <label for="recipient-name" class="col-form-label">Endereço:</label>
-                        <input class="form-control" type="text" value="<%= ((ClienteBean) session.getAttribute("cliente")).getEndereco() %>" placeholder="info-endereco" readonly>
+                        <input class="form-control" type="text" value="<%= ((ClienteBean) session.getAttribute("cliente")).getLogradouro()%>" placeholder="info-endereco" readonly>
                         <div class="helper-block with-errors"></div>
                     </div>
                     <div class="row">
