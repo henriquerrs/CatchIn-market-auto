@@ -90,5 +90,9 @@ $('#modalProdutos').on('shown.bs.modal', function () {
 });
 
 $('#finalizar').click(function (){
-    alert("Compra finalizada");
+    new PNotify({
+    title: 'Compra',
+    text: 'Compra finalizada.',
+    type: 'success'
+  });
 });

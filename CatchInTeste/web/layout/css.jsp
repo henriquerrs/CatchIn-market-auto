@@ -9,6 +9,7 @@
 <link href="../tema/CustomCss/fixedHeader.bootstrap.min.css" rel="stylesheet">
 <link href="../tema/CustomCss/responsive.bootstrap.min.css" rel="stylesheet">
 <link href="../tema/CustomCss/style.css" rel="stylesheet">
+<link href="../tema/CustomCss/pnotify.custom.min.css" rel="stylesheet">
 
 <style>
     #nav_bar {
