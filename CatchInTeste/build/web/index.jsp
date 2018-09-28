@@ -77,6 +77,7 @@
                             <div class="helper-block with-errors"></div>
                         </div>
                     </div>
+<<<<<<< HEAD
                     <div class="row">
                         <div class="form-group col s6">
                             <label for="recipient-name" class="col-form-label">Idade:</label>
@@ -101,6 +102,12 @@
                             <input class="form-control" type="text" value="<%= ((ClienteBean) session.getAttribute("cliente")).getEndereco()%>" placeholder="info-endereco" readonly>
                             <div class="helper-block with-errors"></div>
                         </div>
+=======
+                    <div class="row form-group col s12">
+                        <label for="recipient-name" class="col-form-label">Endereço:</label>
+                        <input class="form-control" type="text" value="<%= ((ClienteBean) session.getAttribute("cliente")).getLogradouro()%>" placeholder="info-endereco" readonly>
+                        <div class="helper-block with-errors"></div>
+>>>>>>> 95ffef10a5cce72bfa504bfe56d00fef68b0a563
                     </div>
                     <div class="row">
                         <div class="form-group col s6">
