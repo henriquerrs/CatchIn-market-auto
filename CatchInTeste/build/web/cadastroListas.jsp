@@ -15,9 +15,8 @@
 <%@include file="layout/masterBootStrap.jsp"%>
 
 <title>Página de Listas</title>
-
 <h3 style="text-align: center">May the capitalism be with you</h3>
-<br>
+    <br>
 <div class="container">
     <%  int idLista = ((ClienteBean) session.getAttribute("cliente")).getIdLista();%>
     <%  List<ProdutoListaBean> produtos = new ProdutoListaDAO().obterItensPeloIdLista(idLista);%>
@@ -26,6 +25,7 @@
             <a id="botao_finaizar_compra" href='/paraCarinho' class='btn btn-success blue'>Adicionar ao Carrinho</a>
         </div>
     </div>
+    <br>
     <br>
     <!-- Panel Tickets -->
     <div class="panel box-shadow">
@@ -63,4 +63,4 @@
         </div>
     </div>
 </div>
-<%@include file="layout/footerBootstrap.jsp" %>
+<%@include file="layout/footerBootStrapLista.jsp" %>
