@@ -30,7 +30,7 @@ public class SupermercadoStoreExcluirListaItem extends HttpServlet{
         int id = Integer.parseInt(req.getParameter("id"));
         
          new ProdutoListaDAO().excluirItem(id);
-         resp.sendRedirect("");
+         resp.sendRedirect("/lista-de-compras");
     }
     
 }
