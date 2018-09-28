@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Alunos
+ * @author Sara Reis
  */
 public class ListaDAOTest {
     
