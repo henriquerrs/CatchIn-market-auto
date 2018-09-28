@@ -189,4 +189,7 @@
     #texto_centralizado{
         text-align: center;
     }
+    #menu_centro_adm {
+        margin-left: 6%;
+    }
 </style>

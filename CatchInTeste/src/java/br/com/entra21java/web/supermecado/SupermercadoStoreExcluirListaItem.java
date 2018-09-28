@@ -5,8 +5,6 @@
  */
 package br.com.entra21java.web.supermecado;
 
-import br.com.entra21java.dao.ItemDAO;
-import br.com.entra21java.dao.ProdutoDAO;
 import br.com.entra21java.dao.ProdutoListaDAO;
 import java.io.IOException;
 import javax.servlet.ServletException;
