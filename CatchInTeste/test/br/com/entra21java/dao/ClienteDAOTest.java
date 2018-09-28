@@ -128,7 +128,8 @@ public class ClienteDAOTest {
         Conexao.truncate();
         
         ClienteBean cliente = new ClienteBean();
-        
+        cliente.setCidade("Blumenau");
+        cliente.setBairro("Centro");
         
         PessoaBean pessoa = new PessoaBean();
         pessoa.setCpf("11111111111");
