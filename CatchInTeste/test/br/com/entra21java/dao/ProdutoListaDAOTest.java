@@ -63,6 +63,12 @@ public class ProdutoListaDAOTest {
         ListaBean lista = new ListaBean();
 
         ClienteBean cliente = new ClienteBean();
+        cliente.setUf("SC");
+        cliente.setCidade("Blumenau");
+        cliente.setBairro("Centro");
+        cliente.setLogradouro("Rua XV de Novembro 1480");
+        cliente.setComplemento("Prédio");
+        cliente.setNumero("3001");
 
         PessoaBean pessoa = new PessoaBean();
         pessoa.setTelefone("99999999");
@@ -128,6 +134,12 @@ public class ProdutoListaDAOTest {
         ListaBean lista = new ListaBean();
 
         ClienteBean cliente = new ClienteBean();
+        cliente.setUf("SC");
+        cliente.setCidade("Blumenau");
+        cliente.setBairro("Centro");
+        cliente.setLogradouro("Rua XV de Novembro 1480");
+        cliente.setComplemento("Prédio");
+        cliente.setNumero("3001");
 
         PessoaBean pessoa = new PessoaBean();
         pessoa.setTelefone("99999999");
@@ -196,6 +208,12 @@ public class ProdutoListaDAOTest {
         ListaBean lista = new ListaBean();
           
         ClienteBean cliente = new ClienteBean();
+        cliente.setUf("SC");
+        cliente.setCidade("Blumenau");
+        cliente.setBairro("Centro");
+        cliente.setLogradouro("Rua XV de Novembro 1480");
+        cliente.setComplemento("Prédio");
+        cliente.setNumero("3001");
         
         PessoaBean pessoa = new PessoaBean();
         pessoa.setTelefone("99999999");
@@ -264,6 +282,12 @@ public class ProdutoListaDAOTest {
         ListaBean lista = new ListaBean();
           
         ClienteBean cliente = new ClienteBean();
+        cliente.setUf("SC");
+        cliente.setCidade("Blumenau");
+        cliente.setBairro("Centro");
+        cliente.setLogradouro("Rua XV de Novembro 1480");
+        cliente.setComplemento("Prédio");
+        cliente.setNumero("3001");
         
         PessoaBean pessoa = new PessoaBean();
         pessoa.setTelefone("99999999");
@@ -332,6 +356,12 @@ public class ProdutoListaDAOTest {
         ListaBean lista = new ListaBean();
           
         ClienteBean cliente = new ClienteBean();
+        cliente.setUf("SC");
+        cliente.setCidade("Blumenau");
+        cliente.setBairro("Centro");
+        cliente.setLogradouro("Rua XV de Novembro 1480");
+        cliente.setComplemento("Prédio");
+        cliente.setNumero("3001");
         
         PessoaBean pessoa = new PessoaBean();
         pessoa.setTelefone("99999999");
@@ -392,6 +422,12 @@ public class ProdutoListaDAOTest {
         ListaBean lista = new ListaBean();
           
         ClienteBean cliente = new ClienteBean();
+        cliente.setUf("SC");
+        cliente.setCidade("Blumenau");
+        cliente.setBairro("Centro");
+        cliente.setLogradouro("Rua XV de Novembro 1480");
+        cliente.setComplemento("Prédio");
+        cliente.setNumero("3001");
         
         PessoaBean pessoa = new PessoaBean();
         pessoa.setTelefone("99999999");
@@ -457,6 +493,12 @@ public class ProdutoListaDAOTest {
         ListaBean lista = new ListaBean();
           
         ClienteBean cliente = new ClienteBean();
+        cliente.setUf("SC");
+        cliente.setCidade("Blumenau");
+        cliente.setBairro("Centro");
+        cliente.setLogradouro("Rua XV de Novembro 1480");
+        cliente.setComplemento("Prédio");
+        cliente.setNumero("3001");
         
         PessoaBean pessoa = new PessoaBean();
         pessoa.setTelefone("99999999");
