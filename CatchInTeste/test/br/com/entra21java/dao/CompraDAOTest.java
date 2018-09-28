@@ -41,6 +41,12 @@ public class CompraDAOTest {
         
         ClienteBean cliente = new ClienteBean();
         cliente.setPessoaBean(pessoa);
+        cliente.setUf("SC");
+        cliente.setCidade("Blumenau");
+        cliente.setBairro("Centro");
+        cliente.setLogradouro("Rua XV de Novembro 1480");
+        cliente.setComplemento("Prédio");
+        cliente.setNumero("3001");
         
         List<ItemBean> itens = new ArrayList<>();
         
@@ -94,6 +100,12 @@ public class CompraDAOTest {
         
         ClienteBean cliente = new ClienteBean();
         cliente.setPessoaBean(pessoa);
+        cliente.setUf("SC");
+        cliente.setCidade("Blumenau");
+        cliente.setBairro("Centro");
+        cliente.setLogradouro("Rua XV de Novembro 1480");
+        cliente.setComplemento("Prédio");
+        cliente.setNumero("3001");
         
         List<ItemBean> itens = new ArrayList<>();
         
@@ -144,6 +156,12 @@ public class CompraDAOTest {
         
         ClienteBean cliente = new ClienteBean();
         cliente.setPessoaBean(pessoa);
+        cliente.setUf("SC");
+        cliente.setCidade("Blumenau");
+        cliente.setBairro("Centro");
+        cliente.setLogradouro("Rua XV de Novembro 1480");
+        cliente.setComplemento("Prédio");
+        cliente.setNumero("3001");
         
         List<ItemBean> itens = new ArrayList<>();
         
@@ -200,6 +218,12 @@ public class CompraDAOTest {
         
         ClienteBean cliente = new ClienteBean();
         cliente.setPessoaBean(pessoa);
+        cliente.setUf("SC");
+        cliente.setCidade("Blumenau");
+        cliente.setBairro("Centro");
+        cliente.setLogradouro("Rua XV de Novembro 1480");
+        cliente.setComplemento("Prédio");
+        cliente.setNumero("3001");
         
         List<ItemBean> itens = new ArrayList<>();
         
