@@ -26,6 +26,12 @@ public class ClienteDAOTest {
         Conexao.truncate();
         
         ClienteBean cliente = new ClienteBean();
+        cliente.setUf("SC");
+        cliente.setCidade("Blumenau");
+        cliente.setBairro("Centro");
+        cliente.setLogradouro("Rua XV de Novembro 1480");
+        cliente.setComplemento("Prédio");
+        cliente.setNumero("3001");
         
         PessoaBean pessoa = new PessoaBean();
         pessoa.setCpf("11111111111");
@@ -60,6 +66,12 @@ public class ClienteDAOTest {
         Conexao.truncate();
         
         ClienteBean cliente = new ClienteBean();
+        cliente.setUf("SC");
+        cliente.setCidade("Blumenau");
+        cliente.setBairro("Centro");
+        cliente.setLogradouro("Rua XV de Novembro 1480");
+        cliente.setComplemento("Prédio");
+        cliente.setNumero("3001");
          
         PessoaBean pessoa = new PessoaBean();
         pessoa.setCpf("11111111111");
@@ -92,6 +104,12 @@ public class ClienteDAOTest {
         Conexao.truncate();
         
         ClienteBean cliente = new ClienteBean();
+        cliente.setUf("SC");
+        cliente.setCidade("Blumenau");
+        cliente.setBairro("Centro");
+        cliente.setLogradouro("Rua XV de Novembro 1480");
+        cliente.setComplemento("Prédio");
+        cliente.setNumero("3001");
         
         PessoaBean pessoa = new PessoaBean();
         pessoa.setCpf("11111111111");
@@ -128,8 +146,12 @@ public class ClienteDAOTest {
         Conexao.truncate();
         
         ClienteBean cliente = new ClienteBean();
+        cliente.setUf("SC");
         cliente.setCidade("Blumenau");
         cliente.setBairro("Centro");
+        cliente.setLogradouro("Rua XV de Novembro 1480");
+        cliente.setComplemento("Prédio");
+        cliente.setNumero("3001");
         
         PessoaBean pessoa = new PessoaBean();
         pessoa.setCpf("11111111111");
@@ -164,7 +186,12 @@ public class ClienteDAOTest {
         Conexao.truncate();
         
         ClienteBean cliente = new ClienteBean();
-        
+        cliente.setUf("SC");
+        cliente.setCidade("Blumenau");
+        cliente.setBairro("Centro");
+        cliente.setLogradouro("Rua XV de Novembro 1480");
+        cliente.setComplemento("Prédio");
+        cliente.setNumero("3001");
          
         PessoaBean pessoa = new PessoaBean();
         pessoa.setCpf("11111111111");
