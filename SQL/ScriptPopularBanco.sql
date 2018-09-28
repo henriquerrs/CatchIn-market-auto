@@ -91,11 +91,11 @@ INSERT INTO listas() VALUES
 (),
 ();
 
-INSERT INTO clientes(endereco, id_compra, id_pessoa, id_lista) VALUES
-('Rua AAA',1,1,1),
-('Rua BBB',2,2,2),
-('Rua CCC',3,3,3),
-('Rua DDD',4,4,4);
+INSERT INTO clientes(logradouro, id_compra, id_pessoa, id_lista,cep,complemento,bairro,cidade,uf,numero) VALUES
+('Rua AAA',1,1,1,'798797979','A','Azinho','Azao','AA','321'),
+('Rua BBB',2,2,2,'798797979','B','Bzinho','Bzao','BB','321'),
+('Rua CCC',3,3,3,'798797979','C','Czinho','Czao','CC','321'),
+('Rua DDD',4,4,4,'798797979','D','Dzinho','Dzao','CC','321');
 
 INSERT INTO colaboradores(cargo,id_pessoa) VALUES
 ('Gerente',1),
@@ -116,6 +116,6 @@ INSERT INTO produto_lista (quantidade,id_lista,id_produto) VALUES
 #SELECT * FROM produtos;
 SELECT * FROM pessoas;
 #SELECT * FROM compras;
-#SELECT * FROM clientes;
+SELECT * FROM clientes;
 #SELECT * FROM colaboradores;
 #SELECT * FROM itens;
