@@ -29,7 +29,7 @@ public class ProdutoListaDAOTest {
      * Test of obterItensPeloIdLista method, of class ProdutoListaDAO.
      */
     @Test
-    public void testObterItensPeloIdLista() {
+    public void obterItensPeloIdLista() {
         Conexao.truncate();
 
         List<ProdutoListaBean> produtoLista = new ArrayList<>();
@@ -100,7 +100,7 @@ public class ProdutoListaDAOTest {
      * Test of obterIdDaLista method, of class ProdutoListaDAO.
      */
     @Test
-    public void testObterIdDaLista() {
+    public void obterIdDaLista() {
         Conexao.truncate();
 
         List<ProdutoListaBean> produtoLista = new ArrayList<>();
@@ -171,7 +171,7 @@ public class ProdutoListaDAOTest {
      * Test of adicionarLista method, of class ProdutoListaDAO.
      */
     @Test
-    public void testAdicionarLista() {
+    public void adicionarLista() {
         Conexao.truncate();
         
         List<ProdutoListaBean> produtoLista = new ArrayList<>();
@@ -245,7 +245,7 @@ public class ProdutoListaDAOTest {
      * Test of verificarProdutoCadastrado method, of class ProdutoListaDAO.
      */
     @Test
-    public void testVerificarProdutoCadastrado() {
+    public void verificarProdutoCadastrado() {
         Conexao.truncate();
         
         List<ProdutoListaBean> produtoLista = new ArrayList<>();
@@ -319,7 +319,7 @@ public class ProdutoListaDAOTest {
      * Test of atualizarCompra method, of class ProdutoListaDAO.
      */
     @Test
-    public void testAtualizarCompra() {
+    public void atualizarCompra() {
         Conexao.truncate();
         
         List<ProdutoListaBean> produtoLista = new ArrayList<>();
@@ -388,7 +388,7 @@ public class ProdutoListaDAOTest {
      * Test of excluirItem method, of class ProdutoListaDAO.
      */
     @Test
-    public void testExcluirItem() {
+    public void excluirItem() {
         Conexao.truncate();
         
         List<ProdutoListaBean> produtoLista = new ArrayList<>();
@@ -459,7 +459,7 @@ public class ProdutoListaDAOTest {
      * Test of passarParaCarrinho method, of class ProdutoListaDAO.
      */
     @Test
-    public void testPassarParaCarrinho() {
+    public void passarParaCarrinho() {
         Conexao.truncate();
         
         List<ProdutoListaBean> produtoLista = new ArrayList<>();

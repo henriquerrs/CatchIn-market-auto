@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author user
+ * @author Sara Reis
  */
 public class PrivilegioDAOTest {
     
