@@ -70,7 +70,7 @@
                 <% } %>
             </div>
             <% } else if (new CompraDAO().statusCompra(idCompra) == 1){%>
-            <h1>Compra em andamento</h1>
+            <h4 class="text-center">Compra em andamento</h4>
             <%} %>
         </div>
     </div>

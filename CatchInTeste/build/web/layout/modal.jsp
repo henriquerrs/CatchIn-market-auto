@@ -13,6 +13,9 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
+            <% int idCompra = ((ClienteBean) session.getAttribute("cliente")).getIdCompra();%>
+            <% int quantidadeNoCarrinho = 0;%>
+            <% if (new CompraDAO().statusCompra(idCompra) != 1) {%>
             <div class="modal-body">
                 <% if (((ClienteBean) session.getAttribute("cliente")).getPessoaBean().getIdPrivilegio() < 4) {%>
                 <div class="form-group">
@@ -20,11 +23,11 @@
                 </div>
                 <%} else {%>
                 <div class="form-group">
-                    <%  int idCompra = ((ClienteBean) session.getAttribute("cliente")).getIdCompra();%>
                     <h7>Total das compras: <%=new CompraDAO().atualizarTotal(idCompra)%></h7>
                 </div>
                 <div class="form-group">
                     <% List<ItemBean> itens = new ItemDAO().obterItensPeloIdCompra(idCompra); %>
+                    
                     <table id="table-carrinho" class="table table-striped table-bordered">
                         <thead>
                             <tr>
@@ -35,7 +38,8 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <% for (ItemBean item : itens) {%>
+                            <% for (ItemBean item : itens) {
+                                quantidadeNoCarrinho++;%>
                             <tr>
                                 <td class="text-center"><%=item.getProduto().getPreco()%></td>
                                 <td><%=item.getProduto().getNome()%></td>
@@ -56,13 +60,18 @@
                 </div>
                 <%}%>
             </div>
-            <div class="modal-footer">
+            <div class="modal-footer" >
                 <!--button id="finalizar" type="submit" class="btn btn-dark">Finalizar Compra</button-->
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-                <form action='/excluirCompra' method='get'>
-                    <button type="submit" id="finalizar" class="btn btn-dark" data-dismiss="modal" aria-label="Finalizar">Finalizar</button>
+                <% if(quantidadeNoCarrinho>0){ %>
+                <form action="/terminarCompra">
+                    <button type="submit" class="btn btn-dark">Finalizar</button>
                 </form>
+                <% } %>
             </div>
+            <% } else if (new CompraDAO().statusCompra(idCompra) == 1){%>
+            <h4 class="text-center">Compra em andamento</h4>
+            <%} %>
         </div>
     </div>
 </div>
