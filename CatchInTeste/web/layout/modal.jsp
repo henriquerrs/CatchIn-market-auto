@@ -14,6 +14,7 @@
                 </button>
             </div>
             <% int idCompra = ((ClienteBean) session.getAttribute("cliente")).getIdCompra();%>
+            <% int quantidadeNoCarrinho = 0;%>
             <% if (new CompraDAO().statusCompra(idCompra) != 1) {%>
             <div class="modal-body">
                 <% if (((ClienteBean) session.getAttribute("cliente")).getPessoaBean().getIdPrivilegio() < 4) {%>
@@ -37,7 +38,8 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <% for (ItemBean item : itens) {%>
+                            <% for (ItemBean item : itens) {
+                                quantidadeNoCarrinho++;%>
                             <tr>
                                 <td class="text-center"><%=item.getProduto().getPreco()%></td>
                                 <td><%=item.getProduto().getNome()%></td>
@@ -61,9 +63,11 @@
             <div class="modal-footer" >
                 <!--button id="finalizar" type="submit" class="btn btn-dark">Finalizar Compra</button-->
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <% if(quantidadeNoCarrinho>0){ %>
                 <form action="/terminarCompra">
                     <button type="submit" class="btn btn-dark">Finalizar</button>
                 </form>
+                <% } %>
             </div>
             <% } else if (new CompraDAO().statusCompra(idCompra) == 1){%>
             <h1>Compra em andamento</h1>
