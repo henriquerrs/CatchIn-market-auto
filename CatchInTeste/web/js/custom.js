@@ -110,15 +110,15 @@ var input_selector = 'input[type=text], input[type=password], input[type=email],
       if($(this).val().length !== 0) {
        $(this).siblings('label, i').addClass('active');
       }
-    })
+    });
      // Add active when element has focus
     $(document).on('focus', input_selector, function () {
       $(this).siblings('label, i').addClass('active');
     });
-     $(document).on('blur', input_selector, function () {
+    $(document).on('blur', input_selector, function () {
       console.log($(this).is(':valid'));
       if ($(this).val().length === 0) {
         $(this).siblings('label, i').removeClass('active');
         }
-    },
-     };
+    });
+});

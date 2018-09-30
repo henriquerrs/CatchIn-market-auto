@@ -133,8 +133,8 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal" aria-label="Fechar">Fechar</button>
                 </div>
+                </div>
             </form>
-                        </div>
         </div>
     </div>
 </div>

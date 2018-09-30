@@ -7,11 +7,18 @@ import java.util.List;
 */
 public class CompraBean {
 
-    private int id, idCliente;
+    private int id, idCliente, status;
     private ClienteBean cliente;
     private double total;
     private List<ItemBean> item;
 
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
+    }
 
     public int getId() {
         return id;

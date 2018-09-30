@@ -79,11 +79,11 @@ INSERT INTO pessoas(nome,senha,email,cpf,idade,telefone,id_privilegio) VALUES
 ('Leonardo','3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2','Leonardo@gmail.com','333.333.333-33',18,'(47)9 9793-1575',3),
 ('Henríque','3c9909afec25354d551dae21590bb26e38d53f2173b8d3dc3eee4c047e7ab1c1eb8b85103e3be7ba613b31bb5c9c36214dc9f14a42fd7a2fdb84856bca5c44c2','Henrique@gmail.com','444.444.444-44',17,'(47)9 9738-2791',4);
 
-INSERT INTO compras(total) VALUES
-(1.10),
-(2.10),
-(3.10),
-(4.10);
+INSERT INTO compras(total, status) VALUES
+(1.10,0),
+(2.10,0),
+(3.10,0),
+(4.10,0);
 
 INSERT INTO listas() VALUES
 (),
@@ -115,7 +115,7 @@ INSERT INTO produto_lista (quantidade,id_lista,id_produto) VALUES
 #SELECT * FROM privilegios;
 #SELECT * FROM produtos;
 SELECT * FROM pessoas;
-#SELECT * FROM compras;
+SELECT * FROM compras;	
 SELECT * FROM clientes;
 #SELECT * FROM colaboradores;
-#SELECT * FROM itens;
+SELECT * FROM itens;

@@ -31,12 +31,12 @@
                 <a id="botao_logout" class="nav-link" href="/logout">Log Out - <i class="fas fa-sign-out-alt"></i></a>
                 <a id="botao_lista" class="nav-link" href="/lista-de-compras">Sua Lista - <i class="fas fa-clipboard-list"></i></a>
 
-                <% } else {%>
-                <fieldset id="menu_centro_adm">
-
+        <% } else {%>
+        <fieldset id="menu_centro_adm">
+            <li class="nav-link">
+                <a id="botao_logout" class="nav-link" href="/admin/entregas">Entregas<i class="fas fa-sign-out-alt"></i></a>
                 <a id="botao_logout_adm" class="nav-link" href="/logout">Log Out - <i class="fas fa-sign-out-alt"></i></a>
-                </fieldset>
-                    <%}%>
+        <%}%>
             </li>
         </fieldset>
     </div>

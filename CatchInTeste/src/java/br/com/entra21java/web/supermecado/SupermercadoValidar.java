@@ -30,7 +30,6 @@ public class SupermercadoValidar extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         String login = req.getParameter("login");
         String senha = new ConverterSHA512().transformarSenha(req.getParameter("senha"));
-        System.out.println("Senha do pornhub: " + senha);
         ClienteBean cliente = new PessoaDAO().verificarLogin(login, senha);
 
         if (cliente != null) {
