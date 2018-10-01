@@ -30,20 +30,19 @@
             <li class="nav-link">
                 <a id="botao_logout" class="nav-link" href="/logout">Log Out - <i class="fas fa-sign-out-alt"></i></a>
                 <a id="botao_lista" class="nav-link" href="/lista-de-compras">Sua Lista - <i class="fas fa-clipboard-list"></i></a>
-
         <% } else {%>
-        <fieldset id="menu_centro_adm">
+        <fieldset id="menu_centro">
             <li class="nav-link">
-                <a id="botao_logout" class="nav-link" href="/admin/entregas">Entregas<i class="fas fa-sign-out-alt"></i></a>
-                <a id="botao_logout_adm" class="nav-link" href="/logout">Log Out - <i class="fas fa-sign-out-alt"></i></a>
+                <a id="botao_logout" class="nav-link" href="/logout">Log Out - <i class="fas fa-sign-out-alt"></i></a>
+                <a id="botao_lista" class="nav-link" href="/admin/entregas">Entregas - <i class="fas fa-clipboard-list"></i></a>
         <%}%>
+            </li>
+        </fieldset>
             </li>
         </fieldset>
     </div>
     <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
         <ul class="navbar-nav ml-auto">
-
-
             <% if (((ClienteBean) session.getAttribute("cliente")).getPessoaBean().getIdPrivilegio() == 4) { %>
             <fieldset id="fieldset_preview" data-toggle="tooltip" data-placement="bottom" data-original-title="Veja seus produtos clicando aqui!">
                 <li class="nav-item">
@@ -62,7 +61,6 @@
                     </a>
             </fieldset>
             <% }%>
-
         </ul>
     </div>
 </nav>

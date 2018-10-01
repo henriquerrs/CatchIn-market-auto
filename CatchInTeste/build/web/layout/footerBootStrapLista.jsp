@@ -55,9 +55,9 @@
                     <li>
                         <a href="/termos">Política de Privacidade</a>
                     </li>
-                    <li>
+<!--                    <li>
                         <a href="/termos">Fale conosco</a>
-                    </li>
+                    </li>-->
                 </ul>
 
             </div>
